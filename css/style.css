@@ -400,7 +400,7 @@ video.big {
   width: 104%;
   max-width: none;
   margin-left: -2%;
-  margin-top: -150px;
+  margin-top: -95px;
   pointer-events: none;
 }
 
@@ -551,7 +551,7 @@ video.big {
   .project-pic { width: 100px; }
   .photos figure { width: 100%; }
   .crt { width: 92%; }
-  .crowd { width: 150%; margin-left: -25%; margin-top: -60px; }
+  .crowd { width: 150%; margin-left: -25%; margin-top: -35px; }
   .bubble { font-size: 14px; }
   .bubble.one { bottom: 12px; left: 4%; }
   .bubble.two { display: none; }
