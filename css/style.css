@@ -1044,11 +1044,13 @@ table.plain th {
 
 @media (max-width: 640px) {
   body { font-size: 17px; }
-  .taskbar { font-size: 12px; }
+  .taskbar { font-size: 12px; flex-wrap: wrap; }
+  .taskbar__nav { flex-wrap: wrap; overflow: visible; }
+  .taskbar__nav a { padding: 4px 8px 3px; }
   .taskbar__logo { padding: 3px 6px; margin-right: 2px; }
   .taskbar__logo span { display: none; }
   .taskbar__clock { display: none; }
-  .hero { padding: 50px 16px 250px; min-height: auto; }
+  .hero { padding: 40px 16px 170px; min-height: auto; }
   .quote-note { position: relative; right: auto; bottom: auto; margin: 44px auto 0; width: 240px; }
   .floater--rocket { left: -2%; top: 4%; width: 70px; opacity: 0.8; }
   .floater--balloon { right: -3%; top: 2%; width: 90px; opacity: 0.8; }
@@ -1066,6 +1068,12 @@ table.plain th {
   .bubble--a { bottom: 80px; }
   .bubble--b { display: none; }
   .post-list li { grid-template-columns: 1fr; gap: 0; }
+}
+
+.only-touch { display: none; }
+@media (hover: none) {
+  .only-hover, .card__hint { display: none; }
+  .only-touch { display: inline; }
 }
 
 @media (prefers-reduced-motion: reduce) {
