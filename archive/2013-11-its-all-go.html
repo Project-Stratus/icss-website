@@ -13,18 +13,16 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="../index.html" aria-label="ICSS home">
-    <img src="../assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="../index.html"><img src="../assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="../blog.html">Blog</a>
     <a href="../wiki.html">Wiki</a>
     <a href="../events.html">Events</a>
     <a href="../projects.html">Projects</a>
-    <a class="taskbar__join" href="../join.html">Join us</a>
-  </nav>
-</header>
+    <a href="../join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
 <main>
@@ -43,33 +41,15 @@
 </main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="../assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="../join.html">Become a member (&pound;5)</a></li>
-        <li><a href="../blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="../wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="../js/main.js"></script>

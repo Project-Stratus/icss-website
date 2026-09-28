@@ -3,136 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mini-Rover &middot; ICSS</title>
-  <meta name="description" content="A Mars-style rover for the UKSEDS Olympus Rover Trials">
+  <title>Mini Rover - ICSS</title>
+  <meta name="description" content="ICSS x IPRL mini rover for the UKSEDS Olympus Rover Trials.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<img class="project-pic" src="assets/img/float/iprl-rover.webp" alt="">
+<h1 style="color:#ff5a36">Mini Rover <span class="new">(new!)</span></h1>
 
-<article class="project project--rover">
+<p>A joint ICSS x IPRL team building a small Mars-style rover for the <b>UKSEDS Olympus Rover Trials</b>. Mobility, autonomy, the usual rover problems.</p>
+<p>Last year IPRL built an entry in about a month on not much money, so there's loads of room to make it better. No rover experience needed, and it's a good way to get some project management experience too.</p>
 
-  <header class="project__head">
-    <img class="project__graphic floater-lite" src="assets/img/float/iprl-rover.webp" alt="" aria-hidden="true">
-    <p class="hero__kicker">&ldquo;Want to create artificial celestial life?&rdquo;</p>
-    <h1>Mini-Rover <span class="card__new">NEW</span></h1>
-    <p class="lede">A Mars-style rover for the UKSEDS Olympus Rover Trials</p>
-    <nav class="project__toc">
-      <a href="#what">what it is</a> &middot; <a href="#skills">skills</a> &middot; <a href="#gallery">pictures</a> &middot; <a href="#updates">updates</a> &middot; <a href="#achievements">achievements</a> &middot; <a href="#join">join</a>
-    </nav>
-  </header>
-
-
-  <h2 id="what">What it is</h2>
-  <p>Design and build a Mars-style rover that tackles realistic challenges in mobility, autonomy and planetary exploration, and compete in the <b>UKSEDS Olympus Rover Trials</b>. This year it&rsquo;s a joint ICSS &times; IPRL entry.</p>
-<p>Low-stakes and accessible: no prior rover experience needed, and a great way to pick up technical and project-management experience.</p>
-  <table class="plain spec">
-      <tr><th>Competition</th><td>UKSEDS Olympus Rover Trials</td></tr>
-      <tr><th>Team</th><td>ICSS &times; IPRL joint entry</td></tr>
-      <tr><th>Experience needed</th><td>None</td></tr>
-  </table>
-
-  <h2 id="skills">Skills &amp; techniques you&rsquo;ll pick up</h2>
-  <ul class="chips">
-      <li>mobility &amp; suspension</li>
-      <li>autonomy</li>
-      <li>mechanical design</li>
-      <li>electronics</li>
-      <li>rapid prototyping</li>
-      <li>project management</li>
-  </ul>
-  <p class="margin-note">More detail on each of these in the <a href="wiki.html">wiki</a> (coming soon).</p>
-
-  <div class="window ">
-  <div class="window__title"><span>Intro course</span><span>&times;</span></div>
-  <div class="window__body">
-    <p>Every ICSS project runs an intro course for new members at the start of the year &mdash; no experience needed. Join the WhatsApp community for dates.</p>
-  </div>
+<div class="photos">
+  <figure><img src="assets/img/projects/rover-mini.jpg" alt="Small red rover on sand" loading="lazy"><figcaption>last year's rover</figcaption></figure>
+  <figure><img src="assets/img/projects/rover-group.jpg" alt="Everyone at the Olympus Rover Trials" loading="lazy"><figcaption>Olympus Rover Trials</figcaption></figure>
 </div>
 
-  <h2 id="gallery">Pictures from the build</h2>
-  <div class="polaroids">
-    <figure><img src="assets/img/projects/rover-mini.jpg" alt="Small red rover on sand between flags" loading="lazy"><figcaption>last year&rsquo;s entry</figcaption></figure>
-    <figure><img src="assets/img/projects/rover-group.jpg" alt="Competitors at the Olympus Rover Trials" loading="lazy"><figcaption>Olympus Rover Trials</figcaption></figure>
+<p>Meeting times and rooms get posted in the rover group chat in the <a href="join.html">ICSS WhatsApp community</a>.</p>
 </div>
-
-
-  <h2 id="updates">Project updates</h2>
-  <div class="window ">
-  <div class="window__title"><span>Latest updates</span><span>&times;</span></div>
-  <div class="window__body">
-    <!-- Paste Instagram / LinkedIn embed code for the latest posts here.
-         Instagram: open a post > ... > Embed > copy code.
-         LinkedIn: open a post > ... > Embed this post > copy code. -->
-    <p class="embed-empty">No updates posted here yet. Paste an Instagram or LinkedIn embed into this box (see the comment in the HTML).</p>
-  </div>
-</div>
-
-  <h2 id="achievements">Key achievements</h2>
-  <ul class="ticks">
-      <li>Last year IPRL built an entry in ~1 month on a limited budget &mdash; lots of room to develop it further</li>
-  </ul>
-
-  <h2 id="join">Get involved</h2>
-  <div class="window ">
-  <div class="window__title"><span>Get involved</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Meeting info:</b> join the ICSS WhatsApp community and hop into the Rover group chat &mdash; that&rsquo;s where meeting times and rooms get posted.</p>
-    
-    
-    <p><b>Questions?</b> Email <a href="mailto:space.society@imperial.ac.uk?subject=Rover">space.society@imperial.ac.uk</a></p>
-    <p><a class="btn btn--go" href="join.html">Join ICSS</a></p>
-  </div>
-</div>
-
-</article>
-</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

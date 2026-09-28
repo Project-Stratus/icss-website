@@ -3,99 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Join us &middot; ICSS</title>
-  <meta name="description" content="Become a member of Imperial College Space Society for £5.">
+  <title>Join - ICSS</title>
+  <meta name="description" content="Join Imperial College Space Society.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<h1>Join us</h1>
+<p>If you know nothing we'll teach you, if you know loads you'll teach us!</p>
 
-<div class="page">
-  <h1>Join us!</h1>
-  <p class="lede">If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us.</p>
-  <div class="window ">
-  <div class="window__title"><span>Step 1</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>1. Buy a membership &mdash; &pound;5 for the year.</b> It unlocks every project, talk and event.</p>
-    <p><a class="btn btn--go" href="https://www-s.imperialcollegeunion.org/student-group-shop?groupId=212">Buy membership</a></p>
-    <p><small>Membership is through Imperial College Union, so you&rsquo;ll need to be a Union member.</small></p>
-  </div>
-</div>
-  <div class="window ">
-  <div class="window__title"><span>Step 2</span><span>&times;</span></div>
-  <div class="window__body">
-    <p id="whatsapp"><b>2. Join the WhatsApp community.</b> Every project has a group chat in there, and it&rsquo;s where meeting times, rooms and events get posted.</p>
-    <!-- TODO: add the WhatsApp community invite link (it's behind the QR code on the welcome-talk slides / Linktree) -->
-    <p><a class="btn" href="mailto:space.society@imperial.ac.uk?subject=WhatsApp%20community%20link">Ask for the WhatsApp link</a></p>
-  </div>
-</div>
-  <div class="window ">
-  <div class="window__title"><span>Step 3</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>3. Turn up.</b> Pick a <a href="projects.html">project</a> (or three) and come to its intro session. No applications, no experience needed.</p>
-  </div>
+<div class="box">
+  <p><b>1.</b> Get a membership, it's &pound;5 for the year and gets you into all the projects, talks and events.<br>
+  <a class="button yellow" href="https://www-s.imperialcollegeunion.org/student-group-shop?groupId=212">Buy membership</a></p>
+  <p><b>2.</b> Join the WhatsApp community. Each project has a group chat in there and it's where we post meeting times and events.<br>
+  <!-- TODO: put the WhatsApp community invite link here -->
+  <a class="button" id="whatsapp" href="mailto:space.society@imperial.ac.uk?subject=WhatsApp%20link">Email us for the link</a></p>
+  <p><b>3.</b> Pick a <a href="projects.html">project</a> (or a few) and come along. No applications!</p>
 </div>
 
-  <h2>Committee 2026/27</h2>
-  <table class="plain">
-    <tr><th>Role</th><th>Name</th></tr>
-    <tr><td>Chair</td><td>Oliver Edmond</td></tr>
-    <tr><td>Secretary</td><td>Etienne Franzi</td></tr>
-    <tr><td>Treasurer</td><td>Tomas Bezkorowajnyj</td></tr>
-    <tr><td>Communications / Publications</td><td>Mikhail Ischenko</td></tr>
-    <tr><td>Committee</td><td>Lucas Cheung, Shiki Mahesh Devan, Lalith Velamakanni, Sahil Bhargava, Thomas van Pul, Xuan Loong Hoh, Tim Barrett</td></tr>
-  </table>
+<h2>Committee 2026/27</h2>
+<table>
+  <tr><th>Chair</th><td>Oliver Edmond</td></tr>
+  <tr><th>Secretary</th><td>Etienne Franzi</td></tr>
+  <tr><th>Treasurer</th><td>Tomas Bezkorowajnyj</td></tr>
+  <tr><th>Comms</th><td>Mikhail Ischenko</td></tr>
+  <tr><th>Committee</th><td>Lucas Cheung, Shiki Mahesh Devan, Lalith Velamakanni, Sahil Bhargava, Thomas van Pul, Xuan Loong Hoh, Tim Barrett</td></tr>
+</table>
 
-  <h2>Sponsors</h2>
-  <p>We work with companies on talks, hackathon tasks and testing campaigns. Interested? Email <a href="mailto:space.society@imperial.ac.uk?subject=Sponsorship">space.society@imperial.ac.uk</a>.</p>
+<h2>Sponsors</h2>
+<p>If your company wants to work with us (talks, hackathon challenges, sponsoring a project) email <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></p>
 </div>
-</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

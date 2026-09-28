@@ -3,160 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Svarog &middot; ICSS</title>
-  <meta name="description" content="An interstellar solar-sailing CubeSat">
+  <title>Project Svarog - ICSS</title>
+  <meta name="description" content="Project Svarog: a student-built solar sailing CubeSat aiming for the edge of the solar system.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<img class="project-pic" src="assets/img/float/svarog-sail.webp" alt="">
+<h1 style="color:#e05ad0">Project Svarog</h1>
+<p><i>An interstellar solar sailing CubeSat</i></p>
 
-<article class="project project--svarog">
+<p>Student designed, student built, student tested. We want to get a CubeSat to the edge of the solar system using a solar sail, and be the first student team to do it.</p>
 
-  <header class="project__head">
-    <img class="project__graphic floater-lite" src="assets/img/float/svarog-sail.webp" alt="" aria-hidden="true">
-    <p class="hero__kicker">&ldquo;Need a break from this solar system?&rdquo;</p>
-    <h1>Project Svarog </h1>
-    <p class="lede">An interstellar solar-sailing CubeSat</p>
-    <nav class="project__toc">
-      <a href="#what">what it is</a> &middot; <a href="#skills">skills</a> &middot; <a href="#gallery">pictures</a> &middot; <a href="#papers">papers</a> &middot; <a href="#updates">updates</a> &middot; <a href="#achievements">achievements</a> &middot; <a href="#join">join</a>
-    </nav>
-  </header>
+<video class="big" src="assets/video/svarog-sail.mp4" poster="assets/img/projects/svarog-poster.jpg" muted loop playsinline autoplay controls></video>
+<p class="small grey">Sail deployment test</p>
 
-  <figure class="tv">
-    <video src="assets/video/svarog-sail.mp4" poster="assets/img/projects/svarog-poster.jpg" muted loop playsinline autoplay preload="metadata"></video>
-    <figcaption>Sail deployment test</figcaption>
-  </figure>
+<h2>Timeline</h2>
+<table>
+  <tr><th>2021</th><td>Project started</td></tr>
+  <tr><th>2023</th><td>Vacuum chamber testing</td></tr>
+  <tr><th>2024/25</th><td>Balloon tests on BEXUS (twice!)</td></tr>
+  <tr><th>2026</th><td>Low Earth Orbit test</td></tr>
+  <tr><th>2030?</th><td>Interstellar launch</td></tr>
+</table>
 
-  <h2 id="what">What it is</h2>
-  <p>A student designed, student built, student tested CubeSat. The aim: <b>reach the edge of the Solar System</b> on a solar sail &mdash; and be the first student team to do it.</p>
-<p>Timeline so far: project inception (2021) &rarr; vacuum chamber testing (2023) &rarr; balloon tests on BEXUS (2024/25) &rarr; Low Earth Orbit test (2026) &rarr; interstellar launch (2030?).</p>
-  <table class="plain spec">
-      <tr><th>Platform</th><td>CubeSat with a deployable solar sail</td></tr>
-      <tr><th>Flown on</th><td>BEXUS stratospheric balloon campaign (&times;2), Esrange, Sweden</td></tr>
-      <tr><th>Next milestone</th><td>Sail deployment test in Low Earth Orbit</td></tr>
-      <tr><th>Sub-teams</th><td>Electronics &middot; Orbital sims &middot; Mechanical design + testing &middot; Structural sims &middot; Plasma modelling &middot; Outreach / media</td></tr>
-  </table>
+<h2>Papers and conferences</h2>
+<div class="paper"><img src="assets/img/projects/svarog-paper1.jpg" alt=""><p><i>Mission Concept and Development of the First Interstellar CubeSat Powered by Solar Sailing Technology</i></p></div>
+<div class="paper"><img src="assets/img/projects/svarog-paper2.jpg" alt=""><p><i>Research for and Early-Stage Development of the First Interstellar CubeSat Powered by Solar Sailing Technology</i><br>6th International Symposium on Space Sailing, New York, 2023</p></div>
+<p>We also presented at the First European Interstellar Symposium (Dec 2024), and found a new type of orbit that was previously thought not to be possible. Most of the team got their first publication out of it.</p>
 
-  <h2 id="skills">Skills &amp; techniques you&rsquo;ll pick up</h2>
-  <ul class="chips">
-      <li>PCB design</li>
-      <li>electronics box manufacture</li>
-      <li>orbital simulation</li>
-      <li>orbital optimisation</li>
-      <li>structural simulation</li>
-      <li>energy momentum method</li>
-      <li>plasma modelling</li>
-      <li>composite booms</li>
-      <li>mechanical design</li>
-      <li>vacuum-chamber &amp; drop testing</li>
-      <li>integration &amp; assembly</li>
-      <li>academic writing</li>
-  </ul>
-  <p class="margin-note">More detail on each of these in the <a href="wiki.html">wiki</a> (coming soon).</p>
-
-  <div class="window ">
-  <div class="window__title"><span>Intro course</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Freshers-first approach</b> &mdash; you&rsquo;ll be given responsibility for part of the design and manufacture process, with the team guiding you throughout.</p>
-  </div>
+<h2>Photos</h2>
+<div class="photos">
+  <figure><img src="assets/img/projects/svarog-sail.jpg" alt="Solar sail deployed on a hangar floor" loading="lazy"><figcaption>full sail deployment</figcaption></figure>
+  <figure><img src="assets/img/projects/svarog-drop.jpg" alt="CubeSat hanging for a drop test" loading="lazy"><figcaption>drop test</figcaption></figure>
+  <figure><img src="assets/img/projects/svarog-crane.jpg" alt="Payload lifted by crane" loading="lazy"><figcaption>BEXUS launch prep</figcaption></figure>
+  <figure><img src="assets/img/projects/svarog-kiruna.jpg" alt="Team outside the Swedish Space Corporation" loading="lazy"><figcaption>at SSC in Sweden</figcaption></figure>
+  <figure><img src="assets/img/projects/svarog-workshop.jpg" alt="Team working on hardware" loading="lazy"><figcaption>integration week</figcaption></figure>
 </div>
 
-  <h2 id="gallery">Pictures from the build</h2>
-  <div class="polaroids">
-    <figure><img src="assets/img/projects/svarog-sail.jpg" alt="Solar sail deployed on a hangar floor" loading="lazy"><figcaption>full sail deployment</figcaption></figure>
-    <figure><img src="assets/img/projects/svarog-drop.jpg" alt="CubeSat suspended for a drop test" loading="lazy"><figcaption>drop testing</figcaption></figure>
-    <figure><img src="assets/img/projects/svarog-crane.jpg" alt="Payload lifted by crane for launch" loading="lazy"><figcaption>BEXUS launch prep</figcaption></figure>
-    <figure><img src="assets/img/projects/svarog-kiruna.jpg" alt="Team outside the Swedish Space Corporation" loading="lazy"><figcaption>SSC, Sweden</figcaption></figure>
-    <figure><img src="assets/img/projects/svarog-workshop.jpg" alt="Team working on hardware in a workshop" loading="lazy"><figcaption>integration week chaos</figcaption></figure>
-    <figure><img src="assets/img/projects/svarog-render.jpg" alt="Render of the CubeSat in orbit" loading="lazy"><figcaption>where we&rsquo;re going</figcaption></figure>
+<h2>Teams</h2>
+<ol>
+  <li>Electronics (PCB design, building the electronics box)</li>
+  <li>Orbital simulations</li>
+  <li>Mechanical design + testing</li>
+  <li>Structural simulations</li>
+  <li>Plasma modelling</li>
+  <li>Industrial outreach / media</li>
+</ol>
+<p>New this year: <b>composites engineer</b>, designing new composite booms for the sails.</p>
+<p>We do freshers first, so you'll get given a real bit of the design and manufacturing to own, and we'll help you through it. There are also trips to ESA for testing.</p>
+
+<h2>Join</h2>
+<p>Mondays, 6pm, CAGB 650. Meeting times and rooms get posted in the Svarog group chat in the <a href="join.html">ICSS WhatsApp community</a>.</p>
+<p>Mission lead: Matthew Acevski. Orbital lead: Shiki Vaahan. Instagram: <a href="https://www.instagram.com/project_svarog">@project_svarog</a></p>
 </div>
-
-  <h2 id="papers">Papers &amp; talks</h2>
-  <ul class="papers">
-      <li><img src="assets/img/projects/svarog-paper1.jpg" alt="" loading="lazy"><span>Mission Concept and Development of the First Interstellar CubeSat Powered by Solar Sailing Technology</span></li>
-      <li><img src="assets/img/projects/svarog-paper2.jpg" alt="" loading="lazy"><span>Research for and Early-Stage Development of the First Interstellar CubeSat Powered by Solar Sailing Technology &mdash; 6th International Symposium on Space Sailing, New York, 2023</span></li>
-  </ul>
-
-  <h2 id="updates">Project updates</h2>
-  <div class="window ">
-  <div class="window__title"><span>Latest updates</span><span>&times;</span></div>
-  <div class="window__body">
-    <!-- Paste Instagram / LinkedIn embed code for the latest posts here.
-         Instagram: open a post > ... > Embed > copy code.
-         LinkedIn: open a post > ... > Embed this post > copy code. -->
-    <p class="embed-empty">No updates posted here yet. Paste an Instagram or LinkedIn embed into this box (see the comment in the HTML).</p>
-  </div>
-</div>
-
-  <h2 id="achievements">Key achievements</h2>
-  <ul class="ticks">
-      <li>Flown on <b>BEXUS</b> &mdash; twice</li>
-      <li>Discovered a new type of orbit previously thought not possible</li>
-      <li>Papers and talks at the <b>6th International Symposium on Space Sailing</b> (New York, 2023) and the <b>First European Interstellar Symposium</b> (2024)</li>
-      <li>Most of the team got their first publishing opportunity</li>
-      <li>Multiple trips to ESA for testing</li>
-  </ul>
-
-  <h2 id="join">Get involved</h2>
-  <div class="window ">
-  <div class="window__title"><span>Get involved</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Meeting info:</b> join the ICSS WhatsApp community and hop into the Svarog group chat &mdash; that&rsquo;s where meeting times and rooms get posted.</p>
-    <p><b>When &amp; where:</b> Mondays, 6pm &middot; CAGB 650</p>
-    <p><b>Who to talk to:</b> Mission lead: Matthew Acevski &middot; Orbital lead: Shiki Vaahan</p>
-    <p><b>Questions?</b> Email <a href="mailto:space.society@imperial.ac.uk?subject=Svarog">space.society@imperial.ac.uk</a> &middot; <a href="https://www.instagram.com/project_svarog">Instagram @project_svarog</a></p>
-    <p><a class="btn btn--go" href="join.html">Join ICSS</a></p>
-  </div>
-</div>
-
-</article>
-</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

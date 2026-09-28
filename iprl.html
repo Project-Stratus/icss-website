@@ -3,148 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Imperial Planetary Robotics Lab &middot; ICSS</title>
-  <meta name="description" content="Giving students the space to gain experience in space robotics">
+  <title>IPRL - ICSS</title>
+  <meta name="description" content="Imperial Planetary Robotics Lab: student rovers, drones and planetary research.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<img class="project-pic" src="assets/img/float/iprl-rover.webp" alt="">
+<h1 style="color:#ff9a1f">Imperial Planetary Robotics Lab</h1>
+<p><i>Run with the Imperial College Robotics Society (ICRS)</i></p>
 
-<article class="project project--iprl">
+<p>IPRL's mission is to "give students the space to gain experience in space robotics". That means rovers, drones, maybe robot swarms one day. There are three branches right now:</p>
+<ul>
+  <li><b>Harbinger</b>, the rover team for the European Rover Challenge</li>
+  <li><b>Triton</b>, the research branch</li>
+  <li><b>Alumni Project</b>, for ex-IPRL people who want to keep building</li>
+</ul>
 
-  <header class="project__head">
-    <img class="project__graphic floater-lite" src="assets/img/float/iprl-rover.webp" alt="" aria-hidden="true">
-    <p class="hero__kicker">&ldquo;Want to create artificial celestial life?&rdquo;</p>
-    <h1>Imperial Planetary Robotics Lab </h1>
-    <p class="lede">Giving students the space to gain experience in space robotics</p>
-    <nav class="project__toc">
-      <a href="#what">what it is</a> &middot; <a href="#skills">skills</a> &middot; <a href="#gallery">pictures</a> &middot; <a href="#updates">updates</a> &middot; <a href="#achievements">achievements</a> &middot; <a href="#join">join</a>
-    </nav>
-  </header>
+<h2>European Rover Challenge</h2>
+<p>ERC is held in Poland every year. Last year we came <b>16th</b> out of 100+ teams registered worldwide. This year we want to rebuild the arm, get autonomous driving working and get into the top 10. The competition is in Krak&oacute;w.</p>
+<p>The tasks: maintenance (flipping switches and plugging cables with the arm), probing (picking up a probe and dropping it in the payload), navigation (autonomous drone + rover), science (drilling and sampling, astrobiology) and a presentation.</p>
+<div class="photos">
+  <figure><img src="assets/img/projects/iprl-rover.jpg" alt="The rover in the Mars yard" loading="lazy"><figcaption>the rover</figcaption></figure>
+  <figure><img src="assets/img/projects/iprl-erc.jpg" alt="Team with the rover at ERC" loading="lazy"><figcaption>ERC 2025</figcaption></figure>
+  <figure><img src="assets/img/projects/iprl-build.jpg" alt="Team working on the rover" loading="lazy"><figcaption>fixing things between runs</figcaption></figure>
+  <figure><img src="assets/img/projects/iprl-cad.jpg" alt="CAD render of the rover" loading="lazy"><figcaption>CAD</figcaption></figure>
+  <figure><img src="assets/img/projects/iprl-drone.jpg" alt="CAD render of the drone" loading="lazy"><figcaption>the drone</figcaption></figure>
+</div>
+<p>Rover sub-teams: electronics, drive/chassis/suspension, robotic arm, drill and payload, science, UAV. We're looking for people who can commit 4-8 hours a week.</p>
 
-
-  <h2 id="what">What it is</h2>
-  <p>IPRL is a student-led initiative, run with the Imperial College Robotics Society (ICRS), with one mission: <em>give students the space to gain experience in space robotics</em> &mdash; rovers, drones, even mini robot swarms.</p>
-<p>It has three branches: <b>Harbinger</b>, the rover team competing in the European Rover Challenge; <b>Triton</b>, the research branch; and the <b>Alumni Project</b>. More are on the way.</p>
-  <table class="plain spec">
-      <tr><th>Competition</th><td>European Rover Challenge (ERC), Krak&oacute;w</td></tr>
-      <tr><th>ERC tasks</th><td>Maintenance &middot; Probing &middot; Navigation (rover + drone) &middot; Science &middot; Presentation</td></tr>
-      <tr><th>Rover sub-teams</th><td>Electronics &middot; Drive / chassis / suspension &middot; Robotic arm &middot; Drill / payload &middot; Science &middot; UAV</td></tr>
-      <tr><th>Research (Triton)</th><td>Applications &middot; Geoscience &middot; Engineering challenges</td></tr>
-      <tr><th>Commitment</th><td>Rover team 4&ndash;8 hrs/week &middot; Research 3&ndash;6 hrs/week</td></tr>
-  </table>
-
-  <h2 id="skills">Skills &amp; techniques you&rsquo;ll pick up</h2>
-  <ul class="chips">
-      <li>robotic arm design</li>
-      <li>drive, chassis &amp; suspension</li>
-      <li>electronics</li>
-      <li>UAV autonomy</li>
-      <li>autonomous navigation</li>
-      <li>ArUco marker localisation</li>
-      <li>drilling &amp; sample payloads</li>
-      <li>astrobiology</li>
-      <li>research writing</li>
-      <li>project management</li>
-  </ul>
-  <p class="margin-note">More detail on each of these in the <a href="wiki.html">wiki</a> (coming soon).</p>
-
-  <div class="window ">
-  <div class="window__title"><span>Intro course</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>IPRL Bootcamp Week</b> gets new members up to speed. The research branch starts with an <b>Introduction to Planetary Research</b> term &mdash; three small projects before a big published one.</p>
-  </div>
+<h2>Triton (research)</h2>
+<p>Term 1 is an intro to planetary research with three small projects (sample collection on Mars, Venus geology, lunar water for a moon base). Term 2 is a bigger project with a professor, aiming to publish. Associates do about 3-4 hours a week, leads 4-6.</p>
+<div class="photos">
+  <figure><img src="assets/img/projects/iprl-triton.jpg" alt="Research team at Space Resources Week" loading="lazy"><figcaption>Triton at Space Resources Week, Luxembourg</figcaption></figure>
 </div>
 
-  <h2 id="gallery">Pictures from the build</h2>
-  <div class="polaroids">
-    <figure><img src="assets/img/projects/iprl-rover.jpg" alt="The rover in the Mars yard" loading="lazy"><figcaption>the rover in the Mars yard</figcaption></figure>
-    <figure><img src="assets/img/projects/iprl-erc.jpg" alt="Team posing with the rover at ERC" loading="lazy"><figcaption>ERC 2025</figcaption></figure>
-    <figure><img src="assets/img/projects/iprl-build.jpg" alt="Team working on the rover" loading="lazy"><figcaption>pit stop</figcaption></figure>
-    <figure><img src="assets/img/projects/iprl-cad.jpg" alt="CAD render of the rover" loading="lazy"><figcaption>the rover in CAD</figcaption></figure>
-    <figure><img src="assets/img/projects/iprl-drone.jpg" alt="CAD render of the drone" loading="lazy"><figcaption>the drone</figcaption></figure>
-    <figure><img src="assets/img/projects/iprl-triton.jpg" alt="Research team at Space Resources Week" loading="lazy"><figcaption>Triton in Luxembourg</figcaption></figure>
+<h2>Join</h2>
+<p>Come find us in EE505, or ask in the group chat. Meeting times and rooms get posted in the IPRL group chat in the <a href="join.html">ICSS WhatsApp community</a>.</p>
+<p>Research branch: Charlotte Cao. Email: <a href="mailto:icrobotics@imperial.ac.uk">icrobotics@imperial.ac.uk</a></p>
 </div>
-
-
-  <h2 id="updates">Project updates</h2>
-  <div class="window ">
-  <div class="window__title"><span>Latest updates</span><span>&times;</span></div>
-  <div class="window__body">
-    <!-- Paste Instagram / LinkedIn embed code for the latest posts here.
-         Instagram: open a post > ... > Embed > copy code.
-         LinkedIn: open a post > ... > Embed this post > copy code. -->
-    <p class="embed-empty">No updates posted here yet. Paste an Instagram or LinkedIn embed into this box (see the comment in the HTML).</p>
-  </div>
-</div>
-
-  <h2 id="achievements">Key achievements</h2>
-  <ul class="ticks">
-      <li><b>16th</b> out of 100+ teams registered worldwide at the European Rover Challenge 2025</li>
-      <li>Presented research at Luxembourg Space Resources Week</li>
-      <li>Built an Olympus Rover Trials entry in ~1 month on a shoestring budget</li>
-  </ul>
-
-  <h2 id="join">Get involved</h2>
-  <div class="window ">
-  <div class="window__title"><span>Get involved</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Meeting info:</b> join the ICSS WhatsApp community and hop into the IPRL group chat &mdash; that&rsquo;s where meeting times and rooms get posted.</p>
-    <p><b>When &amp; where:</b> Find us in EE505</p>
-    <p><b>Who to talk to:</b> Head of IPRL: Raph &middot; Research branch: Charlotte Cao &middot; icrobotics@imperial.ac.uk</p>
-    <p><b>Questions?</b> Email <a href="mailto:space.society@imperial.ac.uk?subject=IPRL">space.society@imperial.ac.uk</a></p>
-    <p><a class="btn btn--go" href="join.html">Join ICSS</a></p>
-  </div>
-</div>
-
-</article>
-</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

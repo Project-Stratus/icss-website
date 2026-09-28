@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog &middot; ICSS</title>
+  <title>Blog - ICSS</title>
   <meta name="description" content="News, launch reports and archived posts from Imperial College Space Society.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
@@ -11,47 +11,35 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<h1>Blog</h1>
 
-<div class="page">
-  <h1>Blog</h1>
-  <p class="lede">Dispatches from the workshop, the launch site and the pub afterwards.</p>
+<!--
+  New posts come from a Google Sheet so committee can post without touching the code.
+  Sheet columns (first row): date | title | author | project | body | image | link
+  File > Share > Publish to web > pick the sheet > CSV > Publish, then paste that link into data-sheet below
+  and the normal edit link into the "add a post" link.
+-->
+<div class="sheet-feed" data-sheet=""></div>
+<p><a class="button" href="#" data-sheet-edit>+ Add to the blog</a></p>
 
-  <div class="window">
-    <div class="window__title"><span>Latest posts</span><span>&times;</span></div>
-    <div class="window__body">
-      <!--
-        New posts come from a Google Sheet, so anyone on committee can post without touching code.
-        1. Make a sheet with a header row:  date | title | author | project | body | image | link
-        2. File > Share > Publish to web > (that sheet) > Comma-separated values > Publish
-        3. Paste the published CSV link into data-sheet below, and the edit link into the "add a post" button.
-      -->
-      <div class="sheet-feed" data-sheet="">
-        <p class="embed-empty">No new posts yet &mdash; the feed will show up here once the blog spreadsheet is connected.</p>
-      </div>
-      <p><a class="btn" href="#" data-sheet-edit>+ add to the blog here</a></p>
-    </div>
-  </div>
+<h2 id="archive">Archive</h2>
+<p>Rumour has it that ICSS was founded in medieval times by one of the knights of Camelot. Tragically all our archives from this era were lost in the Great Fire of London. What we've tried to recover of our history is given below.</p>
 
-  <h2 id="archive">From the archives</h2>
-  <p>Rumour has it that ICSS was founded in medieval times by one of the knights of Camelot. Tragically all our archives from this era were lost in the Great Fire of London. What we&rsquo;ve tried to recover of our history is given below.</p>
-
-  <h3>Archived blog posts</h3>
-  <!-- BEGIN archive-list -->
+<h3>Archived blog posts</h3>
+<!-- BEGIN archive-list -->
   <h3 class="year-head">2023</h3>
   <ul class="post-list">
     <li><time>May 2023</time><a href="archive/2023-05-iprl-2023-new-partner.html">IPRL 2023 – New Partner!</a></li>
@@ -103,7 +91,7 @@
   </ul>
   <h3 class="year-head">2014</h3>
   <ul class="post-list">
-    <li><time>Oct 2014</time><span class="gone">Another year! <small>&mdash; lost in the Great Fire</small></span></li>
+    <li><time>Oct 2014</time><span class="gone">Another year! <small>(lost in the Great Fire)</small></span></li>
     <li><time>Mar 2014</time><a href="archive/2014-03-735.html">Election Manifestos 2014</a></li>
     <li><time>Feb 2014</time><a href="archive/2014-02-the-agm-grows-near.html">The AGM Grows Near</a></li>
   </ul>
@@ -113,82 +101,62 @@
     <li><time>Oct 2013</time><a href="archive/2013-10-introductory-meeting.html">Introductory Meeting on Thursday 10th</a></li>
     <li><time>Oct 2013</time><a href="archive/2013-10-a-successful-launch.html">A Successful Launch</a></li>
     <li><time>Sep 2013</time><a href="archive/2013-09-hello.html">Hello!</a></li>
-    <li><time>Aug 2013</time><span class="gone">Welcome to the new committee! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>May 2013</time><span class="gone">SpIN – New Placements with Extended Deadline <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>May 2013</time><span class="gone">IOP Sponsorship! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>May 2013</time><span class="gone">ICSEDS RBS ESSA Entry <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>May 2013</time><span class="gone">ICSEDS Launch Trip <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>May 2013</time><span class="gone">Help Us Find Our HABs! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Apr 2013</time><span class="gone">Upcoming Events <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Apr 2013</time><span class="gone">The UK Space Design Competition 2013 <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Apr 2013</time><span class="gone">SpIN Placement Opportunities 2013 <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Apr 2013</time><span class="gone">Internship Opportunities for RBS ESSA Accredited Society Members <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Apr 2013</time><span class="gone">Discount Tickets for the Festival of the Spoken Nerd! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Mar 2013</time><span class="gone">Volunteer for IOP’s Physics in the Field events <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Mar 2013</time><span class="gone">Manifestos for AGM <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Mar 2013</time><span class="gone">How do you organise a space conference? Planet. <small>&mdash; lost in the Great Fire</small></span></li>
+    <li><time>Aug 2013</time><span class="gone">Welcome to the new committee! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>May 2013</time><span class="gone">SpIN – New Placements with Extended Deadline <small>(lost in the Great Fire)</small></span></li>
+    <li><time>May 2013</time><span class="gone">IOP Sponsorship! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>May 2013</time><span class="gone">ICSEDS RBS ESSA Entry <small>(lost in the Great Fire)</small></span></li>
+    <li><time>May 2013</time><span class="gone">ICSEDS Launch Trip <small>(lost in the Great Fire)</small></span></li>
+    <li><time>May 2013</time><span class="gone">Help Us Find Our HABs! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Apr 2013</time><span class="gone">Upcoming Events <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Apr 2013</time><span class="gone">The UK Space Design Competition 2013 <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Apr 2013</time><span class="gone">SpIN Placement Opportunities 2013 <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Apr 2013</time><span class="gone">Internship Opportunities for RBS ESSA Accredited Society Members <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Apr 2013</time><span class="gone">Discount Tickets for the Festival of the Spoken Nerd! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Mar 2013</time><span class="gone">Volunteer for IOP’s Physics in the Field events <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Mar 2013</time><span class="gone">Manifestos for AGM <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Mar 2013</time><span class="gone">How do you organise a space conference? Planet. <small>(lost in the Great Fire)</small></span></li>
     <li><time>Mar 2013</time><a href="archive/2013-03-committee-201314-elected.html">Committee 2013/14 Elected!</a></li>
-    <li><time>Mar 2013</time><span class="gone">A Good Week for ICSEDS <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Feb 2013</time><span class="gone">We are the 15%! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Feb 2013</time><span class="gone">Nominations for committee 2013/14 open today <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Feb 2013</time><span class="gone">ICSEDS AGM 2012/13 <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Feb 2013</time><span class="gone">DLR EDEN Initiative Intership <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Jan 2013</time><span class="gone">Welcome to a new term! <small>&mdash; lost in the Great Fire</small></span></li>
+    <li><time>Mar 2013</time><span class="gone">A Good Week for ICSEDS <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Feb 2013</time><span class="gone">We are the 15%! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Feb 2013</time><span class="gone">Nominations for committee 2013/14 open today <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Feb 2013</time><span class="gone">ICSEDS AGM 2012/13 <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Feb 2013</time><span class="gone">DLR EDEN Initiative Intership <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Jan 2013</time><span class="gone">Welcome to a new term! <small>(lost in the Great Fire)</small></span></li>
     <li><time>Jan 2013</time><a href="archive/2013-01-project-opportunity-ukseds-payload-for-dare-stratos-ii.html">Project Opportunity : UKSEDS Payload for DARE Stratos II</a></li>
   </ul>
   <h3 class="year-head">2012</h3>
   <ul class="post-list">
-    <li><time>Dec 2012</time><span class="gone">Helium Shortages! Run to the hills!!!! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Dec 2012</time><span class="gone">Happy Holidays! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Nov 2012</time><span class="gone">Welcome to the new ICSEDS Website! <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Nov 2012</time><span class="gone">Surrey Satellite Technology Ltd Trip <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Nov 2012</time><span class="gone">Pulse Jet Engine Casual Meeting <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Nov 2012</time><span class="gone">Lunar Observation by Astrosoc <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Nov 2012</time><span class="gone">IMAX Afternoon – Fly me to the Moon 3D <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Nov 2012</time><span class="gone">High Altitude Ballooning First Meeting <small>&mdash; lost in the Great Fire</small></span></li>
-    <li><time>Nov 2012</time><span class="gone">First Rocketry Meeting <small>&mdash; lost in the Great Fire</small></span></li>
+    <li><time>Dec 2012</time><span class="gone">Helium Shortages! Run to the hills!!!! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Dec 2012</time><span class="gone">Happy Holidays! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Nov 2012</time><span class="gone">Welcome to the new ICSEDS Website! <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Nov 2012</time><span class="gone">Surrey Satellite Technology Ltd Trip <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Nov 2012</time><span class="gone">Pulse Jet Engine Casual Meeting <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Nov 2012</time><span class="gone">Lunar Observation by Astrosoc <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Nov 2012</time><span class="gone">IMAX Afternoon – Fly me to the Moon 3D <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Nov 2012</time><span class="gone">High Altitude Ballooning First Meeting <small>(lost in the Great Fire)</small></span></li>
+    <li><time>Nov 2012</time><span class="gone">First Rocketry Meeting <small>(lost in the Great Fire)</small></span></li>
   </ul>  <!-- END archive-list -->
 
-  <h2 id="elsewhere">ICSS elsewhere</h2>
-  <p>You can find other media covering ICSS published across the internet. Call it a scavenger hunt or whatever.</p>
-  <ul class="ticks">
-    <li><a href="https://web.archive.org/web/2019/http://felixonline.co.uk/articles/2018-11-23-imperial-s-space-society-launches-high-altitude-weather-balloon/">Felix: Imperial&rsquo;s Space Society launches high-altitude weather balloon</a> (2018)</li>
-    <li><a href="https://web.archive.org/web/20230206103353/https://www.union.ic.ac.uk/guilds/icss/stories/">The old society website, as the Wayback Machine remembers it</a></li>
-    <li><a href="https://github.com/Project-Stratus">Project Stratus on GitHub</a></li>
-  </ul>
-  <p class="margin-note">Found something we missed? Email space.society@imperial.ac.uk</p>
+<h2>ICSS elsewhere</h2>
+<p>You can find other media covering ICSS published across the internet. Call it a scavenger hunt or whatever.</p>
+<ul>
+  <li><a href="https://web.archive.org/web/2019/http://felixonline.co.uk/articles/2018-11-23-imperial-s-space-society-launches-high-altitude-weather-balloon/">Felix: Imperial's Space Society launches high-altitude weather balloon</a> (2018)</li>
+  <li><a href="https://web.archive.org/web/20230206103353/https://www.union.ic.ac.uk/guilds/icss/stories/">Our old website on the Wayback Machine</a></li>
+  <li><a href="https://github.com/Project-Stratus">Project Stratus on GitHub</a></li>
+</ul>
+<p class="grey">Found something we missed? Email space.society@imperial.ac.uk</p>
 </div>
 
-</main>
-
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

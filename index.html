@@ -4,186 +4,108 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Imperial College Space Society</title>
-  <meta name="description" content="A student-led society for the development of space bound infrastructure and research. Rocket engines, solar sails, balloons, rovers.">
+  <meta name="description" content="Imperial College Space Society (ICSS). Rocket engines, solar sails, weather balloons and rovers, all built by students.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="home">
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div id="hero">
+  <img class="floater" id="f-rocket"  src="assets/img/float/tycho-rocket.webp"    alt="" draggable="false">
+  <img class="floater" id="f-balloon" src="assets/img/float/stratus-balloon.webp" alt="" draggable="false">
+  <img class="floater" id="f-rover"   src="assets/img/float/iprl-rover.webp"      alt="" draggable="false">
+  <img class="floater" id="f-sail"    src="assets/img/float/svarog-sail.webp"     alt="" draggable="false">
 
-  <section class="hero">
-    <img class="floater floater--rocket"  src="assets/img/float/tycho-rocket.webp"    alt="" aria-hidden="true" draggable="false">
-    <img class="floater floater--balloon" src="assets/img/float/stratus-balloon.webp" alt="" aria-hidden="true" draggable="false">
-    <img class="floater floater--rover"   src="assets/img/float/iprl-rover.webp"      alt="" aria-hidden="true" draggable="false">
-    <img class="floater floater--sail"    src="assets/img/float/svarog-sail.webp"     alt="" aria-hidden="true" draggable="false">
+  <h1>Imperial College<br>Space Society</h1>
+  <p class="subtitle">A student-led society for the development of space bound infrastructure and research.</p>
+  <p>
+    <a class="button" href="#projects">Learn about our projects</a>
+    <a class="button yellow" href="join.html">Join us</a>
+  </p>
 
-    <div class="hero__text">
-      <p class="hero__kicker">a student society at Imperial College London</p>
-      <h1>Imperial College Space Society</h1>
-      <p class="hero__sub">A student-led society for the development of space bound infrastructure and research.</p>
-      <div class="hero__buttons">
-        <a class="btn" href="#projects">Learn about our projects</a>
-        <a class="btn btn--go" href="join.html">Join us</a>
+  <p id="quote">"Come along, there's surely a chance for explosions, we build rockets!"</p>
+</div>
+
+<div class="content" id="projects">
+  <h2>Our Projects</h2>
+  <p>Take your ideas from mind to metal by joining one of our projects. Our projects are entirely student led and most require no prior knowledge, just keen enthusiasm!</p>
+  <p class="small grey"><span class="only-hover">(hover over them)</span><span class="only-touch">(they play when you scroll past)</span></p>
+
+  <div class="projects">
+    <a class="card" href="tycho.html" style="border-color: #19c3d4">
+      <div class="card__media">
+        <video muted loop playsinline preload="none" poster="assets/img/projects/tycho-poster.jpg" data-src="assets/video/tycho-hotfire.mp4"></video>
       </div>
-    </div>
+      <span class="card__name">Tycho</span>
+    </a>
 
-    <blockquote class="quote-note">
-      &ldquo;Come along, there&rsquo;s surely a chance for explosions &mdash; we build rockets!&rdquo;
-    </blockquote>
+    <a class="card" href="svarog.html" style="border-color: #e05ad0">
+      <div class="card__media">
+        <video muted loop playsinline preload="none" poster="assets/img/projects/svarog-poster.jpg" data-src="assets/video/svarog-sail.mp4"></video>
+      </div>
+      <span class="card__name">Svarog</span>
+    </a>
 
-    <a class="hero__scroll" href="#projects">scroll &darr;</a>
-  </section>
+    <a class="card" href="stratus.html" style="border-color: #a26bff">
+      <div class="card__media">
+        <img class="is-on" src="assets/img/projects/stratus-space1.jpg" alt="">
+        <img src="assets/img/projects/stratus-launch.jpg" alt="" loading="lazy">
+        <img src="assets/img/projects/stratus-space2.jpg" alt="" loading="lazy">
+      </div>
+      <span class="card__name">Stratus</span>
+    </a>
 
-  <div class="stats">
-    <div><b>4.5 kN</b><span>Tycho hot-fire at Race 2 Space</span></div>
-    <div><b>16th</b><span>of 100+ teams at the European Rover Challenge</span></div>
-    <div><b>2&times;</b><span>Svarog flights on BEXUS</span></div>
-    <div><b>~30 km</b><span>Stratus balloon altitude</span></div>
+    <a class="card" href="iprl.html" style="border-color: #ff9a1f">
+      <div class="card__media">
+        <img class="is-on" src="assets/img/projects/iprl-rover.jpg" alt="">
+        <img src="assets/img/projects/iprl-build.jpg" alt="" loading="lazy">
+        <img src="assets/img/projects/iprl-erc.jpg" alt="" loading="lazy">
+        <img src="assets/img/projects/iprl-team.jpg" alt="" loading="lazy">
+      </div>
+      <span class="card__name">IPRL</span>
+    </a>
+
+    <a class="card" href="rocketry.html" style="border-color: #4d8dff">
+      <div class="card__media">
+        <img class="is-on" src="assets/img/projects/hpr-onboard.jpg" alt="">
+        <img src="assets/img/projects/hpr-field.jpg" alt="" loading="lazy">
+      </div>
+      <span class="card__name">High Powered Rocketry <span class="new">(new!)</span></span>
+    </a>
+
+    <a class="card" href="rover.html" style="border-color: #ff5a36">
+      <div class="card__media">
+        <img class="is-on" src="assets/img/projects/rover-mini.jpg" alt="">
+        <img src="assets/img/projects/rover-group.jpg" alt="" loading="lazy">
+      </div>
+      <span class="card__name">Rover <span class="new">(new!)</span></span>
+    </a>
   </div>
-
-  <section class="section" id="projects">
-    <div class="section__head">
-      <h2>Our Projects</h2>
-      <p>Take your ideas from mind to metal by joining one of our projects. Our projects are entirely student led and most require no prior knowledge, just keen enthusiasm!</p>
-      <p><span class="margin-note"><span class="only-hover">(hover over one)</span><span class="only-touch">(they play as you scroll)</span></span></p>
-    </div>
-
-    <div class="projects">
-
-      <a class="card card--tycho" href="tycho.html">
-        <div class="card__media">
-          <video muted loop playsinline preload="none" poster="assets/img/projects/tycho-poster.jpg" data-src="assets/video/tycho-hotfire.mp4"></video>
-        </div>
-        <div class="card__shade"></div>
-        <span class="card__tag">rocket engine</span>
-        <span class="card__hint">&#9654;</span>
-        <span class="card__label">
-          <span class="card__name">Tycho</span>
-          <span class="card__what">10 kN liquid bipropellant engine</span>
-        </span>
-      </a>
-
-      <a class="card card--svarog" href="svarog.html">
-        <div class="card__media">
-          <video muted loop playsinline preload="none" poster="assets/img/projects/svarog-poster.jpg" data-src="assets/video/svarog-sail.mp4"></video>
-        </div>
-        <div class="card__shade"></div>
-        <span class="card__tag">cubesat</span>
-        <span class="card__hint">&#9654;</span>
-        <span class="card__label">
-          <span class="card__name">Svarog</span>
-          <span class="card__what">interstellar solar-sailing CubeSat</span>
-        </span>
-      </a>
-
-      <a class="card card--stratus" href="stratus.html">
-        <div class="card__media">
-          <img class="is-on" src="assets/img/projects/stratus-space1.jpg" alt="">
-          <img src="assets/img/projects/stratus-launch.jpg" alt="" loading="lazy">
-          <img src="assets/img/projects/stratus-space2.jpg" alt="" loading="lazy">
-        </div>
-        <div class="card__shade"></div>
-        <span class="card__tag">high-altitude balloon</span>
-        <span class="card__hint">&#9654;</span>
-        <span class="card__label">
-          <span class="card__name">Stratus</span>
-          <span class="card__what">AI-steered weather balloons, 30 km up</span>
-        </span>
-      </a>
-
-      <a class="card card--iprl" href="iprl.html">
-        <div class="card__media">
-          <img class="is-on" src="assets/img/projects/iprl-rover.jpg" alt="">
-          <img src="assets/img/projects/iprl-build.jpg" alt="" loading="lazy">
-          <img src="assets/img/projects/iprl-erc.jpg" alt="" loading="lazy">
-          <img src="assets/img/projects/iprl-team.jpg" alt="" loading="lazy">
-        </div>
-        <div class="card__shade"></div>
-        <span class="card__tag">planetary robotics</span>
-        <span class="card__hint">&#9654;</span>
-        <span class="card__label">
-          <span class="card__name">IPRL</span>
-          <span class="card__what">Imperial Planetary Robotics Lab</span>
-        </span>
-      </a>
-
-      <a class="card card--hpr card--new" href="rocketry.html">
-        <div class="card__media">
-          <img class="is-on" src="assets/img/projects/hpr-onboard.jpg" alt="">
-          <img src="assets/img/projects/hpr-field.jpg" alt="" loading="lazy">
-        </div>
-        <div class="card__shade"></div>
-        <span class="card__tag">model rocketry</span>
-        <span class="card__new">NEW</span>
-        <span class="card__label">
-          <span class="card__name">High-Powered Rocketry</span>
-          <span class="card__what">G-class motor, chasing apogee</span>
-        </span>
-      </a>
-
-      <a class="card card--rover card--new" href="rover.html">
-        <div class="card__media">
-          <img class="is-on" src="assets/img/projects/rover-mini.jpg" alt="">
-          <img src="assets/img/projects/rover-group.jpg" alt="" loading="lazy">
-        </div>
-        <div class="card__shade"></div>
-        <span class="card__tag">mini rover</span>
-        <span class="card__new">NEW</span>
-        <span class="card__label">
-          <span class="card__name">Rover</span>
-          <span class="card__what">UKSEDS Olympus Rover Trials, with IPRL</span>
-        </span>
-      </a>
-
-    </div>
-  </section>
-
-</main>
+</div>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

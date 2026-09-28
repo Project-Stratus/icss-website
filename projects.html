@@ -3,103 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects &middot; ICSS</title>
-  <meta name="description" content="Six student-led space engineering projects at Imperial College London.">
+  <title>Projects - ICSS</title>
+  <meta name="description" content="All ICSS projects.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<h1>Projects</h1>
+<p>All our projects are run by students and most don't need any experience. Every project runs an intro course at the start of the year so you can turn up knowing nothing (Tycho's is a 4 week rocket engine design course, for example).</p>
 
-<div class="page">
-  <h1>Projects</h1>
-  <p class="lede">Take your ideas from mind to metal. Our projects are entirely student led and most require no prior knowledge, just keen enthusiasm!</p>
-  <div class="proj-list">
-    <a class="proj-row proj-row--tycho" href="tycho.html">
-      <img src="assets/img/float/tycho-rocket.webp" alt="" aria-hidden="true">
-      <span><b>Project Tycho</b><br><small>A high-thrust liquid bipropellant rocket engine</small></span>
-      <span class="proj-row__go">open &rarr;</span>
-    </a>
-    <a class="proj-row proj-row--svarog" href="svarog.html">
-      <img src="assets/img/float/svarog-sail.webp" alt="" aria-hidden="true">
-      <span><b>Project Svarog</b><br><small>An interstellar solar-sailing CubeSat</small></span>
-      <span class="proj-row__go">open &rarr;</span>
-    </a>
-    <a class="proj-row proj-row--stratus" href="stratus.html">
-      <img src="assets/img/float/stratus-balloon.webp" alt="" aria-hidden="true">
-      <span><b>Project Stratus</b><br><small>High-altitude ballooning, steered by AI</small></span>
-      <span class="proj-row__go">open &rarr;</span>
-    </a>
-    <a class="proj-row proj-row--iprl" href="iprl.html">
-      <img src="assets/img/float/iprl-rover.webp" alt="" aria-hidden="true">
-      <span><b>Imperial Planetary Robotics Lab</b><br><small>Giving students the space to gain experience in space robotics</small></span>
-      <span class="proj-row__go">open &rarr;</span>
-    </a>
-    <a class="proj-row proj-row--hpr" href="rocketry.html">
-      <img src="assets/img/float/tycho-rocket.webp" alt="" aria-hidden="true">
-      <span><b>High-Powered Rocketry</b> <em class="new-tag">new!</em><br><small>Design, build, fly, recover &mdash; and go higher</small></span>
-      <span class="proj-row__go">open &rarr;</span>
-    </a>
-    <a class="proj-row proj-row--rover" href="rover.html">
-      <img src="assets/img/float/iprl-rover.webp" alt="" aria-hidden="true">
-      <span><b>Mini-Rover</b> <em class="new-tag">new!</em><br><small>A Mars-style rover for the UKSEDS Olympus Rover Trials</small></span>
-      <span class="proj-row__go">open &rarr;</span>
-    </a>
-  </div>
-  <div class="window ">
-  <div class="window__title"><span>Good to know</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Every project runs an intro course</b> at the start of the year, so you can turn up knowing nothing. Tycho, for example, runs a 4-week Rocket Engine Design Crash Course where you design your own engine with the same software as the real one.</p>
-    <p>Meeting times are posted in each project&rsquo;s group chat in the <a href="join.html">ICSS WhatsApp community</a>.</p>
-  </div>
+<h2><a href="tycho.html">Tycho</a></h2>
+<p>Liquid bipropellant rocket engine, going for the UK student thrust record. Hot-fired at 4.5 kN last July.</p>
+
+<h2><a href="svarog.html">Svarog</a></h2>
+<p>Solar sailing CubeSat that wants to get to the edge of the solar system. Flown on BEXUS twice.</p>
+
+<h2><a href="stratus.html">Stratus</a></h2>
+<p>High altitude weather balloons that steer themselves using reinforcement learning.</p>
+
+<h2><a href="iprl.html">IPRL</a></h2>
+<p>Imperial Planetary Robotics Lab. Rovers, drones and planetary research. 16th at the European Rover Challenge 2025.</p>
+
+<h2><a href="rocketry.html">High Powered Rocketry</a> <span class="new">(new!)</span></h2>
+<p>G-class model rockets, back after a couple of years off.</p>
+
+<h2><a href="rover.html">Mini Rover</a> <span class="new">(new!)</span></h2>
+<p>Joint ICSS x IPRL rover for the UKSEDS Olympus Rover Trials.</p>
 </div>
-</div>
-</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

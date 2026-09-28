@@ -3,143 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>High-Powered Rocketry &middot; ICSS</title>
-  <meta name="description" content="Design, build, fly, recover - and go higher">
+  <title>High Powered Rocketry - ICSS</title>
+  <meta name="description" content="High powered model rocketry at ICSS.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<img class="project-pic" src="assets/img/float/tycho-rocket.webp" alt="">
+<h1 style="color:#4d8dff">High Powered Rocketry <span class="new">(new!)</span></h1>
 
-<article class="project project--hpr">
+<p>Design and build a model rocket on a G-class motor and get it as high as possible. Bonus points for collecting data on the way up and getting it back in one piece.</p>
+<p>ICSS used to do this until 2023 and we're bringing it back. We've already got the equipment, supplies and funding, and we've done the National Rocketry Championship before so we'd like to go back.</p>
 
-  <header class="project__head">
-    <img class="project__graphic floater-lite" src="assets/img/float/tycho-rocket.webp" alt="" aria-hidden="true">
-    <p class="hero__kicker">&ldquo;Is the speed of sound too slow for you?&rdquo;</p>
-    <h1>High-Powered Rocketry <span class="card__new">NEW</span></h1>
-    <p class="lede">Design, build, fly, recover &mdash; and go higher</p>
-    <nav class="project__toc">
-      <a href="#what">what it is</a> &middot; <a href="#skills">skills</a> &middot; <a href="#gallery">pictures</a> &middot; <a href="#updates">updates</a> &middot; <a href="#achievements">achievements</a> &middot; <a href="#join">join</a>
-    </nav>
-  </header>
-
-
-  <h2 id="what">What it is</h2>
-  <p>Design and build a high-powered model rocket on a G-class motor. Main aim: the highest possible apogee. Side quests: collect data during the flight with on-board sensors, and get the rocket back in one piece.</p>
-<p>ICSS ran this project until 2023 and we&rsquo;re bringing it back. The equipment, supplies and funding are ready to go, and we have pedigree in the UK National Rocketry Championship.</p>
-  <table class="plain spec">
-      <tr><th>Motor</th><td>G-class</td></tr>
-      <tr><th>Goal</th><td>Maximum apogee + flight data + recovery</td></tr>
-      <tr><th>Experience needed</th><td>None! Low-risk, new project &mdash; don&rsquo;t worry about making mistakes</td></tr>
-  </table>
-
-  <h2 id="skills">Skills &amp; techniques you&rsquo;ll pick up</h2>
-  <ul class="chips">
-      <li>aerodynamics</li>
-      <li>OpenRocket</li>
-      <li>MATLAB</li>
-      <li>CAD</li>
-      <li>FEA</li>
-      <li>CFD</li>
-      <li>laser cutting</li>
-      <li>3D printing</li>
-      <li>electronics &amp; flight sensors</li>
-      <li>structures &amp; mechanisms</li>
-      <li>recovery systems</li>
-  </ul>
-  <p class="margin-note">More detail on each of these in the <a href="wiki.html">wiki</a> (coming soon).</p>
-
-  <div class="window ">
-  <div class="window__title"><span>Intro course</span><span>&times;</span></div>
-  <div class="window__body">
-    <p>Every ICSS project runs an intro course for new members at the start of the year &mdash; no experience needed. Join the WhatsApp community for dates.</p>
-  </div>
+<div class="photos">
+  <figure><img src="assets/img/projects/hpr-onboard.jpg" alt="View from a camera on the rocket" loading="lazy"><figcaption>onboard camera</figcaption></figure>
+  <figure><img src="assets/img/projects/hpr-field.jpg" alt="Team at the launch field" loading="lazy"><figcaption>launch day (a few years ago)</figcaption></figure>
+  <figure><img src="assets/img/projects/hpr-sim.jpg" alt="OpenRocket simulation plot" loading="lazy"><figcaption>OpenRocket sim</figcaption></figure>
 </div>
 
-  <h2 id="gallery">Pictures from the build</h2>
-  <div class="polaroids">
-    <figure><img src="assets/img/projects/hpr-onboard.jpg" alt="On-board camera view looking down from a rocket" loading="lazy"><figcaption>on-board camera, going up</figcaption></figure>
-    <figure><img src="assets/img/projects/hpr-field.jpg" alt="Team preparing a rocket on a launch field" loading="lazy"><figcaption>launch day</figcaption></figure>
-    <figure><img src="assets/img/projects/hpr-sim.jpg" alt="Flight simulation plot" loading="lazy"><figcaption>OpenRocket simulation</figcaption></figure>
+<p>You'd pick up aerodynamics, electronics, structures, OpenRocket, MATLAB, CAD/FEA/CFD, laser cutting and 3D printing.</p>
+<p>You don't need any experience, it's a new low-risk project so don't worry about breaking things. Meeting times and rooms get posted in the rocketry group chat in the <a href="join.html">ICSS WhatsApp community</a>.</p>
 </div>
-
-
-  <h2 id="updates">Project updates</h2>
-  <div class="window ">
-  <div class="window__title"><span>Latest updates</span><span>&times;</span></div>
-  <div class="window__body">
-    <!-- Paste Instagram / LinkedIn embed code for the latest posts here.
-         Instagram: open a post > ... > Embed > copy code.
-         LinkedIn: open a post > ... > Embed this post > copy code. -->
-    <p class="embed-empty">No updates posted here yet. Paste an Instagram or LinkedIn embed into this box (see the comment in the HTML).</p>
-  </div>
-</div>
-
-  <h2 id="achievements">Key achievements</h2>
-  <ul class="ticks">
-      <li>Previous ICSS rocketry teams competed in the National Rocketry Championship</li>
-      <li>Relaunched for 2026/27</li>
-  </ul>
-
-  <h2 id="join">Get involved</h2>
-  <div class="window ">
-  <div class="window__title"><span>Get involved</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Meeting info:</b> join the ICSS WhatsApp community and hop into the High-Powered Rocketry group chat &mdash; that&rsquo;s where meeting times and rooms get posted.</p>
-    
-    
-    <p><b>Questions?</b> Email <a href="mailto:space.society@imperial.ac.uk?subject=High-Powered%20Rocketry">space.society@imperial.ac.uk</a></p>
-    <p><a class="btn btn--go" href="join.html">Join ICSS</a></p>
-  </div>
-</div>
-
-</article>
-</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

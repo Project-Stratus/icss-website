@@ -3,123 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Events &middot; ICSS</title>
-  <meta name="description" content="Launch watch parties, hackathons, movie nights, trivia, industry talks and trips.">
+  <title>Events - ICSS</title>
+  <meta name="description" content="ICSS events: launch watch parties, hackathons, movie nights, trivia, talks and trips.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<h1>Events</h1>
 
-<div class="page page--wide">
-  <h1>Events</h1>
-  <p class="lede">Not everything we do involves a torque wrench.</p>
-
-  <section class="watchparty" aria-label="Launch watch parties">
-    <div class="crt">
-      <div class="crt__glass">
-        <!-- swap the video id to change what's on the telly -->
-        <iframe data-yt="NfrLoG2CeNU" title="SpaceX catches the Starship Super Heavy booster with the launch tower's chopsticks" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        <div class="crt__scan" aria-hidden="true"></div>
-      </div>
-      <div class="crt__label">ICSS-TV &middot; CH 5 &middot; LIVE</div>
+<div class="watchparty">
+  <div class="crt">
+    <div class="crt__glass">
+      <!-- change data-yt to a different youtube video id to change what's on the tv -->
+      <iframe data-yt="NfrLoG2CeNU" title="SpaceX catching the Starship booster" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="crt__scan"></div>
     </div>
-    <svg class="crowd" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
-      <!-- hand-drawn silhouettes: heads, shoulders, a lot of pointing -->
-      <g fill="#0d0c0a">
-        <circle cx="120" cy="150" r="46"/><path d="M40 300 C40 220 70 200 120 200 C170 200 200 220 200 300Z"/>
-        <path d="M175 215 L250 90 L268 100 L200 230Z"/><circle cx="262" cy="88" r="14"/>
-        <circle cx="330" cy="175" r="40"/><path d="M260 300 C260 240 290 225 330 225 C370 225 400 240 400 300Z"/>
-        <circle cx="520" cy="140" r="50"/><path d="M430 300 C430 215 465 195 520 195 C575 195 610 215 610 300Z"/>
-        <path d="M590 210 L650 60 L672 68 L615 225Z"/><circle cx="664" cy="58" r="15"/>
-        <path d="M455 215 L405 110 L385 118 L430 230Z"/><circle cx="392" cy="108" r="13"/>
-        <circle cx="720" cy="170" r="42"/><path d="M645 300 C645 235 675 218 720 218 C765 218 795 235 795 300Z"/>
-        <rect x="770" y="120" width="34" height="56" rx="5" transform="rotate(12 787 148)"/>
-        <path d="M760 230 L790 170 L806 178 L780 240Z"/>
-        <circle cx="900" cy="150" r="48"/><path d="M820 300 C820 220 850 200 900 200 C950 200 980 220 980 300Z"/>
-      </g>
-    </svg>
-    <p class="bubble bubble--a">OMG THEY CAUGHT THE ROCKET!!</p>
-    <p class="bubble bubble--b">no way no way no WAY</p>
-  </section>
-
-  <h2>Launch watch parties</h2>
-  <p>Big launch coming up? We book a room, put it on the big screen and shout at it together. Delays and scrubs are inevitable, so there&rsquo;s usually a space quiz running while we wait.</p>
-
-  <h2>Hackathons</h2>
-  <p>We run hackathons with hardware, software and presentation tasks, sponsored and judged by people from industry. Expect 3D printers, circuit-assembly kit, a prototyping space, free lunch and prizes.</p>
-  <ul class="ticks">
-    <li><b>LEOHack</b> &mdash; simulating in-space docking of satellite vehicles (with Magdrive)</li>
-    <li><b>SatHack</b> &mdash; simulating autonomous debris-evasion systems (with Lodestar Space)</li>
-    <li>Prizes totalling over &pound;300 &middot; next one: <b>21&ndash;22 November</b></li>
-  </ul>
-  <div class="polaroids">
-    <figure><img src="assets/img/events/hack-build.jpg" alt="Hackathon teams building on the floor" loading="lazy"><figcaption>building a docking rig out of cardboard</figcaption></figure>
-    <figure><img src="assets/img/events/hack-team.jpg" alt="Team at laptops with 3D printed parts" loading="lazy"><figcaption>3D-printed satellites</figcaption></figure>
-    <figure><img src="assets/img/events/hack-room.jpg" alt="Room full of hackathon participants" loading="lazy"><figcaption>full house</figcaption></figure>
-    <figure><img src="assets/img/events/hack-winners.jpg" alt="Winners holding prizes" loading="lazy"><figcaption>the winners</figcaption></figure>
-    <figure><img src="assets/img/events/hack-group.jpg" alt="Group photo of hackathon participants" loading="lazy"><figcaption>everyone, slightly sleep deprived</figcaption></figure>
-</div>
-
-  <h2>&hellip;and the rest</h2>
-  <div class="event-grid">
-    <div class="event-card"><img src="assets/img/events/movies.jpg" alt="Space film posters" loading="lazy"><h3>Movie nights</h3><p>Free snacks, a space film, and people to argue about the physics with.</p></div>
-    <div class="event-card"><div class="event-card__q" aria-hidden="true">?</div><h3>Trivia nights</h3><p>Pub-quiz style space trivia (sometimes with AstroSoc). There may be prizes.</p></div>
-    <div class="event-card"><img src="assets/img/events/talk-lecture.jpg" alt="Audience at an industry talk" loading="lazy"><h3>Industry talks</h3><p>People from ESA, the Science Museum and space start-ups telling us how it really works.</p></div>
-    <div class="event-card"><img src="assets/img/events/trip-ral.jpg" alt="RAL Space building" loading="lazy"><h3>Trips</h3><p>Site visits and tours &mdash; RAL Space, test sites, and wherever else will have us.</p></div>
+    <div class="crt__label">ICSS TV</div>
   </div>
-
-  <h2>Outreach</h2>
-  <p>We support the UK Space Design Competition (hosting, volunteering and talks), the UK Youth Rocketry Competition (UKROC) and CanSat.</p>
-
-  <p class="margin-note">Dates get posted in the WhatsApp community first &rarr; <a href="join.html">join</a></p>
+  <svg class="crowd" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+    <g fill="#000">
+      <circle cx="120" cy="150" r="46"/><path d="M40 300 C40 220 70 200 120 200 C170 200 200 220 200 300Z"/>
+      <path d="M175 215 L250 90 L268 100 L200 230Z"/><circle cx="262" cy="88" r="14"/>
+      <circle cx="330" cy="175" r="40"/><path d="M260 300 C260 240 290 225 330 225 C370 225 400 240 400 300Z"/>
+      <circle cx="520" cy="140" r="50"/><path d="M430 300 C430 215 465 195 520 195 C575 195 610 215 610 300Z"/>
+      <path d="M590 210 L650 60 L672 68 L615 225Z"/><circle cx="664" cy="58" r="15"/>
+      <path d="M455 215 L405 110 L385 118 L430 230Z"/><circle cx="392" cy="108" r="13"/>
+      <circle cx="720" cy="170" r="42"/><path d="M645 300 C645 235 675 218 720 218 C765 218 795 235 795 300Z"/>
+      <rect x="770" y="120" width="34" height="56" rx="5" transform="rotate(12 787 148)"/>
+      <path d="M760 230 L790 170 L806 178 L780 240Z"/>
+      <circle cx="900" cy="150" r="48"/><path d="M820 300 C820 220 850 200 900 200 C950 200 980 220 980 300Z"/>
+    </g>
+  </svg>
+  <p class="bubble one">OMG THEY CAUGHT THE ROCKET!!</p>
+  <p class="bubble two">no way no way no WAY</p>
 </div>
-</main>
+
+<h2>Launch watch parties</h2>
+<p>When there's a big launch on we get a room and put it on the big screen. Launches get delayed a lot so there's usually a space quiz going while we wait.</p>
+
+<h2>Hackathons</h2>
+<p>Last year we ran two:</p>
+<ul>
+  <li><b>LEOHack</b>: simulating satellites docking in space (sponsored by Magdrive)</li>
+  <li><b>SatHack</b>: simulating autonomous space debris avoidance (sponsored by Lodestar Space)</li>
+</ul>
+<p>Hardware, software and presentation tasks, 3D printers and circuit stuff to use, free lunch, and over &pound;300 in prizes. The next one is on <b>21-22 November</b>.</p>
+<div class="photos">
+  <figure><img src="assets/img/events/hack-build.jpg" alt="Hackathon teams building on the floor" loading="lazy"><figcaption></figcaption></figure>
+  <figure><img src="assets/img/events/hack-team.jpg" alt="Team at laptops with 3D printed parts" loading="lazy"><figcaption></figcaption></figure>
+  <figure><img src="assets/img/events/hack-winners.jpg" alt="Winners holding prizes" loading="lazy"><figcaption>the winners</figcaption></figure>
+  <figure><img src="assets/img/events/hack-room.jpg" alt="Room full of people at the hackathon" loading="lazy"><figcaption></figcaption></figure>
+</div>
+
+<h2>Other stuff we do</h2>
+<ul>
+  <li><b>Movie nights</b> (free snacks)</li>
+  <li><b>Trivia nights</b>, sometimes with AstroSoc</li>
+  <li><b>Industry talks</b>, e.g. the Science Museum's Head of Space, ESA's head of recruitment</li>
+  <li><b>Trips</b>, like the RAL Space tour</li>
+</ul>
+<p>We also help out with the UK Space Design Competition, UKROC and CanSat.</p>
+<p>Dates get posted in the <a href="join.html">WhatsApp community</a> first.</p>
+</div>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>

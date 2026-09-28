@@ -3,160 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project Tycho &middot; ICSS</title>
-  <meta name="description" content="A high-thrust liquid bipropellant rocket engine">
+  <title>Project Tycho - ICSS</title>
+  <meta name="description" content="Project Tycho: a student-built liquid bipropellant rocket engine at Imperial College London.">
   <link rel="icon" href="assets/img/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
-<header class="taskbar">
-  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-white.png" alt="ICSS">
-  </a>
-  <nav class="taskbar__nav" aria-label="Main">
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-white.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
     <a href="blog.html">Blog</a>
     <a href="wiki.html">Wiki</a>
     <a href="events.html">Events</a>
     <a href="projects.html">Projects</a>
-    <a class="taskbar__join" href="join.html">Join us</a>
-  </nav>
-</header>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
 <!-- END taskbar -->
 
-<main>
+<div class="content">
+<img class="project-pic" src="assets/img/float/tycho-rocket.webp" alt="">
+<h1 style="color:#19c3d4">Project Tycho</h1>
+<p><i>A high-thrust liquid bipropellant rocket engine</i></p>
 
-<article class="project project--tycho">
+<p>We're a team of about 20 undergrad, masters and PhD students designing, building and firing a liquid rocket engine. Tycho is the new engine, the older design was called Kepler (you'll still see that name around).</p>
+<p>What we're going for:</p>
+<ul>
+  <li>the UK student record for highest thrust from a liquid bipropellant engine (10 kN)</li>
+  <li>being the first student team to test a liquid biprop engine with turbomachinery we designed ourselves</li>
+</ul>
 
-  <header class="project__head">
-    <img class="project__graphic floater-lite" src="assets/img/float/tycho-rocket.webp" alt="" aria-hidden="true">
-    <p class="hero__kicker">&ldquo;Can you handle the heat?&rdquo;</p>
-    <h1>Project Tycho </h1>
-    <p class="lede">A high-thrust liquid bipropellant rocket engine</p>
-    <nav class="project__toc">
-      <a href="#what">what it is</a> &middot; <a href="#skills">skills</a> &middot; <a href="#gallery">pictures</a> &middot; <a href="#updates">updates</a> &middot; <a href="#achievements">achievements</a> &middot; <a href="#join">join</a>
-    </nav>
-  </header>
+<video class="big" src="assets/video/tycho-hotfire.mp4" poster="assets/img/projects/tycho-poster.jpg" muted loop playsinline autoplay controls></video>
+<p class="small grey">Our hot-fire at Race 2 Space in July, Westcott Venture Park</p>
 
-  <figure class="tv">
-    <video src="assets/video/tycho-hotfire.mp4" poster="assets/img/projects/tycho-poster.jpg" muted loop playsinline autoplay preload="metadata"></video>
-    <figcaption>Hot-fire at Race 2 Space, Westcott Venture Park</figcaption>
-  </figure>
+<h2>The engine</h2>
+<table>
+  <tr><th>Propellants</th><td>Liquid oxygen + isopropyl alcohol (IPA)</td></tr>
+  <tr><th>Thrust</th><td>~11 kN (about 1120 kg) at 60 bar chamber pressure</td></tr>
+  <tr><th>Cycle</th><td>Gas-generator (open) cycle</td></tr>
+  <tr><th>Injector</th><td>Coaxial swirl</td></tr>
+  <tr><th>Cooling</th><td>LOx regen + film cooling</td></tr>
+  <tr><th>Other stuff</th><td>Supersonic turbomachinery, autogenous re-pressurisation</td></tr>
+</table>
+<p>Changes from the last design: made in fewer parts, a new 24 kRPM turbo, and a longer chamber with a shorter nozzle.</p>
 
-  <h2 id="what">What it is</h2>
-  <p>Tycho is a team of around 20 undergraduate, masters and PhD students designing, building and firing a liquid rocket engine. It started life as <em>Project Kepler</em>; Tycho is the next-generation design.</p>
-<p>Two goals: break the UK student record for the highest thrust produced by a liquid bipropellant engine (10&nbsp;kN), and become the first student team to test a liquid bipropellant engine with turbomachinery designed in-house.</p>
-  <table class="plain spec">
-      <tr><th>Propellants</th><td>Liquid oxygen + isopropyl alcohol (IPA)</td></tr>
-      <tr><th>Thrust / chamber pressure</th><td>~11 kN (~1,120 kgf) at 60 bar</td></tr>
-      <tr><th>Power cycle</th><td>Gas-generator (open) cycle</td></tr>
-      <tr><th>Injector</th><td>Coaxial swirl</td></tr>
-      <tr><th>Cooling</th><td>LOx regenerative + film cooling</td></tr>
-      <tr><th>Also</th><td>Supersonic turbomachinery, autogenous re-pressurisation</td></tr>
-  </table>
+<h2>What you'll learn</h2>
+<p>CAD, FEA and CFD, regen cooling analysis, injector and nozzle design, turbomachinery, machining and metal 3D printing, writing test procedures and design reviews (PDR/CDR), and a bit of electronics for the flow control unit and pressure sensors.</p>
+<p>New members can do the <b>Rocket Engine Design Crash Course</b>: 4 weeks, you design your own engine using the same theory and software we use for the real one. Good if you've never touched rocket engines before.</p>
 
-  <h2 id="skills">Skills &amp; techniques you&rsquo;ll pick up</h2>
-  <ul class="chips">
-      <li>CAD</li>
-      <li>FEA / stress analysis</li>
-      <li>CFD</li>
-      <li>regenerative cooling analysis</li>
-      <li>turbomachinery design</li>
-      <li>injector design</li>
-      <li>nozzle design</li>
-      <li>machining</li>
-      <li>additive manufacturing (metal AM)</li>
-      <li>propulsion analysis software</li>
-      <li>flow control electronics</li>
-      <li>pressure transducers</li>
-      <li>test procedures &amp; safety</li>
-      <li>design reviews (PDR / CDR)</li>
-  </ul>
-  <p class="margin-note">More detail on each of these in the <a href="wiki.html">wiki</a> (coming soon).</p>
-
-  <div class="window ">
-  <div class="window__title"><span>Intro course</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Rocket Engine Design Crash Course</b> &mdash; learn how to design your own monolithic engine in 4 weeks, using the same theory and software as the real engine. Covers engine specification, injectors, power cycles, thermal management and manufacturing. Great if you&rsquo;re new to rocket engines and don&rsquo;t know where to start.</p>
-  </div>
+<h2>Photos</h2>
+<div class="photos">
+  <figure><img src="assets/img/projects/tycho-hotfire.jpg" alt="Engine firing on the test stand at Westcott" loading="lazy"><figcaption>hot-fire!!</figcaption></figure>
+  <figure><img src="assets/img/projects/tycho-am-chamber.jpg" alt="3D printed thrust chamber held in a hand" loading="lazy"><figcaption>the thrust chamber assembly</figcaption></figure>
+  <figure><img src="assets/img/projects/tycho-injector.jpg" alt="Two injector plates with lots of small holes" loading="lazy"><figcaption>121-element coaxial shear pin injector</figcaption></figure>
+  <figure><img src="assets/img/projects/tycho-copper-mcc.jpg" alt="Copper combustion chamber" loading="lazy"><figcaption>assembled MCC + injector</figcaption></figure>
+  <figure><img src="assets/img/projects/tycho-turbo-stack.jpg" alt="Machined turbomachinery parts" loading="lazy"><figcaption>turbomachinery stack</figcaption></figure>
+  <figure><img src="assets/img/projects/tycho-ready.jpg" alt="Two students bolting the engine to the test mount" loading="lazy"><figcaption>bolting it to the mount</figcaption></figure>
+  <figure><img src="assets/img/projects/tycho-testteam.jpg" alt="The team at the test site" loading="lazy"><figcaption>test day team</figcaption></figure>
 </div>
 
-  <h2 id="gallery">Pictures from the build</h2>
-  <div class="polaroids">
-    <figure><img src="assets/img/projects/tycho-hotfire.jpg" alt="Engine firing on the test stand at Westcott" loading="lazy"><figcaption>a successful hot-fire!</figcaption></figure>
-    <figure><img src="assets/img/projects/tycho-am-chamber.jpg" alt="Additively manufactured thrust chamber held in a hand" loading="lazy"><figcaption>the glorious thrust chamber assembly</figcaption></figure>
-    <figure><img src="assets/img/projects/tycho-injector.jpg" alt="Two injector plates with many small holes" loading="lazy"><figcaption>121-element coaxial shear pin injector</figcaption></figure>
-    <figure><img src="assets/img/projects/tycho-copper-mcc.jpg" alt="Copper combustion chamber on its injector" loading="lazy"><figcaption>assembled MCC + injector</figcaption></figure>
-    <figure><img src="assets/img/projects/tycho-turbo-stack.jpg" alt="Machined turbomachinery parts laid out on a table" loading="lazy"><figcaption>turbomachinery stack elements</figcaption></figure>
-    <figure><img src="assets/img/projects/tycho-ready.jpg" alt="Two students bolting the engine to the test mount" loading="lazy"><figcaption>fastening the engine to the mount</figcaption></figure>
-    <figure><img src="assets/img/projects/tycho-testteam.jpg" alt="The team at the test site" loading="lazy"><figcaption>the test day team</figcaption></figure>
+<h2>What we've done</h2>
+<ul>
+  <li>Hot-fired at Race 2 Space in the Airborne Engineering test bays: 4500 N, enough to lift a grand piano</li>
+  <li>Tested our turbine (as a final year project) and it worked really well</li>
+  <li>Passed our CDR and wrote the safety and test procedures</li>
+  <li>New chamber + nozzle, new injector, turbomachinery manufactured</li>
+  <li>Submitted the Tycho thrust chamber PDR to Race 2 Space</li>
+</ul>
+<p>Next: turbopump testing at the start of term, more hot-fires later in the year, and a full integrated test of the new engine.</p>
+
+<h2>Updates</h2>
+<!-- paste Instagram / LinkedIn embed code here -->
+<p class="grey">Follow <a href="https://www.instagram.com/ic_space_society">@ic_space_society</a> for test day videos.</p>
+
+<h2>Join</h2>
+<p>Meeting times and rooms get posted in the Tycho group chat in the <a href="join.html">ICSS WhatsApp community</a>. No experience or application needed.</p>
+<p>Project lead: Oliver Edmond. Technical leads: Sanan Shankar and Tim Barrett. Questions? Email <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></p>
 </div>
-
-
-  <h2 id="updates">Project updates</h2>
-  <div class="window ">
-  <div class="window__title"><span>Latest updates</span><span>&times;</span></div>
-  <div class="window__body">
-    <!-- Paste Instagram / LinkedIn embed code for the latest posts here.
-         Instagram: open a post > ... > Embed > copy code.
-         LinkedIn: open a post > ... > Embed this post > copy code. -->
-    <p class="embed-empty">No updates posted here yet. Paste an Instagram or LinkedIn embed into this box (see the comment in the HTML).</p>
-  </div>
-</div>
-
-  <h2 id="achievements">Key achievements</h2>
-  <ul class="ticks">
-      <li>Hot-fired at <b>Race 2 Space</b> (Airborne Engineering test bays, Westcott Venture Park) &mdash; <b>4,500 N</b> of thrust, enough to lift a grand piano</li>
-      <li>Turbine testing (as part of a final-year project) confirmed a highly effective design</li>
-      <li>Wrote and passed the CDR and safety / testing procedures</li>
-      <li>New integrated chamber + nozzle, new injector, turbomachinery manufactured</li>
-      <li>Tycho thrust chamber PDR submitted to Race 2 Space</li>
-  </ul>
-
-  <h2 id="join">Get involved</h2>
-  <div class="window ">
-  <div class="window__title"><span>Get involved</span><span>&times;</span></div>
-  <div class="window__body">
-    <p><b>Meeting info:</b> join the ICSS WhatsApp community and hop into the Tycho group chat &mdash; that&rsquo;s where meeting times and rooms get posted.</p>
-    
-    <p><b>Who to talk to:</b> Project lead: Oliver Edmond &middot; Technical leads: Sanan Shankar &amp; Tim Barrett &middot; Design consultant: Theo Macklin</p>
-    <p><b>Questions?</b> Email <a href="mailto:space.society@imperial.ac.uk?subject=Tycho">space.society@imperial.ac.uk</a></p>
-    <p><a class="btn btn--go" href="join.html">Join ICSS</a></p>
-  </div>
-</div>
-
-</article>
-</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
-<footer class="footer">
-  <div class="footer__inner">
-    <div>
-      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
-      <p>Cultivating enthusiasm for space engineering and science.<br>
-      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
-    </div>
-    <div>
-      <h3>Find us</h3>
-      <ul>
-        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
-        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
-        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
-        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>More</h3>
-      <ul>
-        <li><a href="join.html">Become a member (&pound;5)</a></li>
-        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
-        <li><a href="wiki.html">Wiki</a></li>
-      </ul>
-    </div>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
-</footer>
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society 2026. If you know nothing we'll teach you, if you know loads you'll teach us!</p>
+</div>
 <!-- END footer -->
 
 <script src="js/main.js"></script>
