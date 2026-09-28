@@ -6,12 +6,9 @@
   <title>Imperial College Space Society</title>
   <meta name="description" content="A student-led society for the development of space bound infrastructure and research. Rocket engines, solar sails, balloons, rovers.">
   <link rel="icon" href="assets/img/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home">
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
 <header class="taskbar">
@@ -39,7 +36,7 @@
 
     <div class="hero__text">
       <p class="hero__kicker">a student society at Imperial College London</p>
-      <h1>Imperial College <span class="squiggle">Space Society<svg viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 60 2, 110 20, 170 10 S 280 2, 330 12 S 385 16, 397 8"/></svg></span></h1>
+      <h1>Imperial College Space Society</h1>
       <p class="hero__sub">A student-led society for the development of space bound infrastructure and research.</p>
       <div class="hero__buttons">
         <a class="btn bevel" href="#projects">[ learn about our projects ]</a>
@@ -51,25 +48,18 @@
       &ldquo;Come along, there&rsquo;s surely a chance for explosions &mdash; we build rockets!&rdquo;
     </blockquote>
 
-    <a class="hero__scroll" href="#projects">&darr; scroll &darr;</a>
+    <a class="hero__scroll" href="#projects">v v v scroll down v v v</a>
   </section>
 
-  <div class="ticker" aria-label="Recent news">
-    <div class="ticker__track">
-      <span>★ Tycho hot-fired at Race 2 Space: 4,500 N</span>
-      <span>★ IPRL placed 16th of 100+ teams at the European Rover Challenge</span>
-      <span>★ Svarog has flown on BEXUS &times;2</span>
-      <span>★ Stratus sent a balloon to ~30 km</span>
-      <span>★ Hackathon returns 21&ndash;22 November</span>
-      <span>★ Membership is &pound;5 for the whole year</span>
-      <!-- repeated so the loop is seamless -->
-      <span aria-hidden="true">★ Tycho hot-fired at Race 2 Space: 4,500 N</span>
-      <span aria-hidden="true">★ IPRL placed 16th of 100+ teams at the European Rover Challenge</span>
-      <span aria-hidden="true">★ Svarog has flown on BEXUS &times;2</span>
-      <span aria-hidden="true">★ Stratus sent a balloon to ~30 km</span>
-      <span aria-hidden="true">★ Hackathon returns 21&ndash;22 November</span>
-      <span aria-hidden="true">★ Membership is &pound;5 for the whole year</span>
-    </div>
+  <div class="ticker">
+    <marquee scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+      <span>*** Tycho hot-fired at Race 2 Space: 4,500 N ***</span>
+      <span>*** IPRL came 16th of 100+ teams at the European Rover Challenge ***</span>
+      <span>*** Svarog has flown on BEXUS TWICE ***</span>
+      <span>*** Stratus sent a balloon to ~30 km ***</span>
+      <span>*** Hackathon is back 21-22 November ***</span>
+      <span>*** membership is only &pound;5 for the whole year!! ***</span>
+    </marquee>
   </div>
 
   <section class="section" id="projects">
@@ -204,7 +194,8 @@
     <span class="badge badge--d"><b>ERC</b><i>rover approved</i></span>
     <span class="badge badge--c"><b>HTML</b><i>hand-written</i></span>
   </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ</p>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ<br>
+  made by hand by ICSS members &middot; last updated 28/09/2026 &middot; best viewed with your eyes</p>
 </footer>
 <!-- END footer -->
 
