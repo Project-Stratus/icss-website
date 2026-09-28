@@ -4,15 +4,6 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const canHover = window.matchMedia("(hover: hover)").matches;
 
-  // --- taskbar clock (London time, like a proper mission control) ---
-  const clock = document.querySelector("[data-clock]");
-  if (clock) {
-    const fmt = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/London", hour: "2-digit", minute: "2-digit" });
-    const tick = () => { clock.textContent = "LDN " + fmt.format(new Date()); };
-    tick();
-    setInterval(tick, 15000);
-  }
-
   // --- mark the current page in the taskbar ---
   const here = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".taskbar__nav a").forEach((a) => {

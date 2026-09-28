@@ -12,17 +12,16 @@
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
 <header class="taskbar">
-  <a class="taskbar__logo bevel" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-black.png" alt="ICSS">
+  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
+    <img src="assets/img/logo-white.png" alt="ICSS">
   </a>
   <nav class="taskbar__nav" aria-label="Main">
-    <a class="bevel" href="blog.html">Blog</a>
-    <a class="bevel" href="wiki.html">Wiki</a>
-    <a class="bevel" href="events.html">Events</a>
-    <a class="bevel" href="projects.html">Projects</a>
-    <a class="bevel taskbar__join" href="join.html">Join us!</a>
+    <a href="blog.html">Blog</a>
+    <a href="wiki.html">Wiki</a>
+    <a href="events.html">Events</a>
+    <a href="projects.html">Projects</a>
+    <a class="taskbar__join" href="join.html">Join us</a>
   </nav>
-  <span class="taskbar__clock" data-clock>LDN --:--</span>
 </header>
 <!-- END taskbar -->
 
@@ -32,8 +31,8 @@
   <h1>Blog</h1>
   <p class="lede">Dispatches from the workshop, the launch site and the pub afterwards.</p>
 
-  <div class="window bevel">
-    <div class="window__title"><span>latest_posts.csv</span><span>&times;</span></div>
+  <div class="window">
+    <div class="window__title"><span>Latest posts</span><span>&times;</span></div>
     <div class="window__body">
       <!--
         New posts come from a Google Sheet, so anyone on committee can post without touching code.
@@ -44,7 +43,7 @@
       <div class="sheet-feed" data-sheet="">
         <p class="embed-empty">No new posts yet &mdash; the feed will show up here once the blog spreadsheet is connected.</p>
       </div>
-      <p><a class="btn bevel" href="#" data-sheet-edit>[ + add to the blog here ]</a></p>
+      <p><a class="btn" href="#" data-sheet-edit>+ add to the blog here</a></p>
     </div>
   </div>
 
@@ -62,7 +61,7 @@
     <li><a href="https://web.archive.org/web/20230206103353/https://www.union.ic.ac.uk/guilds/icss/stories/">The old society website, as the Wayback Machine remembers it</a></li>
     <li><a href="https://github.com/Project-Stratus">Project Stratus on GitHub</a></li>
   </ul>
-  <p class="margin-note">found something we missed? email us &rarr; space.society@imperial.ac.uk</p>
+  <p class="margin-note">Found something we missed? Email space.society@imperial.ac.uk</p>
 </div>
 
 </main>
@@ -76,7 +75,7 @@
       If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
     </div>
     <div>
-      <h3>&gt; find us</h3>
+      <h3>Find us</h3>
       <ul>
         <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
         <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
@@ -85,7 +84,7 @@
       </ul>
     </div>
     <div>
-      <h3>&gt; elsewhere</h3>
+      <h3>More</h3>
       <ul>
         <li><a href="join.html">Become a member (&pound;5)</a></li>
         <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
@@ -93,15 +92,7 @@
       </ul>
     </div>
   </div>
-  <div class="badges" aria-hidden="true">
-    <span class="badge badge--a"><b>LOx</b><i>powered by IPA</i></span>
-    <span class="badge badge--b"><b>☀</b><i>sail powered</i></span>
-    <span class="badge badge--e"><b>30km</b><i>best viewed from above</i></span>
-    <span class="badge badge--d"><b>ERC</b><i>rover approved</i></span>
-    <span class="badge badge--c"><b>HTML</b><i>hand-written</i></span>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ<br>
-  made by hand by ICSS members &middot; last updated 28/09/2026 &middot; best viewed with your eyes</p>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
 </footer>
 <!-- END footer -->
 

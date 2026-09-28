@@ -12,17 +12,16 @@
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
 <header class="taskbar">
-  <a class="taskbar__logo bevel" href="index.html" aria-label="ICSS home">
-    <img src="assets/img/logo-black.png" alt="ICSS">
+  <a class="taskbar__logo" href="index.html" aria-label="ICSS home">
+    <img src="assets/img/logo-white.png" alt="ICSS">
   </a>
   <nav class="taskbar__nav" aria-label="Main">
-    <a class="bevel" href="blog.html">Blog</a>
-    <a class="bevel" href="wiki.html">Wiki</a>
-    <a class="bevel" href="events.html">Events</a>
-    <a class="bevel" href="projects.html">Projects</a>
-    <a class="bevel taskbar__join" href="join.html">Join us!</a>
+    <a href="blog.html">Blog</a>
+    <a href="wiki.html">Wiki</a>
+    <a href="events.html">Events</a>
+    <a href="projects.html">Projects</a>
+    <a class="taskbar__join" href="join.html">Join us</a>
   </nav>
-  <span class="taskbar__clock" data-clock>LDN --:--</span>
 </header>
 <!-- END taskbar -->
 
@@ -39,8 +38,8 @@
       <h1>Imperial College Space Society</h1>
       <p class="hero__sub">A student-led society for the development of space bound infrastructure and research.</p>
       <div class="hero__buttons">
-        <a class="btn bevel" href="#projects">[ learn about our projects ]</a>
-        <a class="btn btn--go bevel" href="join.html">[ join us ]</a>
+        <a class="btn" href="#projects">Learn about our projects</a>
+        <a class="btn btn--go" href="join.html">Join us</a>
       </div>
     </div>
 
@@ -48,25 +47,21 @@
       &ldquo;Come along, there&rsquo;s surely a chance for explosions &mdash; we build rockets!&rdquo;
     </blockquote>
 
-    <a class="hero__scroll" href="#projects">v v v scroll down v v v</a>
+    <a class="hero__scroll" href="#projects">scroll &darr;</a>
   </section>
 
-  <div class="ticker">
-    <marquee scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
-      <span>*** Tycho hot-fired at Race 2 Space: 4,500 N ***</span>
-      <span>*** IPRL came 16th of 100+ teams at the European Rover Challenge ***</span>
-      <span>*** Svarog has flown on BEXUS TWICE ***</span>
-      <span>*** Stratus sent a balloon to ~30 km ***</span>
-      <span>*** Hackathon is back 21-22 November ***</span>
-      <span>*** membership is only &pound;5 for the whole year!! ***</span>
-    </marquee>
+  <div class="stats">
+    <div><b>4.5 kN</b><span>Tycho hot-fire at Race 2 Space</span></div>
+    <div><b>16th</b><span>of 100+ teams at the European Rover Challenge</span></div>
+    <div><b>2&times;</b><span>Svarog flights on BEXUS</span></div>
+    <div><b>~30 km</b><span>Stratus balloon altitude</span></div>
   </div>
 
   <section class="section" id="projects">
     <div class="section__head">
       <h2>Our Projects</h2>
       <p>Take your ideas from mind to metal by joining one of our projects. Our projects are entirely student led and most require no prior knowledge, just keen enthusiasm!</p>
-      <p><span class="margin-note"><span class="only-hover">&larr; hover over one! (they move)</span><span class="only-touch">&darr; keep scrolling, they play by themselves</span></span></p>
+      <p><span class="margin-note"><span class="only-hover">(hover over one)</span><span class="only-touch">(they play as you scroll)</span></span></p>
     </div>
 
     <div class="projects">
@@ -77,7 +72,7 @@
         </div>
         <div class="card__shade"></div>
         <span class="card__tag">rocket engine</span>
-        <span class="card__hint">&#9654; hover</span>
+        <span class="card__hint">&#9654;</span>
         <span class="card__label">
           <span class="card__name">Tycho</span>
           <span class="card__what">10 kN liquid bipropellant engine</span>
@@ -90,7 +85,7 @@
         </div>
         <div class="card__shade"></div>
         <span class="card__tag">cubesat</span>
-        <span class="card__hint">&#9654; hover</span>
+        <span class="card__hint">&#9654;</span>
         <span class="card__label">
           <span class="card__name">Svarog</span>
           <span class="card__what">interstellar solar-sailing CubeSat</span>
@@ -105,7 +100,7 @@
         </div>
         <div class="card__shade"></div>
         <span class="card__tag">high-altitude balloon</span>
-        <span class="card__hint">&#9654; hover</span>
+        <span class="card__hint">&#9654;</span>
         <span class="card__label">
           <span class="card__name">Stratus</span>
           <span class="card__what">AI-steered weather balloons, 30 km up</span>
@@ -121,7 +116,7 @@
         </div>
         <div class="card__shade"></div>
         <span class="card__tag">planetary robotics</span>
-        <span class="card__hint">&#9654; hover</span>
+        <span class="card__hint">&#9654;</span>
         <span class="card__label">
           <span class="card__name">IPRL</span>
           <span class="card__what">Imperial Planetary Robotics Lab</span>
@@ -135,7 +130,7 @@
         </div>
         <div class="card__shade"></div>
         <span class="card__tag">model rocketry</span>
-        <span class="card__new">NEW!</span>
+        <span class="card__new">NEW</span>
         <span class="card__label">
           <span class="card__name">High-Powered Rocketry</span>
           <span class="card__what">G-class motor, chasing apogee</span>
@@ -149,7 +144,7 @@
         </div>
         <div class="card__shade"></div>
         <span class="card__tag">mini rover</span>
-        <span class="card__new">NEW!</span>
+        <span class="card__new">NEW</span>
         <span class="card__label">
           <span class="card__name">Rover</span>
           <span class="card__what">UKSEDS Olympus Rover Trials, with IPRL</span>
@@ -170,7 +165,7 @@
       If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
     </div>
     <div>
-      <h3>&gt; find us</h3>
+      <h3>Find us</h3>
       <ul>
         <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
         <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
@@ -179,7 +174,7 @@
       </ul>
     </div>
     <div>
-      <h3>&gt; elsewhere</h3>
+      <h3>More</h3>
       <ul>
         <li><a href="join.html">Become a member (&pound;5)</a></li>
         <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
@@ -187,15 +182,7 @@
       </ul>
     </div>
   </div>
-  <div class="badges" aria-hidden="true">
-    <span class="badge badge--a"><b>LOx</b><i>powered by IPA</i></span>
-    <span class="badge badge--b"><b>☀</b><i>sail powered</i></span>
-    <span class="badge badge--e"><b>30km</b><i>best viewed from above</i></span>
-    <span class="badge badge--d"><b>ERC</b><i>rover approved</i></span>
-    <span class="badge badge--c"><b>HTML</b><i>hand-written</i></span>
-  </div>
-  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ<br>
-  made by hand by ICSS members &middot; last updated 28/09/2026 &middot; best viewed with your eyes</p>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
 </footer>
 <!-- END footer -->
 
