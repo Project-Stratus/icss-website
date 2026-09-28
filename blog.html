@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog &middot; ICSS</title>
+  <meta name="description" content="News, launch reports and archived posts from Imperial College Space Society.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo bevel" href="index.html" aria-label="ICSS home">
+    <img src="assets/img/logo-black.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a class="bevel" href="blog.html">Blog</a>
+    <a class="bevel" href="wiki.html">Wiki</a>
+    <a class="bevel" href="events.html">Events</a>
+    <a class="bevel" href="projects.html">Projects</a>
+    <a class="bevel taskbar__join" href="join.html">Join us!</a>
+  </nav>
+  <span class="taskbar__clock" data-clock>LDN --:--</span>
+</header>
+<!-- END taskbar -->
+
+<main>
+
+<div class="page">
+  <h1>Blog</h1>
+  <p class="lede">Dispatches from the workshop, the launch site and the pub afterwards.</p>
+
+  <div class="window bevel">
+    <div class="window__title"><span>latest_posts.csv</span><span>&times;</span></div>
+    <div class="window__body">
+      <!--
+        New posts come from a Google Sheet, so anyone on committee can post without touching code.
+        1. Make a sheet with a header row:  date | title | author | project | body | image | link
+        2. File > Share > Publish to web > (that sheet) > Comma-separated values > Publish
+        3. Paste the published CSV link into data-sheet below, and the edit link into the "add a post" button.
+      -->
+      <div class="sheet-feed" data-sheet="">
+        <p class="embed-empty">No new posts yet &mdash; the feed will show up here once the blog spreadsheet is connected.</p>
+      </div>
+      <p><a class="btn bevel" href="#" data-sheet-edit>[ + add to the blog here ]</a></p>
+    </div>
+  </div>
+
+  <h2 id="archive">From the archives</h2>
+  <p>Rumour has it that ICSS was founded in medieval times by one of the knights of Camelot. Tragically all our archives from this era were lost in the Great Fire of London. What we&rsquo;ve tried to recover of our history is given below.</p>
+
+  <h3>Archived blog posts</h3>
+  <!-- BEGIN archive-list -->
+  <!-- END archive-list -->
+
+  <h2 id="elsewhere">ICSS elsewhere</h2>
+  <p>You can find other media covering ICSS published across the internet. Call it a scavenger hunt or whatever.</p>
+  <ul class="ticks">
+    <li><a href="https://web.archive.org/web/2019/http://felixonline.co.uk/articles/2018-11-23-imperial-s-space-society-launches-high-altitude-weather-balloon/">Felix: Imperial&rsquo;s Space Society launches high-altitude weather balloon</a> (2018)</li>
+    <li><a href="https://web.archive.org/web/20230206103353/https://www.union.ic.ac.uk/guilds/icss/stories/">The old society website, as the Wayback Machine remembers it</a></li>
+    <li><a href="https://github.com/Project-Stratus">Project Stratus on GitHub</a></li>
+  </ul>
+  <p class="margin-note">found something we missed? email us &rarr; space.society@imperial.ac.uk</p>
+</div>
+
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>&gt; find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>&gt; elsewhere</h3>
+      <ul>
+        <li><a href="join.html">Become a member (&pound;5)</a></li>
+        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="badges" aria-hidden="true">
+    <span class="badge badge--a"><b>LOx</b><i>powered by IPA</i></span>
+    <span class="badge badge--b"><b>☀</b><i>sail powered</i></span>
+    <span class="badge badge--e"><b>30km</b><i>best viewed from above</i></span>
+    <span class="badge badge--d"><b>ERC</b><i>rover approved</i></span>
+    <span class="badge badge--c"><b>HTML</b><i>hand-written</i></span>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="js/main.js"></script>
+</body>
+</html>

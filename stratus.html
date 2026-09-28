@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Stratus &middot; ICSS</title>
+  <meta name="description" content="High-altitude ballooning, steered by AI">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo bevel" href="index.html" aria-label="ICSS home">
+    <img src="assets/img/logo-black.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a class="bevel" href="blog.html">Blog</a>
+    <a class="bevel" href="wiki.html">Wiki</a>
+    <a class="bevel" href="events.html">Events</a>
+    <a class="bevel" href="projects.html">Projects</a>
+    <a class="bevel taskbar__join" href="join.html">Join us!</a>
+  </nav>
+  <span class="taskbar__clock" data-clock>LDN --:--</span>
+</header>
+<!-- END taskbar -->
+
+<main>
+
+<article class="project project--stratus">
+
+  <header class="project__head">
+    <img class="project__graphic floater-lite" src="assets/img/float/stratus-balloon.webp" alt="" aria-hidden="true">
+    <p class="hero__kicker">&ldquo;Are your ambitions stratospheric?&rdquo;</p>
+    <h1>Project Stratus </h1>
+    <p class="lede">High-altitude ballooning, steered by AI</p>
+    <nav class="project__toc">
+      <a href="#what">what it is</a> &middot; <a href="#skills">skills</a> &middot; <a href="#gallery">pictures</a> &middot; <a href="#updates">updates</a> &middot; <a href="#achievements">achievements</a> &middot; <a href="#join">join</a>
+    </nav>
+  </header>
+
+
+  <h2 id="what">What it is</h2>
+  <p>Stratus builds and flies high-altitude weather balloons fitted with release valves, ballast and an AI agent. By rising and sinking to catch winds that blow in different directions at different altitudes, the balloon can hold its position (within ~100&nbsp;km of launch) &mdash; and come home instead of bursting.</p>
+<p>The result: a cheap, versatile alternative to low-orbit satellites for weather monitoring and Earth observation.</p>
+  <table class="plain spec">
+      <tr><th>Altitude</th><td>~30 km, &minus;50&nbsp;&deg;C, &lt;1% of sea-level pressure</td></tr>
+      <tr><th>Control</th><td>Reinforcement-learning agent, vertical control only</td></tr>
+      <tr><th>Sensors</th><td>Temperature, barometer, battery monitor, GPS (I&sup2;C) &middot; microSD, LoRaWAN (serial) &middot; UV (analogue)</td></tr>
+      <tr><th>Also on board</th><td>Camera, power bank, insulated container, parachute</td></tr>
+      <tr><th>Application</th><td>Detecting &ldquo;ship tracks&rdquo; to support fuel-sulphur regulation</td></tr>
+  </table>
+
+  <h2 id="skills">Skills &amp; techniques you&rsquo;ll pick up</h2>
+  <ul class="chips">
+      <li>reinforcement learning</li>
+      <li>atmospheric simulation</li>
+      <li>embedded electronics</li>
+      <li>Raspberry Pi Pico</li>
+      <li>I&sup2;C / serial / analogue sensors</li>
+      <li>LoRaWAN radio</li>
+      <li>GPS</li>
+      <li>flight-path prediction</li>
+      <li>valve &amp; ballast design</li>
+      <li>lathe, waterjet &amp; TIG welding</li>
+      <li>soldering</li>
+      <li>launch logistics</li>
+  </ul>
+  <p class="margin-note">more detail on each of these in the <a href="wiki.html">wiki</a> (soon!)</p>
+
+  <div class="window bevel ">
+  <div class="window__title"><span>intro_course.txt</span><span>&times;</span></div>
+  <div class="window__body">
+    <p>Every ICSS project runs an intro course for new members at the start of the year &mdash; no experience needed. Join the WhatsApp community for dates.</p>
+  </div>
+</div>
+
+  <h2 id="gallery">Pictures from the build</h2>
+  <div class="polaroids">
+    <figure><img src="assets/img/projects/stratus-launch.jpg" alt="Team filling a balloon in a field" loading="lazy"><figcaption>launch day</figcaption></figure>
+    <figure><img src="assets/img/projects/stratus-space1.jpg" alt="The curve of the Earth from the balloon" loading="lazy"><figcaption>view from ~30 km</figcaption></figure>
+    <figure><img src="assets/img/projects/stratus-space2.jpg" alt="Dark sky above the clouds" loading="lazy"><figcaption>edge of space</figcaption></figure>
+    <figure><img src="assets/img/projects/stratus-sensors.jpg" alt="Sensor boards" loading="lazy"><figcaption>battery monitor, one of many sensor boards</figcaption></figure>
+    <figure><img src="assets/img/projects/stratus-valve.jpg" alt="Workshop session" loading="lazy"><figcaption>valve manufacture</figcaption></figure>
+    <figure><img src="assets/img/projects/stratus-shiptracks.jpg" alt="Satellite view of ship tracks in clouds" loading="lazy"><figcaption>ship tracks we want to spot</figcaption></figure>
+</div>
+
+
+  <h2 id="updates">Project updates</h2>
+  <div class="window bevel ">
+  <div class="window__title"><span>updates.exe</span><span>&times;</span></div>
+  <div class="window__body">
+    <!-- Paste Instagram / LinkedIn embed code for the latest posts here.
+         Instagram: open a post > ... > Embed > copy code.
+         LinkedIn: open a post > ... > Embed this post > copy code. -->
+    <p class="embed-empty">No updates posted here yet. Paste an Instagram or LinkedIn embed into this box (see the comment in the HTML).</p>
+  </div>
+</div>
+
+  <h2 id="achievements">Key achievements</h2>
+  <ul class="ticks">
+      <li>Launched a balloon to the stratosphere and got the pictures to prove it</li>
+      <li>Trained a 1D agent in a basic 3D atmospheric environment</li>
+      <li>Open-source flight code on GitHub</li>
+  </ul>
+
+  <h2 id="join">Get involved</h2>
+  <div class="window bevel ">
+  <div class="window__title"><span>join_stratus.bat</span><span>&times;</span></div>
+  <div class="window__body">
+    <p><b>Meeting info:</b> join the ICSS WhatsApp community and hop into the Stratus group chat &mdash; that&rsquo;s where meeting times and rooms get posted.</p>
+    <p><b>When &amp; where:</b> Fridays, 6&ndash;8pm &middot; CAGB 749</p>
+    <p><b>Who to talk to:</b> Balloon Commander: Lucas Cheung &middot; Balloon Admiral: Mikhail Ischenko</p>
+    <p><b>Questions?</b> Email <a href="mailto:space.society@imperial.ac.uk?subject=Stratus">space.society@imperial.ac.uk</a> &middot; <a href="https://github.com/Project-Stratus">GitHub: Project-Stratus</a></p>
+    <p><a class="btn btn--go bevel" href="join.html">[ join ICSS ]</a></p>
+  </div>
+</div>
+
+</article>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>&gt; find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>&gt; elsewhere</h3>
+      <ul>
+        <li><a href="join.html">Become a member (&pound;5)</a></li>
+        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="badges" aria-hidden="true">
+    <span class="badge badge--a"><b>LOx</b><i>powered by IPA</i></span>
+    <span class="badge badge--b"><b>☀</b><i>sail powered</i></span>
+    <span class="badge badge--e"><b>30km</b><i>best viewed from above</i></span>
+    <span class="badge badge--d"><b>ERC</b><i>rover approved</i></span>
+    <span class="badge badge--c"><b>HTML</b><i>hand-written</i></span>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="js/main.js"></script>
+</body>
+</html>

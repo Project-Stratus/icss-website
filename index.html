@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imperial College Space Society</title>
+  <meta name="description" content="A student-led society for the development of space bound infrastructure and research. Rocket engines, solar sails, balloons, rovers.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo bevel" href="index.html" aria-label="ICSS home">
+    <img src="assets/img/logo-black.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a class="bevel" href="blog.html">Blog</a>
+    <a class="bevel" href="wiki.html">Wiki</a>
+    <a class="bevel" href="events.html">Events</a>
+    <a class="bevel" href="projects.html">Projects</a>
+    <a class="bevel taskbar__join" href="join.html">Join us!</a>
+  </nav>
+  <span class="taskbar__clock" data-clock>LDN --:--</span>
+</header>
+<!-- END taskbar -->
+
+<main>
+
+  <section class="hero">
+    <img class="floater floater--rocket"  src="assets/img/float/tycho-rocket.webp"    alt="" aria-hidden="true" draggable="false">
+    <img class="floater floater--balloon" src="assets/img/float/stratus-balloon.webp" alt="" aria-hidden="true" draggable="false">
+    <img class="floater floater--rover"   src="assets/img/float/iprl-rover.webp"      alt="" aria-hidden="true" draggable="false">
+    <img class="floater floater--sail"    src="assets/img/float/svarog-sail.webp"     alt="" aria-hidden="true" draggable="false">
+
+    <div class="hero__text">
+      <p class="hero__kicker">a student society at Imperial College London</p>
+      <h1>Imperial College <span class="squiggle">Space Society<svg viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12 C 60 2, 110 20, 170 10 S 280 2, 330 12 S 385 16, 397 8"/></svg></span></h1>
+      <p class="hero__sub">A student-led society for the development of space bound infrastructure and research.</p>
+      <div class="hero__buttons">
+        <a class="btn bevel" href="#projects">[ learn about our projects ]</a>
+        <a class="btn btn--go bevel" href="join.html">[ join us ]</a>
+      </div>
+    </div>
+
+    <blockquote class="quote-note">
+      &ldquo;Come along, there&rsquo;s surely a chance for explosions &mdash; we build rockets!&rdquo;
+    </blockquote>
+
+    <a class="hero__scroll" href="#projects">&darr; scroll &darr;</a>
+  </section>
+
+  <div class="ticker" aria-label="Recent news">
+    <div class="ticker__track">
+      <span>★ Tycho hot-fired at Race 2 Space: 4,500 N</span>
+      <span>★ IPRL placed 16th of 100+ teams at the European Rover Challenge</span>
+      <span>★ Svarog has flown on BEXUS &times;2</span>
+      <span>★ Stratus sent a balloon to ~30 km</span>
+      <span>★ Hackathon returns 21&ndash;22 November</span>
+      <span>★ Membership is &pound;5 for the whole year</span>
+      <!-- repeated so the loop is seamless -->
+      <span aria-hidden="true">★ Tycho hot-fired at Race 2 Space: 4,500 N</span>
+      <span aria-hidden="true">★ IPRL placed 16th of 100+ teams at the European Rover Challenge</span>
+      <span aria-hidden="true">★ Svarog has flown on BEXUS &times;2</span>
+      <span aria-hidden="true">★ Stratus sent a balloon to ~30 km</span>
+      <span aria-hidden="true">★ Hackathon returns 21&ndash;22 November</span>
+      <span aria-hidden="true">★ Membership is &pound;5 for the whole year</span>
+    </div>
+  </div>
+
+  <section class="section" id="projects">
+    <div class="section__head">
+      <h2>Our Projects</h2>
+      <p>Take your ideas from mind to metal by joining one of our projects. Our projects are entirely student led and most require no prior knowledge, just keen enthusiasm!</p>
+      <p><span class="margin-note">&larr; hover over one! (they move)</span></p>
+    </div>
+
+    <div class="projects">
+
+      <a class="card card--tycho" href="tycho.html">
+        <div class="card__media">
+          <video muted loop playsinline preload="none" poster="assets/img/projects/tycho-poster.jpg" data-src="assets/video/tycho-hotfire.mp4"></video>
+        </div>
+        <div class="card__shade"></div>
+        <span class="card__tag">rocket engine</span>
+        <span class="card__hint">&#9654; hover</span>
+        <span class="card__label">
+          <span class="card__name">Tycho</span>
+          <span class="card__what">10 kN liquid bipropellant engine</span>
+        </span>
+      </a>
+
+      <a class="card card--svarog" href="svarog.html">
+        <div class="card__media">
+          <video muted loop playsinline preload="none" poster="assets/img/projects/svarog-poster.jpg" data-src="assets/video/svarog-sail.mp4"></video>
+        </div>
+        <div class="card__shade"></div>
+        <span class="card__tag">cubesat</span>
+        <span class="card__hint">&#9654; hover</span>
+        <span class="card__label">
+          <span class="card__name">Svarog</span>
+          <span class="card__what">interstellar solar-sailing CubeSat</span>
+        </span>
+      </a>
+
+      <a class="card card--stratus" href="stratus.html">
+        <div class="card__media">
+          <img class="is-on" src="assets/img/projects/stratus-space1.jpg" alt="">
+          <img src="assets/img/projects/stratus-launch.jpg" alt="" loading="lazy">
+          <img src="assets/img/projects/stratus-space2.jpg" alt="" loading="lazy">
+        </div>
+        <div class="card__shade"></div>
+        <span class="card__tag">high-altitude balloon</span>
+        <span class="card__hint">&#9654; hover</span>
+        <span class="card__label">
+          <span class="card__name">Stratus</span>
+          <span class="card__what">AI-steered weather balloons, 30 km up</span>
+        </span>
+      </a>
+
+      <a class="card card--iprl" href="iprl.html">
+        <div class="card__media">
+          <img class="is-on" src="assets/img/projects/iprl-rover.jpg" alt="">
+          <img src="assets/img/projects/iprl-build.jpg" alt="" loading="lazy">
+          <img src="assets/img/projects/iprl-erc.jpg" alt="" loading="lazy">
+          <img src="assets/img/projects/iprl-team.jpg" alt="" loading="lazy">
+        </div>
+        <div class="card__shade"></div>
+        <span class="card__tag">planetary robotics</span>
+        <span class="card__hint">&#9654; hover</span>
+        <span class="card__label">
+          <span class="card__name">IPRL</span>
+          <span class="card__what">Imperial Planetary Robotics Lab</span>
+        </span>
+      </a>
+
+      <a class="card card--hpr card--new" href="rocketry.html">
+        <div class="card__media">
+          <img class="is-on" src="assets/img/projects/hpr-onboard.jpg" alt="">
+          <img src="assets/img/projects/hpr-field.jpg" alt="" loading="lazy">
+        </div>
+        <div class="card__shade"></div>
+        <span class="card__tag">model rocketry</span>
+        <span class="card__new">NEW!</span>
+        <span class="card__label">
+          <span class="card__name">High-Powered Rocketry</span>
+          <span class="card__what">G-class motor, chasing apogee</span>
+        </span>
+      </a>
+
+      <a class="card card--rover card--new" href="rover.html">
+        <div class="card__media">
+          <img class="is-on" src="assets/img/projects/rover-mini.jpg" alt="">
+          <img src="assets/img/projects/rover-group.jpg" alt="" loading="lazy">
+        </div>
+        <div class="card__shade"></div>
+        <span class="card__tag">mini rover</span>
+        <span class="card__new">NEW!</span>
+        <span class="card__label">
+          <span class="card__name">Rover</span>
+          <span class="card__what">UKSEDS Olympus Rover Trials, with IPRL</span>
+        </span>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>&gt; find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>&gt; elsewhere</h3>
+      <ul>
+        <li><a href="join.html">Become a member (&pound;5)</a></li>
+        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="badges" aria-hidden="true">
+    <span class="badge badge--a"><b>LOx</b><i>powered by IPA</i></span>
+    <span class="badge badge--b"><b>☀</b><i>sail powered</i></span>
+    <span class="badge badge--e"><b>30km</b><i>best viewed from above</i></span>
+    <span class="badge badge--d"><b>ERC</b><i>rover approved</i></span>
+    <span class="badge badge--c"><b>HTML</b><i>hand-written</i></span>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="js/main.js"></script>
+</body>
+</html>

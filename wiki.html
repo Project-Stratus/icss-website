@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wiki &middot; ICSS</title>
+  <meta name="description" content="The ICSS technical wiki.">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo bevel" href="index.html" aria-label="ICSS home">
+    <img src="assets/img/logo-black.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a class="bevel" href="blog.html">Blog</a>
+    <a class="bevel" href="wiki.html">Wiki</a>
+    <a class="bevel" href="events.html">Events</a>
+    <a class="bevel" href="projects.html">Projects</a>
+    <a class="bevel taskbar__join" href="join.html">Join us!</a>
+  </nav>
+  <span class="taskbar__clock" data-clock>LDN --:--</span>
+</header>
+<!-- END taskbar -->
+
+<main>
+
+<div class="page">
+  <h1>Wiki</h1>
+  <p class="lede">How we actually do the things we do. Written by members, for members.</p>
+  <div class="construction"><p>&#9888; UNDER CONSTRUCTION &mdash; resources are being uploaded</p></div>
+  <div class="window bevel ">
+  <div class="window__title"><span>contents.txt</span><span>&times;</span></div>
+  <div class="window__body">
+    <p>Planned sections, one per project:</p>
+    <ul>
+      <li><a href="tycho.html#skills">Tycho</a> &mdash; engine design, cooling, injectors, turbomachinery, testing</li>
+      <li><a href="svarog.html#skills">Svarog</a> &mdash; CubeSat electronics, orbital sims, sail structures</li>
+      <li><a href="stratus.html#skills">Stratus</a> &mdash; balloon electronics, LoRa, RL agents, launch checklists</li>
+      <li><a href="iprl.html#skills">IPRL</a> &mdash; rover drive, arms, autonomy, ERC tasks</li>
+      <li><a href="rocketry.html#skills">High-Powered Rocketry</a> &mdash; OpenRocket, recovery, flight computers</li>
+      <li><a href="rover.html#skills">Rover</a> &mdash; mobility, autonomy, Olympus Rover Trials</li>
+    </ul>
+  </div>
+</div>
+</div>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>&gt; find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>&gt; elsewhere</h3>
+      <ul>
+        <li><a href="join.html">Become a member (&pound;5)</a></li>
+        <li><a href="blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="badges" aria-hidden="true">
+    <span class="badge badge--a"><b>LOx</b><i>powered by IPA</i></span>
+    <span class="badge badge--b"><b>☀</b><i>sail powered</i></span>
+    <span class="badge badge--e"><b>30km</b><i>best viewed from above</i></span>
+    <span class="badge badge--d"><b>ERC</b><i>rover approved</i></span>
+    <span class="badge badge--c"><b>HTML</b><i>hand-written</i></span>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union &middot; South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
