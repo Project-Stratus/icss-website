@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>High Altitude Ballooning Group launch Pico balloons to the Netherlands from London &middot; ICSS archive</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo" href="../index.html" aria-label="ICSS home">
+    <img src="../assets/img/logo-white.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a href="../blog.html">Blog</a>
+    <a href="../wiki.html">Wiki</a>
+    <a href="../events.html">Events</a>
+    <a href="../projects.html">Projects</a>
+    <a class="taskbar__join" href="../join.html">Join us</a>
+  </nav>
+</header>
+<!-- END taskbar -->
+
+<main>
+<article class="post">
+  <p class="post__meta"><a href="../blog.html#archive">&larr; back to the archive</a></p>
+  <h1>High Altitude Ballooning Group launch Pico balloons to the Netherlands from London</h1>
+  <p class="post__meta">January 29, 2019 &middot; posted by Medad Newman</p>
+  <p class="post__stamp">from the archive</p>
+  <div class="post__body">
+<p>The High altitude ballooning group launched two pico balloons with ultra light trackers from Wormwood scrubs, London on the 26th of January 2019. The two trackers were launched with the call signs ICSPACE2 and ICSPACE3 about 1.5 hours apart. We tracked ICSPACE2 all the way to the Netherlands,just before the German border before the GPS failed but the GPS failed on ICSPACE3 a few minutes after launch.</p>
+<p>Both transmitted RTTY at 434.60MHz and 434.25MHz approximately once per minute. Each telemetry signal was preceeded by 10 pips.</p>
+<p>The balloons were filled to a net lift of 1.5 grams for ICSPACE2 and 3.0g ICSPACE3. We doubled the net lift for the next launch because in the first launch the balloon barely cleared the trees on liftoff.</p>
+<p>We used Qualatex 36″ foil balloons this time. They worked very well, did not burst and were still floating several hours after the gps failed on both trackers.</p>
+<p>The trackers were had 4 pieces of most important Hardware: The STM8 microcontroller, Silabs Si4463 radio chip, GB1803 GPS module and AAA battery boost converter.</p>
+<p>The STM8 micro controller and Silabs radio chip came in the form of the HC-12 module, a radio module largely used in the hobby market. However, the Silabs radio chip was what we were looking for. It came along with the STM8 microcontroller that we could reprogram after we removed the read protection and wiping out the memory. It also came along with all the passives required to transmit at the 70cm band. It is a neat little package which we can connect the GPS module using UART.</p>
+<p>GB1803 GPS module is a GPS module that has the chip from the Ublox M8 family of chips. However, the module carries some other branding. What we were after was the Ublox chip, a very versatile gps chip that has a huge amount of functionality built in. The cost of the module is much lower than the cost of getting a Ublox branded module which is very nice. We still get almost the same performance.</p>
+<p>Ultimately we wanted a low cost prototype that we can use to learn from so that we can do a round the world flight on one of these pico balloons.</p>
+<p>There is more information about our tracker hardware and software on <a href="https://web.archive.org/web/201901/https://github.com/ImperialSpaceSociety/PicoTracker">Github</a>.<br/>
+ICSPACE2 was very successful, successfully travelling all the way to the Netherlands. Many thanks to the Dutch listeners who tuned in to pick up telemetry on the other side of the English Channel.</p>
+<p>ICSPACE3 unfortunately had a GPS failure almost immediately after takeoff. It lost lock just after passing Hamsted Heath.</p>
+<p>ISCPACE2 weighted 23.15 grams and ICSPACE3 weighed 2 grams more, due to a thicker insulation. Based on the data collected on HABHUB, it looks like the difference in insulation thickness did not really make a large difference in shielding the tracker from the cold.</p>
+<p><strong>What went well:</strong><br/>
+We managed to get a good float with the balloons. ICSPACE2 floated at a good 5700m altitude all the way to the Netherlands. We know that ICSPACE3 was also following close behind despite the GPS failure thanks to Dutch listener PE2BZ who used his antenna to figure that out.</p>
+<p><strong>What did not go well:</strong><br/>
+There was a problem with the baud rate, where listeners were not able to tune to 50 baud but to 45 baud. Some managed to tune to 45.45 baud. We had programmed it to transmit at 50 baud. This may be a programming error that we have to get to the bottom of.</p>
+<p>The GPS module failed on both balloons with the same syntoms at the end. Both balloons showed erratic flight paths until it just lost lock. That happened when the number of satallites used in the Fix calculation fell dramatically from around 8 to 4 and then to 0. In post launch analysis, we have determined that it has got to do with the power saving configuration that gives such poor gps performance.</p>
+<p>The float altitude of 5700m was not high enough to avoid the weather systems. We would need to bring down the weight to around 15 grams so that it floats at 9-10km altitude, free from significant weather patterns.</p>
+<p>Many thanks to Richard Ibbotson of the Imperial College Advanced Hackspace for working with us on this project and bringing his experience and skills to the team.</p>
+<p>Many thanks also to all the listeners who listened in on the launch day, picking up telemetry from in the UK as well as in the Netherlands.</p>
+<p>Thanks to Richard Meadows for his pico balloon flight performance <a href="https://web.archive.org/web/201901/https://richardeoin.github.io/sp/">calculator</a>. It was remarkably accurate.</p>
+<p>Key information:<br/>
+ICSPACE2<br/>
+balloon: Qualatex 36 inch<br/>
+payload weight: 23.15g<br/>
+net lift: 1.5g</p>
+<p>ICSPACE3<br/>
+balloon: Qualatex 36 inch<br/>
+payload weight: 25g<br/>
+net lift: 3.0g</p>
+<p><iframe src="https://www.youtube.com/embed/8dchYQp1AWE?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe></p>
+<p><iframe src="https://www.youtube.com/embed/xs_5EnlGSwU?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe></p>
+<p><iframe src="https://www.youtube.com/embed/NCAhwix8TSE?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe></p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>Flight path of ICSPACE2</p>
+<p><iframe src="https://www.youtube.com/embed/NCAhwix8TSE?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe></p>
+<p><iframe src="https://www.youtube.com/embed/NCAhwix8TSE?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe></p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>The pico tracker within a 3D printed frame</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>The tracker packaged in polystyrene with guitar wire antennas for both GPS and telemetry</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>A look at the HC12 module.</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>Richard holding the gps outdoors to see if we could get a fix</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>The group photo.</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>Getting ready for launch.</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>Testing if there is enough lift in the balloon.</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>Filling up the foil balloon</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</p>
+<p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<p>The whole tracker packaged in extruded polystyrene</p>
+  </div>
+  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/201901/https://www.union.ic.ac.uk/guilds/icseds/2019/01/high-altitude-ballooning-group-launch-twin-pico-balloons-to-the-netherlands/">see the original on the Wayback Machine</a></p>
+</article>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="../assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>More</h3>
+      <ul>
+        <li><a href="../join.html">Become a member (&pound;5)</a></li>
+        <li><a href="../blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="../wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="../js/main.js"></script>
+</body>
+</html>

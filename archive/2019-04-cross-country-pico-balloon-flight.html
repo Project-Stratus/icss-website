@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cross country pico balloon flight &middot; ICSS archive</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo" href="../index.html" aria-label="ICSS home">
+    <img src="../assets/img/logo-white.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a href="../blog.html">Blog</a>
+    <a href="../wiki.html">Wiki</a>
+    <a href="../events.html">Events</a>
+    <a href="../projects.html">Projects</a>
+    <a class="taskbar__join" href="../join.html">Join us</a>
+  </nav>
+</header>
+<!-- END taskbar -->
+
+<main>
+<article class="post">
+  <p class="post__meta"><a href="../blog.html#archive">&larr; back to the archive</a></p>
+  <h1>Cross country pico balloon flight</h1>
+  <p class="post__meta">April 5, 2019 &middot; posted by Medad Newman</p>
+  <p class="post__stamp">from the archive</p>
+  <div class="post__body">
+<p>High altitude ballooning group launched two balloons today, 5 April 2019 from our usual launch site, Wormwood Scrubs Spaceport in London. The balloons travelled across the country along almost the same path. This time we had the longest flight duration, surpassing 4.5 hours.</p>
+<p>The balloons did not enter a float this time. It reached peak altitude and then just decended. The flight characteristics point to a leak some where. More investigations required. The leak might possibly have something to do with the heat sealing. There are pictures below of the heat seal. On past launches we have had good floats without any heat sealing at all, just using the inbuilt self sealing valve on the Qualatex balloons.</p>
+<p>For this launch, we prefilled the balloons at the <a href="https://web.archive.org/web/201904/https://www.imperial.ac.uk/advanced-hackspace/">Imperial College Advanced Hackspace</a> and headed over to Wormwood Scrubs which is at walking distance from the facility. We packed the balloons into large plastic boxes for transportation. In the past we filled up the balloons in a shelter right next to the field. One concern was that filling the balloons indoors would affect the lift force outdoors in the much colder temperature. The temperature difference between indoors and outdoors was around 10-15 degrees C. We did some simple tests by filling one balloon to neutral buoyancy indoors, and then headed outdoors into the cold. We stood outside for a few minutes for the helium inside the balloons to reach outdoor temperature. Then we went back into the building where there was no wind and found that it still was more or less neutrally bouyant. No significant difference in lift.</p>
+<p>We made some hardware changes this time. These are the changes we have made:</p>
+<p><strong>TCXO:<br/></strong>We have replaced the Ocillator Crystal that is found on the stock HC-12 radio module with a TCXO.  </p>
+<p><strong>Conformal coating:<br/></strong>Our last pair of balloons mysteriously vanished over Belgium, just 20km apart. We think it may be local weather conditions and moisture that killed both. This time all the electronics was covered by conformal coating.</p>
+<p><strong>Heat sealing the balloon:<br/></strong>Thanks to Tomasz Brol who came to UKHAS 2018 conference, we learned that heat sealing does help in keeping the helium where it should be. We used an impulse sealer to seal the mouth of the balloon.</p>
+<p><strong>GPS antenna:</strong><br/>The GPS has not always behaved properly on our previous flights. We have been using 3/4 wave guitar wire antennas so far. We have used a network analyzer to verify that the resonant frequency of this antenna is indeed the L1 GPS frequency band. Just to be sure, we flew one tracker with the stock ceramic patch antenna that comes with the GPS module in our prototype tracker. The other tracker flew with our guitar wire antenna</p>
+<p>From the electronics point of view, it went much better than earlier. In fact, the flight terminating factor was the balloon and not the electronics. The TCXO worked well. The carrier frequency was stable for both trackers. However, ICSPACE9 had some drift over each transmission, perhaps around 150Hz. Our DLfldigi demodulation software was able to lock on to the carrier frequency using the Automatic Frequency Control algorithm. However, some listeners reported loosing some data while trying to lock on to the carrier frequency.</p>
+<p>The performance of the guitar wire antenna was still poor but works. We could compare the performance of the guitar wire antenna against the stock ceramic patch antenna that came with the GPS module because we flew both. It took on average less that 3s for a fix with the ceramic patch antenna while it took perhaps around 9s with the guitar wire antenna. We earlier used the Network Analyser to verify the performance of the guitar wire antenna and indeed found that it was tuned to the L1 GPS frequency band. Further investigations must take place.</p>
+<p>We are very grateful to everyone who tuned in to listen to our balloon transmissions.</p>
+<p><strong>Key information:</strong></p>
+<p><strong>ICSPACE8</strong><br/>balloon: Qualatex 36 inch<br/>payload weight: 21.5g<br/>net lift: 3.0g </p>
+<p><strong>ICSPACE9<br/></strong>balloon: Qualatex 36 inch<br/>payload weight: 16.7g<br/>net lift: 5.0g</p>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figcaption>This is the flight paths for ICSPACE8 and ICSPACE9. They followed almost the same flight path.<br/><br/></figcaption></figure>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figcaption>Flight path of ICSPACE8 and 9 on google earth</figcaption></figure>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figcaption>last seen points of ICSPACE9 and ICSPACE8<br/></figcaption></figure>
+<figure>
+<iframe src="https://www.youtube.com/embed/94rWgvO7yhI?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe>
+</figure>
+<p>These are the photos from the pre launch preparations and launch itself.</p>
+<ul><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_171915/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>The boxes with one of the balloons still inside.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_120358/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Impulse sealer test.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_120413/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Testing the impulse heater on another balloon.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_130551/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Just the components of ICSPACE8. Note that the antenna is a ceramic patch antenna that weighed around 5g. Heavy!</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_132818/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Upside down ICSPACE8 during assembly</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_133757/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Testing one of the trackers at the window.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_133928/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>ICSPACE8 packed in.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_135306/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>ICSPACE8 on the scale<br/></figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_141945/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>The components of ICSPACE9 on the polystyrene enclosure.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_142633/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>ICSPACE9 on the scale with the string as well</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_1447390/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Both trackers side by side</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_153016/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Packed our balloons in to large boxes to take out to the field and launch!</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_154401-2/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>The heat seal of ICSPACE9</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_154408/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Closer look at the heat seal at ICSPACE9</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_154615-2/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>another closeup</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_171908/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Richard at the launch site!</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/https://www.union.ic.ac.uk/guilds/icseds/?attachment_id=1472"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>The setup with the Yagi antenna mounted on a camera tripod. They were held together with cellotape.</figcaption></figure></li></ul>
+<ul><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_154125/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_154129/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_154137/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190405_154744/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Filled up the balloon at the Imperial College Advanced Hackspace</figcaption></figure></li></ul>
+  </div>
+  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/201904/https://www.union.ic.ac.uk/guilds/icseds/2019/04/cross-country-pico-balloon-flight/">see the original on the Wayback Machine</a></p>
+</article>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="../assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>More</h3>
+      <ul>
+        <li><a href="../join.html">Become a member (&pound;5)</a></li>
+        <li><a href="../blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="../wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="../js/main.js"></script>
+</body>
+</html>

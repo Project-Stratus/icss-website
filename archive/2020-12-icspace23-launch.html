@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICSPACE23 launch &middot; ICSS archive</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo" href="../index.html" aria-label="ICSS home">
+    <img src="../assets/img/logo-white.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a href="../blog.html">Blog</a>
+    <a href="../wiki.html">Wiki</a>
+    <a href="../events.html">Events</a>
+    <a href="../projects.html">Projects</a>
+    <a class="taskbar__join" href="../join.html">Join us</a>
+  </nav>
+</header>
+<!-- END taskbar -->
+
+<main>
+<article class="post">
+  <p class="post__meta"><a href="../blog.html#archive">&larr; back to the archive</a></p>
+  <h1>ICSPACE23 launch</h1>
+  <p class="post__meta">December 17, 2020 &middot; posted by Medad Newman</p>
+  <p class="post__stamp">from the archive</p>
+  <div class="post__body">
+<p>ICSPACE23 was launched at 12:00h UTC on 17/12/2020 from Felixstowe, UK. It is once again a LoRaWAN tracker connected to The Things Network.</p>
+<h3>Day 1</h3>
+<p>Here is the launch video, filmed by Steve Randall.  Many thanks to Steve for launching it. </p>
+<figure>
+<iframe src="https://www.youtube.com/embed/3n4zTiASjAQ?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe>
+<figcaption>Launch video</figcaption></figure>
+<p>At the end of the day, the balloon reached the Netherlands. It is at 10785m, the highest altitude so far for an ICSS balloon.</p>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figcaption>Last position of ICSPACE23 over the Netherlands</figcaption></figure>
+<p>We have a transmission distance record: 701km. Three packets were picked up by a gateway over the Matterhorn. The balloon was at <code>lat=51.870953,lon=4.089384,alt=10538</code> while the gateway was at  <code>"latitude": 45.97645,"longitude": 7.65849,"altitude": 4478</code>. No doubt, the high altitude position of the gateway helps!</p>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure>
+<p>Hopefully this page will be updated as the balloon carries on around the world.</p>
+<h3>Day 2</h3>
+<p>The balloon woke up over Belarus. Transmissions were picked up from neighbouring Lithuania. It floated at 10600m throughout the day, down from yesterday’s peak of 10700m+.</p>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figcaption>Last position of the day</figcaption></figure>
+<p>Flight predictions show that it may miss Japan.</p>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure>
+<p>After reviewing the log of past positions sent down, the very first position fix of the day was at an astonishing <code>1.32°</code> sun elevation. At this incident angle, the sun’s power would have been just 2% of the power if it was directly shining head on at the solar cells. The position was <code>Lon=22.393309,Lat=53.338936,alt=10650,ts=2020-12-18 06:58:01</code>. Note that longitude and latitude positions are accurate to 0.0065335 degrees, altitude accurate to the meter and time accurate to the minute. The tracker saves the very first position fix of the day to EEPROM. It may have browned out trying to transmit it over radio but it saved it anyway.</p>
+<p>Keying the position and time into SunCalc, this is how it looks:</p>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure>
+<h4>Key information</h4>
+<p>The key stats for the balloon are as follows:<br/><strong>Tracker weight:</strong> 5.68 grams<br/><strong>Free lift:</strong> 6.0 grams<br/><strong>Lifting gas:</strong> Hydrogen(99.9% pure)<br/><strong>Balloon:</strong><a href="https://web.archive.org/web/202012/https://www.aliexpress.com/item/32803586452.html?spm=a2g0s.9042311.0.0.32bf4c4dL9KsTW"> Aliexpress clear 36 inch balloon</a><br/><strong>Radio:</strong> LoRa, using the LoRaWAN protocol, registered on The Things Network <br/><strong>Flight Duration: </strong>Not available yet<br/><strong>Float Altitude:</strong> As of 17/12/2020, reached a peak of 10785 <br/><strong>Balloon Preparation</strong>:  Balloon was prestretched to 0.630psi and sealed(temporarily). A hair dryer was used  to heat the surface of the film during inflation. It took 40 minutes to reach peak internal pressure with and full power on aquarium pump. </p>
+<h3>Photos of Tracker</h3>
+<p>These photos were taken by Steve Randall, a day before launch. Many thanks Steve.</p>
+<figure>
+<a href="https://web.archive.org/web/202012/https://www.flickr.com/photos/16828840@N07/albums/72157717368383966"><img alt="20201206_201743" loading="lazy" src="img/a8fd3cea_50728133142_a481e72d14_c.jpg"/></a>
+</figure>
+  </div>
+  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/202012/https://www.union.ic.ac.uk/guilds/icseds/2020/12/icspace23-launch/">see the original on the Wayback Machine</a></p>
+</article>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="../assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>More</h3>
+      <ul>
+        <li><a href="../join.html">Become a member (&pound;5)</a></li>
+        <li><a href="../blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="../wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="../js/main.js"></script>
+</body>
+</html>

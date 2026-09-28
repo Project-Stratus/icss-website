@@ -730,3 +730,4 @@ table.plain th {
   html { scroll-behavior: auto; }
   .floater, .project__graphic, .quote-note, .bubble, .crt__scan::before, .crt__scan::after { animation: none; }
 }
+[hidden] { display: none !important; }

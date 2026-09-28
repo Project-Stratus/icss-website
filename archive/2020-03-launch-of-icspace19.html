@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Launch of ICSPACE19 LoRa balloon flight &middot; ICSS archive</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo" href="../index.html" aria-label="ICSS home">
+    <img src="../assets/img/logo-white.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a href="../blog.html">Blog</a>
+    <a href="../wiki.html">Wiki</a>
+    <a href="../events.html">Events</a>
+    <a href="../projects.html">Projects</a>
+    <a class="taskbar__join" href="../join.html">Join us</a>
+  </nav>
+</header>
+<!-- END taskbar -->
+
+<main>
+<article class="post">
+  <p class="post__meta"><a href="../blog.html#archive">&larr; back to the archive</a></p>
+  <h1>Launch of ICSPACE19 LoRa balloon flight</h1>
+  <p class="post__meta">March 20, 2020 &middot; posted by guilds_icseds</p>
+  <p class="post__stamp">from the archive</p>
+  <div class="post__body">
+<figure>
+<iframe src="https://www.youtube.com/embed/Q-_KLZYXcoY?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe>
+<figcaption>Launch of ICSPACE19 by Jackson</figcaption></figure>
+<p>The ICSS balloon group launched ICSPACE19 from Fryent Country park on 17/3/2020. This launch comes more than a month since the last launch and is perhaps the most tested tracker we have launched. </p>
+<p>The LoRa radio transmitted using Spreading Factor 8 and 125khz bandwidth. </p>
+<p>We have split the world into regions for different LoRaWAN parameters. e.g. EU868, AU915, US915 etc. The regions are graphically shown in the map below.</p>
+<p>Update: 20/3/20: A critical bug was discovered in the firmware, breaking the ablity for the tracker to switch LoRaWAN parameters depending on where it is. It is stuck transmitting on EU868 params.</p>
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure>
+<h3>Key Stats</h3>
+<p><strong>ICSPACE19</strong><br/>balloon: <a href="https://web.archive.org/web/202003/https://www.aliexpress.com/item/32803586452.html?spm=a2g0s.9042311.0.0.32bf4c4dL9KsTW">Aliexpress party balloon</a><br/>payload weight: 6.0g<br/>net lift: 5.0g<br/>float altitude: 7500m<br/>Lifting Gas: Pure BOC GAS helium, accidentally mixed with some air</p>
+<h2>Updates</h2>
+<p>Since this flight has become a multi day flight, we will update on the flight as time goes by</p>
+<h3>Day 1</h3>
+<p>ICSPACE19 was launched from Fryent Country Park in London. It was launched just before 2pm and there was only around 2-3 hours of sunlight left. It was semi overcast but surprisingly the tracker came to life, indicated by the blinking LED on the tracker. </p>
+<p>Launch was flawless, with minimal wind. The tracker GPS did not get a fix until it was over Essex. It transmitted for around 1 hour before going to sleep, with the sun going down on it.</p>
+<h4>Pre launch photos</h4>
+<p>These photos show the prestretching process. The balloon was filled to a pressure of 0.625 psi.</p>
+<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li></ul>
+<h3>Day 2</h3>
+<p>ICSPACE19 came to life early in the morning and was picked up by gateways over Germany. However, it was transmitting no valid GPS position(only the default position centered in London) and invalid pressure and temperature values. It was transmitting every 46 minutes instead of the 2 minutes it was programmed to do.</p>
+<p>After a bit of investigation, it was determined that somehow, the I2C line connecting the GPS and pressure/temperature sensor to the Microcontroller was not working, and NO data was being returned to the microcontroller. </p>
+<p>However, we knew that the 46minute interval represented the timeout duration if the GPS did not respond. </p>
+<p>The tracker transmitted every 46 minutes and we could localise the tracker using gateway locations.</p>
+<h3>Day 3</h3>
+<p>Same issue as the previous day. GPS and Sensor were sending incorrect information and radio was transmitting in 46 minute intervals.</p>
+<h3>Day 4</h3>
+<p>The tracker miraculously came to life today, and started sending down valid GPS and sensor data every two minutes. It travelled over Romania and entered Bulgaria. It has achieved a float of 7500m ASL.</p>
+<figure><a href="2020-03-launch-of-icspace19.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</a><figcaption>Predicted flight path after the sun went down</figcaption></figure>
+<h3>Day 5 &amp; 6 &amp; 7</h3>
+<p>The tracker made a few LoRaWAN join requests through out the days but could not succeed in completeing a join request. It looks like the tracker is successfully sending the Join-Request but is not receiving back the Join-Accept. Perhaps it is because the antenna on the tracker is not very well tuned to receive the data. Hopefully it will still attempt to join tomorrow</p>
+<figure><img alt="Image result for join request lorawan" loading="lazy" src="img/ad24efa5_OTAA.png"/><figcaption>Image taken from https://microchipdeveloper.com/lora:connecting-to-a-lorawan-network</figcaption></figure>
+<h2>Final assembly of trackers</h2>
+<p>Final assembly of the tracker was done in the Dyson School makerspace where we attached the Solar Cells to the tracker PCB.</p>
+<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li></ul>
+
+<h2>Photos of tracker during testing in the Sun</h2>
+<p>The tracker was taken out to Hyde Park and placed in the sun to test if it works under the sun. It did. Interestingly, once the GPS gets its first fix, it is able to keep the ephemeris data even when shadows fall on the Solar cells. </p>
+<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li></ul>
+  </div>
+  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/202003/https://www.union.ic.ac.uk/guilds/icss/2020/03/launch-of-icspace19/">see the original on the Wayback Machine</a></p>
+</article>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="../assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>More</h3>
+      <ul>
+        <li><a href="../join.html">Become a member (&pound;5)</a></li>
+        <li><a href="../blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="../wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="../js/main.js"></script>
+</body>
+</html>

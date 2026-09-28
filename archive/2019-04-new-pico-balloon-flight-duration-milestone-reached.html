@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New pico balloon flight duration milestone reached &middot; ICSS archive</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo" href="../index.html" aria-label="ICSS home">
+    <img src="../assets/img/logo-white.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a href="../blog.html">Blog</a>
+    <a href="../wiki.html">Wiki</a>
+    <a href="../events.html">Events</a>
+    <a href="../projects.html">Projects</a>
+    <a class="taskbar__join" href="../join.html">Join us</a>
+  </nav>
+</header>
+<!-- END taskbar -->
+
+<main>
+<article class="post">
+  <p class="post__meta"><a href="../blog.html#archive">&larr; back to the archive</a></p>
+  <h1>New pico balloon flight duration milestone reached</h1>
+  <p class="post__meta">April 16, 2019 &middot; posted by Medad Newman</p>
+  <p class="post__stamp">from the archive</p>
+  <div class="post__body">
+<p>The Imperial College Space Society High Altitude ballooning group launched 2 balloons yesterday, 15 April 2019. One of the two balloons launched yesterday was tracked for a duration of 12 hours and 52 minutes of flight time. This is our longest flight yet, beating our previous record by nearly 3 times. We launched 2 balloons, ICSPACE10 and 11 around 15 minutes apart after prefilling at the <a href="https://web.archive.org/web/201904/https://www.imperial.ac.uk/advanced-hackspace/">Imperial College Advanced Hackspace</a> at White City. This also marks the last flight with this generation of prototype balloon trackers. We have reached the capability limit of the current hardware. ICSPACE11 abruptly stopped transmitting at nearly the 13 hour mark. The battery most likely ran out. Any improvements in flight time will come only with hardware changes. We are now designing the next generation of trackers, with custom PCB.</p>
+<p>ICSPACE10 seems to have sprung a leak, leaking out helium at 7200 m. It was still rising before abruptly descending at 1-2m/s.</p>
+<p>ICSPACE11 was a lighter tracker that reached a peak altitude of 8973m, the highest we have flown our pico balloons. The lowest temperature reached was -35°C. This is also the lowest temperature seen to date. Most importantly, it stayed in the air for the longest flight to date:  <br/>12 hours and 52 minutes. </p>
+<p>Around 3.5 hours after reaching a float, ICSPACE11 started descending at -0.1 to -0.3 m/s. It descended all the way to 3110m before recovering to around 7000m. It is likely that at 8600m, the balloon encountered liquid water from the clouds, froze on either the tracker or balloon and descended. Once it reached the lower altitude, the temperature just went above freezing. Then the ice must have melted and evaporated, allowing the balloon to rise back up. It is likely that not all the water evaporated, thus explaining the lower float altitude after that. It seems to have been on its way down again but stopped transmitting abruptly around 1 hour after reaching the second peak. It is likely that the battery ran out. On the ground we have run the tracker for 16 hours. The low temperatures might have shortened the battery life.</p>
+<figure><img alt="" loading="lazy" src="img/4dc028b8_image-1.png"/><figcaption>flight data for ICSPACE11<br/></figcaption></figure>
+<p>ICSPACE10 flew with a 5 gram ceramic patch antenna for GPS. ICSPACE11 flew with a much lighter guitar wire antenna for GPS. The GPS performance with the ceramic patch antenna performed flawlessly. Fixes in 1-2 seconds. However, the guitar wire antenna did not work very well for the first hour. It took around 5-10 seconds for a fix. We have verified the resonant  <br/>frequency of the guitar wire to be the L1 gps frequency with a network analyser. We have also verified that the Voltage Standing Wave Ratio(VSWR) is around 1.4 which is reasonable. Now we think the guitar wire antenna physically flexes and that affects the signal strength every time it bends. The guitar wire antenna is only physically constrained at its base(at one point) and is quite elastic, allowing it to flex and oscillate. This might be messing with the Automatic Gain Control in the GPS module. GPS signals are already very weak and any disturbance might throw it off. </p>
+<p>We have observed on particularly violent launches such as our <a href="2019-03-high-altitude-ballooning-group-launch-pair-of-balloons-to-belgium-this.html">Belgian flights</a> and <a href="2019-02-high-altitude-ballooning-group-launch-a-balloon-that-again-landed-in-t.html">Dutch flight</a> that it took a few minutes to get a fix right after launch. Subsequently, it seemed to get fixes much quicker, on par with the stock ceramic patch antennas. The launches were violent affairs due to storms hitting London during launch. In fact, one of the balloons did a loop- de -loop right after launch. On the ground, free of any movement, the guitar wire antennas work perfectly as well. We suspect that a few minutes after launch, the balloon and tracker reach steady state and stablise. The GPS antenna stops flexing and we get much quicker GPS fixes.</p>
+<h2>Key information</h2>
+<p><strong>ICSPACE10</strong><br/> balloon: Qualatex 36 inch<br/> payload weight: 22.4g<br/> net lift: 4.5g <br/> float altitude: N/A<br/> max altitude: 7227m<br/> distance traveled: 81.21 km<br/> flight duration: 3h 40 min</p>
+<p><strong>ICSPACE11</strong><br/> balloon: Qualatex 36 inch<br/> payload weight: 16.8g<br/> net lift: 5.5g <br/> float altitude:  8600m <br/> max altitude: 8973m<br/> distance traveled: 213.46 km<br/> flight duration: 12h 52 min</p>
+<p>This project is supported by the <a href="https://web.archive.org/web/201904/https://ukseds.org/">UK Society for the Development and Exploration of Space(UKSEDS)</a>.</p>
+<figure>
+<iframe src="https://www.youtube.com/embed/jbGhiWi_4w8?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe>
+</figure>
+<figure><img alt="" loading="lazy" src="img/9e5909cf_image-2.png"/><figcaption>Flight path of ICSPACE10 and 11<br/></figcaption></figure>
+<figure><img alt="" loading="lazy" src="img/2e68b56a_image-3.png"/><figcaption>Fight path ICSPACE10 and 11 on Google Earth. ICSPACE11 went further.</figcaption></figure>
+<h2>Photos taken pre launch</h2>
+<ul><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_183502/"><img alt="" loading="lazy" src="img/7b928cd5_20190415_183502-1024x576.jpg"/></a><figcaption>Lovely field, Wormwood Scrubs</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_183504/"><img alt="" loading="lazy" src="img/64bc7ac7_20190415_183504-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_183510/"><img alt="" loading="lazy" src="img/60371f35_20190415_183510-1024x576.jpg"/></a><figcaption>The setup on the field</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_123203/"><img alt="" loading="lazy" src="img/ede2a8fc_20190415_123203-1024x576.jpg"/></a><figcaption>Close up the electronics<br/></figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_123209/"><img alt="" loading="lazy" src="img/500f83db_20190415_123209-1024x576.jpg"/></a><figcaption>All electronics are covered in conformal coating</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_131731/"><img alt="" loading="lazy" src="img/b9e1e35f_20190415_131731-1024x576.jpg"/></a><figcaption>ICSPACE10 with its heavy, ceramic patch antenna</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_131750/"><img alt="" loading="lazy" src="img/db13ca72_20190415_131750-1024x576.jpg"/></a><figcaption>ICSPACE11 with its Guitar wire antenna for GPS</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_131757/"><img alt="" loading="lazy" src="img/f30c0754_20190415_131757-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_132141/"><img alt="" loading="lazy" src="img/e559c6cf_20190415_132141-1024x576.jpg"/></a><figcaption>fitting the components in very low density polystyrene foam</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_132529/"><img alt="" loading="lazy" src="img/53f29149_20190415_132529-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_133451/"><img alt="" loading="lazy" src="img/b8c39540_20190415_133451-1024x576.jpg"/></a><figcaption>ICSPACE10</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_133534/"><img alt="" loading="lazy" src="img/ce1fa3fd_20190415_133534-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_1335350/"><img alt="" loading="lazy" src="img/5a4bb2b5_20190415_1335350-1024x576.jpg"/></a><figcaption>ICSPACE10 in the foam</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_134857/"><img alt="" loading="lazy" src="img/7ae0f145_20190415_134857-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_134900/"><img alt="" loading="lazy" src="img/84809dd5_20190415_134900-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_134902/"><img alt="" loading="lazy" src="img/bac63084_20190415_134902-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_134901/"><img alt="" loading="lazy" src="img/90a00d13_20190415_134901-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_134949/"><img alt="" loading="lazy" src="img/b906b144_20190415_134949-1024x576.jpg"/></a><figcaption>ICSPACE10 with the string as well</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_141840/"><img alt="" loading="lazy" src="img/cc25e127_20190415_141840-1024x576.jpg"/></a><figcaption>fully packaged ICSPACE11</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_163412/"><img alt="" loading="lazy" src="img/fbdfef3a_20190415_163412-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_163415/"><img alt="" loading="lazy" src="img/f524dd59_20190415_163415-1024x576.jpg"/></a><figcaption>Both balloons packed in boxes to be transported to the field</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_163605/"><img alt="" loading="lazy" src="img/8ef3a10c_20190415_163605-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_163608/"><img alt="" loading="lazy" src="img/3764dba9_20190415_163608-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_163613/"><img alt="" loading="lazy" src="img/ba1062fb_20190415_163613-1024x576.jpg"/></a><figcaption>A sticker for our sponsor</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_163616/"><img alt="" loading="lazy" src="img/58b4d193_20190415_163616-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_172537/"><img alt="" loading="lazy" src="img/fcebf933_20190415_172537-1024x576.jpg"/></a><figcaption>Hunkered down for tracking and lunch out in the park.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_183455/"><img alt="" loading="lazy" src="img/0184878e_20190415_183455-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_183459/"><img alt="" loading="lazy" src="img/a19a55a7_20190415_183459-1024x576.jpg"/></a></figure></li><li><figure><a href="https://web.archive.org/web/201904/http://www.union.ic.ac.uk/guilds/icseds/20190415_183501/"><img alt="" loading="lazy" src="img/7458a217_20190415_183501-1024x576.jpg"/></a></figure></li></ul>
+  </div>
+  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/201904/https://www.union.ic.ac.uk/guilds/icseds/2019/04/new-pico-balloon-flight-duration-milestone-reached/">see the original on the Wayback Machine</a></p>
+</article>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="../assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>More</h3>
+      <ul>
+        <li><a href="../join.html">Become a member (&pound;5)</a></li>
+        <li><a href="../blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="../wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="../js/main.js"></script>
+</body>
+</html>

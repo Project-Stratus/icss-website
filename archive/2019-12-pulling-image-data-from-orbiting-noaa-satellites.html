@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pulling image data from orbiting NOAA satellites &middot; ICSS archive</title>
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Silkscreen&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<header class="taskbar">
+  <a class="taskbar__logo" href="../index.html" aria-label="ICSS home">
+    <img src="../assets/img/logo-white.png" alt="ICSS">
+  </a>
+  <nav class="taskbar__nav" aria-label="Main">
+    <a href="../blog.html">Blog</a>
+    <a href="../wiki.html">Wiki</a>
+    <a href="../events.html">Events</a>
+    <a href="../projects.html">Projects</a>
+    <a class="taskbar__join" href="../join.html">Join us</a>
+  </nav>
+</header>
+<!-- END taskbar -->
+
+<main>
+<article class="post">
+  <p class="post__meta"><a href="../blog.html#archive">&larr; back to the archive</a></p>
+  <h1>Pulling image data from orbiting NOAA satellites</h1>
+  <p class="post__meta">December 4, 2019 &middot; posted by Medad Newman</p>
+  <p class="post__stamp">from the archive</p>
+  <div class="post__body">
+<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure>
+<p>The cube satellite group designed and  built a 137 Mhz double crossed dipole antenna to receive data from orbiting NOAA statelites. This probably the first time the Imperial College Space Society has communicated with an orbiting satellite, albeit only one way. We built the antenna according to this excellent <a href="https://web.archive.org/web/201912/https://www.qsl.net/py4zbz/DCA.pdf">tutorial</a> by Gerald Martes (KD6JDJ). Our design did not necessarily use the exact same materials as in the tutorial but the dimensions were close. The structure was made from wood the work shop in the Dyson School of Design Engineering and the dipole elements made from 2mm steel wire.  We assembled the antenna in Imperial College Robotics Society Lab. The dipole elements were aligned at 30° to the vertical by laser cutting out the hole to interface dipole elements with the antenna structure at a  30° angle. This kept the dipole elements aligned pretty accurately.</p>
+<p>We followed <a href="https://web.archive.org/web/201912/https://www.rtl-sdr.com/rtl-sdr-tutorial-receiving-noaa-weather-satellite-images/">this</a> excellent tutorial on how to get the software working: SDR sharp and Wxtoimg. It required quite a bit of fiddling around to get it to work. </p>
+<p>After testing the antenna in the lab, we took the antenna out to Hyde Park to receive signals from orbiting NOAA satellites. We were fortunate to pick signals from our very first pass and we recorded all the IQ data from the SDR. We processed the data later to get the images.</p>
+<h2>Takeaways</h2>
+<p>If you are trying to pull data from a satellite like how we did, make sure  you record the the IQ data from the whole satellite pass. SDRsharp has a function to record the whole bandwidth of the SDR you are using into a large WAV file. The file can get quite large. In our experience, it was around 500Mb for a 10 min recording. Later on, we can reprocess that data, piping the filtered audio from SDR sharp into WXtoIMG via a virtual audio cable like <a href="https://web.archive.org/web/201912/https://www.vb-audio.com/Cable/">this</a>.</p>
+<h2>Satellite imagery</h2>
+<p>The satellite we tracked had 2 channels and WXtoIMG did some processing to get various different output images, as seen in the gallery below.</p>
+<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figcaption>MCIR filter</figcaption></figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figcaption>Thermal filter</figcaption></figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li></ul>
+<h2>Pictures of assembly</h2>
+<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li></ul>
+<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li></ul>
+<h2>Field trip to Hyde Park</h2>
+<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+</figure></li></ul>
+  </div>
+  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/201912/https://www.union.ic.ac.uk/guilds/icseds/2019/12/pulling-image-data-from-orbiting-noaa-satellites/">see the original on the Wayback Machine</a></p>
+</article>
+</main>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img class="footer__logo" src="../assets/img/logo-white.png" alt="Imperial College Space Society">
+      <p>Cultivating enthusiasm for space engineering and science.<br>
+      If you know nothing we&rsquo;ll teach you &mdash; if you know loads you&rsquo;ll teach us!</p>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <ul>
+        <li><a href="https://www.instagram.com/ic_space_society">Instagram</a></li>
+        <li><a href="https://www.twitter.com/ICSpaceSoc">Twitter / X</a></li>
+        <li><a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a></li>
+        <li><a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>More</h3>
+      <ul>
+        <li><a href="../join.html">Become a member (&pound;5)</a></li>
+        <li><a href="../blog.html#archive">The archives (2012&ndash;2023)</a></li>
+        <li><a href="../wiki.html">Wiki</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__small">Imperial College Space Society &middot; Imperial College Union, South Kensington, London SW7 2AZ</p>
+</footer>
+<!-- END footer -->
+
+<script src="../js/main.js"></script>
+</body>
+</html>
