@@ -40,7 +40,7 @@ img, video {
   top: 0;
   z-index: 10;
   background: black;
-  padding: 8px 20px;
+  padding: 12px 40px;
   border-bottom: 1px solid #333;
   overflow: hidden;
 }
@@ -60,7 +60,7 @@ img, video {
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
   font-size: 14px;
-  margin-left: 22px;
+  margin-left: 28px;
 }
 
 #nav .taskbar__nav a:hover,
@@ -160,19 +160,38 @@ img, video {
 /* main content */
 
 .content {
-  max-width: 1000px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 20px 20px 60px;
+  padding: 50px 50px 100px;
 }
 
 .content h1 {
   font-size: 40px;
-  margin-bottom: 5px;
+  margin: 10px 0 15px;
 }
 
 .content h2 {
   font-size: 26px;
-  margin-top: 45px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.content h3 {
+  margin-top: 35px;
+}
+
+.content p {
+  max-width: 720px;
+  margin: 0 0 18px;
+}
+
+.content ul, .content ol {
+  margin: 0 0 20px;
+  padding-left: 25px;
+}
+
+.content li {
+  margin-bottom: 8px;
 }
 
 /* project boxes on the home page */
@@ -180,8 +199,8 @@ img, video {
 .projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 25px;
+  margin-top: 35px;
 }
 
 .card {
@@ -237,31 +256,33 @@ img, video {
 .project-pic {
   float: right;
   width: 170px;
-  margin: 0 0 10px 20px;
+  margin: 0 0 30px 40px;
   filter: drop-shadow(0 0 1px white) drop-shadow(0 0 6px rgba(150, 180, 255, 0.6));
 }
 
 table {
   border-collapse: collapse;
-  margin: 15px 0;
+  margin: 25px 0 30px;
 }
 
 td, th {
   border: 1px solid #555;
-  padding: 6px 10px;
+  padding: 10px 16px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
   background: #1a1a2e;
+  white-space: nowrap;
 }
 
 .photos {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 22px;
   align-items: flex-start;
+  margin: 25px 0 35px;
 }
 
 .photos figure {
@@ -277,38 +298,47 @@ th {
 .photos figcaption {
   font-size: 13px;
   color: #aaa;
-  padding: 4px 0;
+  padding: 8px 0 0;
 }
 
 .box {
   border: 1px solid #555;
   background: rgba(0, 0, 0, 0.5);
-  padding: 5px 20px;
-  margin: 20px 0;
+  padding: 25px 30px 10px;
+  margin: 30px 0;
+}
+
+.box p {
+  margin-bottom: 25px;
+}
+
+.box .button {
+  margin: 10px 0 0;
 }
 
 video.big {
   width: 100%;
   display: block;
+  margin-top: 30px;
 }
 
 .paper {
   overflow: hidden;
-  margin-bottom: 12px;
+  margin-bottom: 25px;
 }
 
 .paper img {
   float: left;
   width: 80px;
-  margin-right: 12px;
+  margin-right: 20px;
 }
 
 /* events page - the tv */
 
 .watchparty {
   position: relative;
-  margin: 20px 0;
-  padding-top: 30px;
+  margin: 30px 0 20px;
+  padding-top: 40px;
   overflow: hidden;
   background: #0b0d20;
 }
@@ -407,7 +437,7 @@ video.big {
 }
 
 .post-list li {
-  padding: 3px 0;
+  padding: 6px 0;
 }
 
 .post-list time {
@@ -422,14 +452,37 @@ video.big {
 }
 
 .year-head {
-  margin: 25px 0 5px;
+  margin: 35px 0 10px;
   color: #ffd23f;
 }
 
 .post {
-  max-width: 750px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 30px 20px 60px;
+  padding: 50px 40px 100px;
+}
+
+.post__body p {
+  margin: 0 0 18px;
+}
+
+/* old posts have long links and bits of code that break the layout on phones */
+.post__body {
+  overflow-wrap: anywhere;
+}
+
+.content {
+  overflow-wrap: break-word;
+}
+
+.post__body code, .post__body pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.post__body table {
+  display: block;
+  overflow-x: auto;
 }
 
 .post h1 {
@@ -451,7 +504,7 @@ video.big {
 
 .post__body img {
   height: auto;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .post__lost-img {
@@ -462,7 +515,8 @@ video.big {
 
 .sheet-post {
   border-bottom: 1px solid #333;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .sheet-post img {
@@ -474,8 +528,8 @@ video.big {
 
 #footer {
   text-align: center;
-  padding: 25px 20px;
-  margin-top: 40px;
+  padding: 40px 30px 30px;
+  margin-top: 60px;
   border-top: 1px solid #333;
   background: black;
 }
@@ -491,7 +545,11 @@ video.big {
 
 /* phones (this took forever) */
 @media (max-width: 800px) {
-  #nav .taskbar__nav { float: none; clear: both; display: block; padding-top: 8px; }
+  #nav { padding: 12px 20px; }
+  #nav .taskbar__nav { float: none; clear: both; display: block; padding-top: 10px; }
+  .content { padding: 30px 22px 70px; }
+  .content h2 { margin-top: 50px; }
+  .post { padding: 30px 22px 70px; }
   #nav .taskbar__nav a { margin: 0 14px 0 0; font-size: 12px; }
   #hero { padding: 60px 15px 190px; }
   #hero h1 { font-size: 36px; }
@@ -506,6 +564,6 @@ video.big {
   .crt { width: 92%; }
   .crowd { margin-top: -40px; }
   .bubble { font-size: 14px; }
-  .bubble.one { bottom: 60px; }
+  .bubble.one { bottom: 12px; left: 4%; }
   .bubble.two { display: none; }
 }
