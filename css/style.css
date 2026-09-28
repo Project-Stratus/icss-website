@@ -340,7 +340,7 @@ video.big {
   margin: 30px 0 20px;
   padding-top: 40px;
   overflow: hidden;
-  background: #0b0d20;
+  background: #26262b;
 }
 
 .crt {
@@ -349,9 +349,10 @@ video.big {
   max-width: 700px;
   margin: 0 auto;
   padding: 15px 15px 28px;
-  background: #34322e;
-  border-radius: 20px;
-  box-shadow: 0 0 60px rgba(120, 190, 255, 0.35);
+  box-sizing: border-box;
+  background: #141414;
+  border: 2px solid #3a3a3a;
+  border-radius: 14px 18px 12px 16px;
 }
 
 /* DONT add overflow:hidden or border-radius to this, the youtube video goes black.
@@ -380,23 +381,9 @@ video.big {
   bottom: 0;
   pointer-events: none;
   border-radius: 18px / 26px;
-  box-shadow: 0 0 0 14px #34322e, inset 0 0 60px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 0 14px #141414, inset 0 0 50px rgba(0, 0, 0, 0.6);
   background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0 2px, transparent 2px 4px),
     linear-gradient(rgba(60, 255, 170, 0.05), rgba(255, 120, 60, 0.07));
-}
-
-/* the flicker is on the tv's glow, NOT on top of the video (anything animated
-   on top of the youtube iframe makes it go black) */
-.crt {
-  animation: tvglow 3.5s infinite;
-}
-
-@keyframes tvglow {
-  0%, 100% { box-shadow: 0 0 60px rgba(120, 190, 255, 0.35); }
-  5% { box-shadow: 0 0 40px rgba(120, 190, 255, 0.15); }
-  7% { box-shadow: 0 0 70px rgba(120, 190, 255, 0.45); }
-  44% { box-shadow: 0 0 30px rgba(120, 190, 255, 0.1); }
-  46% { box-shadow: 0 0 60px rgba(120, 190, 255, 0.35); }
 }
 
 .crt__label {
@@ -410,8 +397,10 @@ video.big {
 .crowd {
   position: relative;
   display: block;
-  width: 100%;
-  margin-top: -100px;
+  width: 104%;
+  max-width: none;
+  margin-left: -2%;
+  margin-top: -150px;
   pointer-events: none;
 }
 
@@ -562,7 +551,7 @@ video.big {
   .project-pic { width: 100px; }
   .photos figure { width: 100%; }
   .crt { width: 92%; }
-  .crowd { margin-top: -40px; }
+  .crowd { width: 150%; margin-left: -25%; margin-top: -60px; }
   .bubble { font-size: 14px; }
   .bubble.one { bottom: 12px; left: 4%; }
   .bubble.two { display: none; }
