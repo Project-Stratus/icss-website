@@ -38,7 +38,14 @@ img, video {
   background: #181818;
   padding: 12px 40px;
   border-bottom: 1px solid #333;
-  overflow: hidden;
+}
+
+/* keeps the nav bar tall enough around the floated logo and links
+   (was overflow: hidden, but that cut off the projects dropdown) */
+#nav::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #logo {
@@ -63,6 +70,40 @@ img, video {
 #nav .taskbar__nav a[aria-current="page"] {
   color: #ffd23f;
 }
+
+/* projects dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  right: -12px;
+  top: 100%;
+  padding-top: 14px;
+  min-width: 210px;
+  z-index: 20;
+}
+
+.dropdown:hover .dropdown__menu,
+.dropdown:focus-within .dropdown__menu {
+  display: block;
+}
+
+#nav .dropdown__menu a {
+  display: block;
+  margin: 0;
+  padding: 9px 16px;
+  background: #181818;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+}
+
+#nav .dropdown__menu a:first-child { border-top: 1px solid #333; border-radius: 6px 6px 0 0; }
+#nav .dropdown__menu a:last-child { border-bottom: 1px solid #333; border-radius: 0 0 6px 6px; }
+#nav .dropdown__menu a:hover { background: #262626; }
 
 #nav a.join {
   color: #ffd23f;
