@@ -114,7 +114,7 @@
     };
 
     fetch(feed.dataset.sheet)
-      .then((r) => r.text())
+      .then((r) => { if (!r.ok) throw new Error("sheet not shared"); return r.text(); })
       .then((text) => {
         const [head, ...rows] = parseCSV(text);
         const names = head.map((h) => h.trim().toLowerCase());
