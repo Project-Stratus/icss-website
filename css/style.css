@@ -225,6 +225,13 @@ img, video {
   margin-bottom: 8px;
 }
 
+/* the projects section on the home page is wider than the rest of the content */
+#projects.content {
+  max-width: 1400px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 /* project boxes on the home page */
 
 .projects {
@@ -237,7 +244,7 @@ img, video {
 .card {
   position: relative;
   display: block;
-  height: 220px;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border: 1px solid #45454a;
   border-radius: 6px;
@@ -580,6 +587,7 @@ video.big {
   #nav { padding: 12px 20px; }
   #nav .taskbar__nav { float: none; clear: both; display: block; padding-top: 10px; }
   .content { padding: 30px 22px 70px; }
+  #projects.content { padding-left: 22px; padding-right: 22px; }
   .content h2 { margin-top: 50px; }
   .post { padding: 30px 22px 70px; }
   #nav .taskbar__nav a { margin: 0 14px 0 0; font-size: 12px; }
