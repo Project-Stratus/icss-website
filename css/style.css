@@ -573,3 +573,13 @@ video.big {
   height: 100%;
   border: 0;
 }
+
+/* instagram embeds */
+.insta {
+  max-width: 480px;
+  margin: 30px 0;
+}
+
+.insta .instagram-media {
+  min-width: 0 !important;
+}
