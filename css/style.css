@@ -399,10 +399,10 @@ video.big {
 .crowd {
   position: relative;
   display: block;
-  width: 104%;
-  max-width: none;
-  margin-left: -2%;
-  margin-top: -95px;
+  width: 100%;
+  margin-left: 0;
+  margin-top: -80px;
+  margin-bottom: -30px;
   pointer-events: none;
 }
 
@@ -553,7 +553,7 @@ video.big {
   .project-pic { width: 100px; }
   .photos figure { width: 100%; }
   .crt { width: 92%; }
-  .crowd { width: 150%; margin-left: -25%; margin-top: -35px; }
+  .crowd { width: 120%; max-width: none; margin-left: -10%; margin-top: -30px; margin-bottom: -12px; }
   .bubble { font-size: 14px; }
   .bubble.one { bottom: 12px; left: 4%; }
   .bubble.two { display: none; }
@@ -584,4 +584,12 @@ video.big {
 
 .insta .instagram-media {
   min-width: 0 !important;
+}
+
+/* blog: "add your update" note */
+.contribute {
+  border: 1px dashed #ffd23f;
+  background: rgba(255, 210, 63, 0.08);
+  padding: 10px 16px;
+  border-radius: 6px;
 }

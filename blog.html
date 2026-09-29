@@ -27,18 +27,27 @@
 <h1>Blog</h1>
 
 <!--
-  New posts come from a Google Sheet so committee can post without touching the code.
-  Sheet columns (first row): date | title | author | project | body | image | link
-  File > Share > Publish to web > pick the sheet > CSV > Publish, then paste that link into data-sheet below
-  and the normal edit link into the "add a post" link.
+  All posts come from a Google Sheet (idea from Tomo Kihara's sheet2news.js), so anyone on
+  committee can post without touching the code.
+
+  Sheet columns (first row): Date | Title | Project | Author | Description | Image | Link | Show
+    - a post only appears if Show is "yes", so submissions can be checked before they go up
+    - Date as 2026-10-05 (or 2026-10); anything from 2023 or earlier goes in the archive list
+    - Image and Link can be full web addresses, or paths on this site like archive/...
+  To connect it: File > Share > Publish to web > pick the sheet > Comma-separated values (.csv)
+  > Publish, then paste that link into data-sheet below. Until then the list further down is shown.
 -->
-<div class="sheet-feed" data-sheet=""></div>
-<p><a class="button" href="#" data-sheet-edit>+ Add to the blog</a></p>
+<p class="contribute" data-private hidden>
+  Got an update from your project? <a data-contribute href="#">Add it here</a> to be featured on the blog.
+</p>
+
+<div id="latest-posts" class="sheet-feed" data-sheet=""></div>
 
 <h2 id="archive">Archive</h2>
 <p>Rumour has it that ICSS was founded in medieval times by one of the knights of Camelot. Tragically all our archives from this era were lost in the Great Fire of London. What we've tried to recover of our history is given below.</p>
 
 <h3>Archived blog posts</h3>
+<div id="archive-posts">
 <!-- BEGIN archive-list -->
   <h3 class="year-head">2023</h3>
   <ul class="post-list">
@@ -136,6 +145,7 @@
     <li><time>Nov 2012</time><span class="gone">High Altitude Ballooning First Meeting <small>(lost in the Great Fire)</small></span></li>
     <li><time>Nov 2012</time><span class="gone">First Rocketry Meeting <small>(lost in the Great Fire)</small></span></li>
   </ul>  <!-- END archive-list -->
+</div>
 
 <h2>ICSS elsewhere</h2>
 <p>You can find other media covering ICSS published across the internet. Call it a scavenger hunt or whatever.</p>

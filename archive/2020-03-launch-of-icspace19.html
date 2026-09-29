@@ -39,7 +39,7 @@
 <p>The LoRa radio transmitted using Spreading Factor 8 and 125khz bandwidth. </p>
 <p>We have split the world into regions for different LoRaWAN parameters. e.g. EU868, AU915, US915 etc. The regions are graphically shown in the map below.</p>
 <p>Update: 20/3/20: A critical bug was discovered in the firmware, breaking the ablity for the tracker to switch LoRaWAN parameters depending on where it is. It is stuck transmitting on EU868 params.</p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 </figure>
 <h3>Key Stats</h3>
 <p><strong>ICSPACE19</strong><br/>balloon: <a href="https://web.archive.org/web/202003/https://www.aliexpress.com/item/32803586452.html?spm=a2g0s.9042311.0.0.32bf4c4dL9KsTW">Aliexpress party balloon</a><br/>payload weight: 6.0g<br/>net lift: 5.0g<br/>float altitude: 7500m<br/>Lifting Gas: Pure BOC GAS helium, accidentally mixed with some air</p>
@@ -50,10 +50,10 @@
 <p>Launch was flawless, with minimal wind. The tracker GPS did not get a fix until it was over Essex. It transmitted for around 1 hour before going to sleep, with the sun going down on it.</p>
 <h4>Pre launch photos</h4>
 <p>These photos show the prestretching process. The balloon was filled to a pressure of 0.625 psi.</p>
-<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<ul><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
 </figure></li></ul>
 <h3>Day 2</h3>
 <p>ICSPACE19 came to life early in the morning and was picked up by gateways over Germany. However, it was transmitting no valid GPS position(only the default position centered in London) and invalid pressure and temperature values. It was transmitting every 46 minutes instead of the 2 minutes it was programmed to do.</p>
@@ -64,52 +64,51 @@
 <p>Same issue as the previous day. GPS and Sensor were sending incorrect information and radio was transmitting in 46 minute intervals.</p>
 <h3>Day 4</h3>
 <p>The tracker miraculously came to life today, and started sending down valid GPS and sensor data every two minutes. It travelled over Romania and entered Bulgaria. It has achieved a float of 7500m ASL.</p>
-<figure><a href="2020-03-launch-of-icspace19.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="2020-03-launch-of-icspace19.html">
 </a><figcaption>Predicted flight path after the sun went down</figcaption></figure>
 <h3>Day 5 &amp; 6 &amp; 7</h3>
 <p>The tracker made a few LoRaWAN join requests through out the days but could not succeed in completeing a join request. It looks like the tracker is successfully sending the Join-Request but is not receiving back the Join-Accept. Perhaps it is because the antenna on the tracker is not very well tuned to receive the data. Hopefully it will still attempt to join tomorrow</p>
 <figure><img alt="Image result for join request lorawan" loading="lazy" src="img/ad24efa5_OTAA.png"/><figcaption>Image taken from https://microchipdeveloper.com/lora:connecting-to-a-lorawan-network</figcaption></figure>
 <h2>Final assembly of trackers</h2>
 <p>Final assembly of the tracker was done in the Dyson School makerspace where we attached the Solar Cells to the tracker PCB.</p>
-<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<ul><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
 </figure></li></ul>
 
 <h2>Photos of tracker during testing in the Sun</h2>
 <p>The tracker was taken out to Hyde Park and placed in the sun to test if it works under the sun. It did. Interestingly, once the GPS gets its first fix, it is able to keep the ephemeris data even when shadows fall on the Solar cells. </p>
-<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</figure></li><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<ul><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
+</figure></li><li><figure>
 </figure></li></ul>
   </div>
-  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/202003/https://www.union.ic.ac.uk/guilds/icss/2020/03/launch-of-icspace19/">see the original on the Wayback Machine</a></p>
 </article>
 </main>
 

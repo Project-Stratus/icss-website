@@ -32,20 +32,20 @@
   <p class="post__meta">October 6, 2020 &middot; posted by Medad Newman</p>
   <p class="post__stamp">from the archive</p>
   <div class="post__body">
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>Flight path of ICSPACE21</figcaption></figure>
 <p>This article describes two high altitude balloon flights in August/September 2020. ICSPACE20 was launched on 22 August 2020 and was last heard over Denmark. ICSPACE21, launched on 4 September 2020, was last heard over Japan six days later, floating at 10400m altitude. This is our longest flight in terms of distance, covering 10000km+. </p>
 <figure>
 <iframe src="https://www.youtube.com/embed/komT73XP97g?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe>
 <figcaption>Perfect launch conditions at 0740h on 4 September 2020</figcaption></figure>
 <p>ICSPACE21 was launched at 0740h in the morning from our usual launch site in Fryent Country Park in London, UK. There was very little wind, allowing a near vertical rise of the balloon. The sun was obscured by clouds at launch, but there was just enough sunlight to power up the  tracker’s LEDs, indicating the tracker was working as expected. The launch was uneventful.</p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>ICSPACE21 over Germany, picked up by dozens of gateways.</figcaption></figure>
 <p>The first data we received from the tracker was 40 minutes later, as the sun broke through the clouds. The balloon settled at 10300m by the end of the day and was last heard for the day at 17:47 BST over Poland as the sun went down.</p>
 <figure><img alt="" loading="lazy" src="img/d75fadc3_20200828_225527.jpg"/><figcaption>ICSPACE21, 3 days before launch. The RF shield on the  CMWX1ZZABZ-078 radio module was accidentally removed during soldering.</figcaption></figure>
 <p>The tracker woke up over Moldova the next day, passing through parts of Ukraine and Romania during the day. Coverage was spottier than the previous day, as the transmissions were only picked up by one or two LoRaWAN gateways over this region. </p>
 <p>Unfortunately, it was not heard the next day, and the next 5 days. I feared the worst. Astonishingly, ICSPACE21 reappeared over Hokkaido Japan, with a SINGLE transmission picked up by a single gateway.</p>
-<figure><a href="https://web.archive.org/web/202010/https://mail.google.com/mail/u/0?ui=2&amp;ik=395bd0f7c5&amp;attid=0.1.1&amp;permmsgid=msg-f:1677561420475776293&amp;th=1747e5394c5bbd25&amp;view=fimg&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ_2q0W35I39bh1UhoOSbBNqt9S33RQPgWKRNJ_ipU3MLcxl7PXQRc39Lkft3x7gmSTxxP0o04Smbemi1gNI9MPXRrf-XnRUhQQfSg76EjSml1BzlMj7_ilWjVM&amp;disp=emb"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="https://web.archive.org/web/202010/https://mail.google.com/mail/u/0?ui=2&amp;ik=395bd0f7c5&amp;attid=0.1.1&amp;permmsgid=msg-f:1677561420475776293&amp;th=1747e5394c5bbd25&amp;view=fimg&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ_2q0W35I39bh1UhoOSbBNqt9S33RQPgWKRNJ_ipU3MLcxl7PXQRc39Lkft3x7gmSTxxP0o04Smbemi1gNI9MPXRrf-XnRUhQQfSg76EjSml1BzlMj7_ilWjVM&amp;disp=emb">
 </a><figcaption>Hysplit prediction of ICSPACE21’s subsequent flight after passing Japan</figcaption></figure>
 <p>The raw data for that packet is as follows: It contains both the data from tracker as well as meta data from gateway. </p>
 <pre>{
@@ -122,37 +122,37 @@ Quoting TT7 in his excellent blog resource: <a href="https://web.archive.org/web
 <p>The final and fourth reason is given by Steve Randall, referencing Dan Bowman:</p>
 <blockquote><p> The aim of the pre-stretching was to stretch the material to the       point it will be stretched in flight – but under warmer conditions       where the material is more ductile. In flight its a lot colder the       material less ductile and more likely to fracture during stretching. </p><cite>Steve Randall</cite></blockquote>
 <p>In both ICSPACE20 and 21, the balloons were prestretched by connecting a sillicone tube from balloon mouth to an aquarium pump(<a href="https://web.archive.org/web/202010/https://www.ebay.co.uk/itm/Hidom-Quiet-Aquarium-Air-Pump-Fish-Tank-Single-Twin-Outlet-Valve-And-Accessories/113078603531?ssPageName=STRK%3AMEBIDX%3AIT&amp;_trksid=p2057872.m2749.l2649">ebay listing</a>), with a manometer inline(<a href="https://web.archive.org/web/202010/https://www.ebay.co.uk/itm/Digital-Handheld-Manometer-HVAC-Air-Vacuum-Gas-Differential-Pressure-Gauge-Meter/184198578514?hash=item2ae3174152:g:LWsAAOSwDRNeYM8N">ebay listing</a>) to monitor internal pressure. Initially, to full the balloon up to its nominal volume, I used the exhaust end of a vaccum cleaner to inflate the balloon. Then I connected the sillicone tube from pump to balloon and filled it to its target pressure, stopping the pump and sealing the tube simultaneously. Note that I set the aquarium pump to maximum power/flow rate, controlled by the knob on it. I then left the balloons in its pressurised state for 24 hours before opening its valve back up.</p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>Prestretching a balloon</figcaption></figure>
 <p>ICSPACE20, which disappeared after the first night, was stretched to 0.600psi. It is not clear if it burst overnight or just went out of LoRaWAN coverage, over Russia. It never reappeared though, indicating that it must have eventually burst.</p>
 <p>ICSPACE2, stretched to 0.591psi was seen over Japan heading East, six days after launch. However, it never reappeared over Europe. It must have burst later, or came down in bad weather. </p>
 <p>While testing, I was finding that some balloons seem to be fully stretched out by 0.590psi but not others. By fully stretched I mean that there are almost no wrinkles along the seam of the balloon. Others seem to still have long wrinkles even at 0.600psi(see picture below). Another balloon I balloon stretched to 0.600psi burst soon after inflating while I was moving it. I had stopped inflating it when it reached  this pressure and sealed it off. It must have been at its unstable limit and blew up.</p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>Balloon prestretched to 0.600psi, with very small wrinkles. It blew up a few minutes later while moving it. It was not pierced, just close to its limit.</figcaption></figure>
 <p>My  feeling is that the longer wrinkles at such high pressures at 0.600psi  indicate that the balloon has still has some leeway to stretch and is not near the limit, and can handle the pressure well. Below is a picture showing longer wrinkles on another balloon. Note that I did not record what pressure it was inflated to in that particular picture. ICSPACE21 had quite long wrinkles,  around 6-7 cm long each side of the seam at its peak pressure of 0.591psi</p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>Balloon with longer wrinkles, around 5-6cm on each side of the seam</figcaption></figure>
 <p>I also suspect that the balloon endures permenant damage by prestretching it to 0.600psi, that may cause premature failure in the air. ICSPACE20 seemed to have burst overnight, prematurely. It was prestretched to 0.600psi. Stretching to only 0.590psi may be safer as was done to ICSPACE21 which survived at least 6 days.</p>
 <h3>Pre launch instructions used on both flights</h3>
 <p>Here is the instructions recording the steps used during filling of the balloon, to serve as a record for future reference.</p>
 <h4><strong>Emp</strong>t<strong>ying the balloon</strong></h4>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 </figure>
 <p>Before filling the balloon, the objective is to completely evacuvate ALL residual air from inside the balloon.</p>
 <p>Completely empty out all air from inside envelop by placing a sillicone tube into the balloon, and using a vaccum cleaner to suck out the air inside. The end of the tube can sit around the center of the balloon. The balloon should absolutely have no air inside after sucking. Slowly pull the tube out after turning off the vaccum cleaner. This will allow the tube to slide out more easily as the balloon film will not be clinging on to the tube as tightly. Now when the tube is at the mouth of the balloon, again restart the vaccum to suck all the air out that entered when removing the tube. Finally, use the <a href="https://web.archive.org/web/202010/https://www.ikea.com/gb/en/p/bevara-sealing-clip-set-of-30-mixed-colours-assorted-colours-assorted-sizes-mixed-sizes-10339171/">IKEA sealing clip</a> to seal the balloon.</p>
 <figure><img alt="https://www.ikea.com/gb/en/images/products/bevara-sealing-clip-set-of-30-mixed-colours-mixed-sizes__0711631_PE728360_S5.JPG" loading="lazy" src="img/deb971e0_set-of-30-mixed-colours-mixed-sizes__0711631_PE728360_S5.JPG"/><figcaption>Ikea sealing clip(<a href="https://web.archive.org/web/202010/https://www.ikea.com/gb/en/p/bevara-sealing-clip-set-of-30-mixed-colours-assorted-colours-assorted-sizes-mixed-sizes-10339171/">listing</a>)</figcaption></figure>
 <h4>Filling</h4>
 <p>Connect sillicone tube to the helium/hydrogen source. Then place the tube into the mouth of the balloon. At this point, the IKEA clip should still be sealing the balloon. Now remove the clip and start filling. The IKEA clip should weigh the weight of payload + netlift. A blob of Bluetac should be attached to the clip to make up the target weight(see picture below). Try to keep the IKEA clip roughly clipped onto the neck of the balloon so that you can fill with lifting gas and immediately check if it has achieved neutral bouyancy. The target is to achieve neutral buoyancy. Once target is reached, ensure that the neck of the balloon is sealed with the IKEA clip. The balloon can be placed aside to prepare for permanent sealing.</p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>Extra bluetac attached to IKEA sealing clip to reach its target weight.</figcaption></figure>
 <h4><strong>Sealing</strong></h4>
 <p>I would highly recommend testing the sealing procedure on another balloon before committing to seal on the flight ready balloon. The seal has to prevent lifting gas from escaping from the balloon, and must NOT add additional holes to leak air out. I use a clothing iron and directly iron the plastic neck. However, different irons have different temperatures so it is best to see the sealing performance on another balloon before trying on the launch balloon. Some people recommend placing a baking sheet over the plastic before ironing(e.g. <a href="https://web.archive.org/web/202010/https://groups.io/g/HABalloon/message/51">Eduard Voiculescu</a>). Once confident about iron sealing, go ahead and iron the neck.</p>
 <h4><strong>Tying the string</strong></h4>
-<figure><a href="2020-10-icspace21-flight-to-japan-and-icspace20.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="2020-10-icspace21-flight-to-japan-and-icspace20.html">
 </a><figcaption> Knotted valve of balloon, after ironing to seal it. The dyneema string, illustrated in green line, is intertwined with the knot of the balloon valve. Excess plastic is cut off after completion.</figcaption></figure>
 <p>I use a 0.08mm dyneema fishing string(<a href="https://web.archive.org/web/202010/https://www.bluezonefishing.co.uk/product/sasame-ldy-3-dyneema-braided-100m-superlight/">purchase listing</a>) that is very light and incredibly strong. I usually iron and seal most of the neck of the balloon with a clothing iron. </p>
 <p>I then tie the plastic valve into a knot, intertwining the dyneema string within the knot(refer to picture above). The reason for this unusual knot is the dyneema string can be highly abrasive and can easily slice through the plastic. Therefore, I try to spread the load at the dyneema string/plastic interface such that the dyneema string cannot slice through the balloon plastic. I use 3-4 knots to tie the dyneema string. The string is highly slippery and needs several knots. I would then cut the excess plastic below the dyneema string knot as that is excess dead weight. </p>
-<ul><li><figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<ul><li><figure>
 <figcaption>Image taken from https://www.my-best-kite.com/larks-head-knot.html</figcaption></figure></li></ul>
 <p>Once the string is tied, I would tie the other end of the string into a loop. This loop will be used to tie a Larks Head knot(<a href="https://web.archive.org/web/202010/http://blog.kites-ireland.com/videos/larks-head-knot/1366/">link</a>, <a href="https://web.archive.org/web/202010/https://www.my-best-kite.com/larks-head-knot.html">link</a>) between the tracker string and balloon(see image above). This would make attaching the tracker to balloon at launch site easier, and can be done as the very last step before launch.</p>
 <h4>Pre-launch advice</h4>
@@ -161,15 +161,14 @@ Quoting TT7 in his excellent blog resource: <a href="https://web.archive.org/web
 <p>The tracker has an indicator LED which will be useful in checking for signs of life. At power up, only the MCU and LED will power up, drawing very little current which means it can come to life with very little sunlight. Following that, the GPS with higher power requirements will power up. It may brown out at this point if there is too little sunlight. </p>
 <h3>Key information</h3>
 <p><strong>ICSPACE20</strong></p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>Both trackers weighed 6 grams. Not sure of precise weight due to inavailablity of more precise scale.</figcaption></figure>
 <ul><li>Ironed over the flaw in the balloon edge, sealing it</li><li>Prestretched to 0.600psi in one shot and sealed(temporarily). 40 minutes fill time and full power on aquarium pump.</li><li>Trimmed off excess plastic around balloon. This was done with moving the knife, not the balloon.</li><li>Survived 1 day, not heard next day. May have crashed over night or later. It was predicted to enter areas of low LoRaWAN coverage so it may have indeed been flying for a while. Never heard from again.</li><li>Floated at 10200m</li><li>Tracker weight: 6 grams</li><li>Net lift: 5 grams</li><li>Balloon: <a href="https://web.archive.org/web/202010/https://www.aliexpress.com/item/32803586452.html?spm=a2g0s.9042311.0.0.32bf4c4dL9KsTW">Aliexpress party balloon</a> </li><li>Lifting gas is <a href="https://web.archive.org/web/202010/https://www.cardfactory.co.uk/helium-gas-canister---fills-up-to-30-balloons*/6475.html">Card Factory helium</a></li></ul>
 <p><strong>ICSPACE21</strong>: </p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 </figure>
 <ul><li>Ironed over the flaw in the balloon edge, sealing it </li><li>Prestretched to 0.591psi in one shot and sealed(temporarily). 40 minutes fill time and full power on aquarium pump .</li><li>Trimmed off excess plastic around balloon. This was done with moving the balloon while holding the knife in place. Different from how it was done on ICSPACE20.</li><li>Survived 6 days, last seen over Japan. May have crashed over the Pacific ocean. Not heard from since.</li><li>Floated at 10400m</li><li>Tracker weight: 6 grams</li><li>Net lift: 5 grams</li><li>Balloon: <a href="https://web.archive.org/web/202010/https://www.aliexpress.com/item/32803586452.html?spm=a2g0s.9042311.0.0.32bf4c4dL9KsTW">Aliexpress party balloon</a> </li><li>Lifting gas is <a href="https://web.archive.org/web/202010/https://www.cardfactory.co.uk/helium-gas-canister---fills-up-to-30-balloons*/6475.html">Card Factory helium</a> </li></ul>
   </div>
-  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/202010/https://www.union.ic.ac.uk/guilds/icseds/2020/10/icspace21-flight-to-japan-and-icspace20/">see the original on the Wayback Machine</a></p>
 </article>
 </main>
 

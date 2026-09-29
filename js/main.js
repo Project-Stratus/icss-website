@@ -78,11 +78,21 @@
     }
   });
 
-  // --- blog: posts pulled from a published Google Sheet (CSV) ---
+  // --- blog: every post comes from a published Google Sheet ---
+  // Idea from Tomo Kihara's sheet2news.js (github.com/kihapper/sheet2news.js). The feed URL that
+  // script used was switched off by Google in 2021, so this reads the sheet's CSV export instead.
+  // Columns: Date | Title | Project | Author | Description | Image | Link | Show (only "yes" rows show)
   const feed = document.querySelector(".sheet-feed[data-sheet]");
   if (feed && feed.dataset.sheet) {
-    const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-    const safeUrl = (u) => (/^https?:\/\//i.test(u) ? esc(u) : "");
+    const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    // allow full web links or paths on this site, nothing else (no javascript: etc)
+    const safeUrl = (u) => (/^(https?:\/\/|archive\/|assets\/)/i.test(u.trim()) ? esc(u.trim()) : "");
+    const niceDate = (d) => {
+      const m = /^(\d{4})-(\d{1,2})(?:-(\d{1,2}))?/.exec(d.trim());
+      if (!m) return esc(d);
+      return (m[3] ? +m[3] + " " : "") + MONTHS[+m[2] - 1] + " " + m[1];
+    };
     const parseCSV = (text) => {
       const rows = [];
       let row = [], cell = "", q = false;
@@ -102,26 +112,55 @@
       if (cell || row.length) { row.push(cell); rows.push(row); }
       return rows;
     };
+
     fetch(feed.dataset.sheet)
       .then((r) => r.text())
       .then((text) => {
         const [head, ...rows] = parseCSV(text);
-        const col = (name) => head.findIndex((h) => h.trim().toLowerCase() === name);
-        const [d, t, a, p, b, im, l] = ["date", "title", "author", "project", "body", "image", "link"].map(col);
-        const posts = rows.filter((r) => r[t] && r[t].trim()).reverse(); // newest rows at the bottom of the sheet
-        if (!posts.length) return;
-        feed.innerHTML = posts.map((r) => {
-          const img = im >= 0 && safeUrl(r[im] || "") ? `<img src="${safeUrl(r[im])}" alt="" loading="lazy">` : "";
-          const more = l >= 0 && safeUrl(r[l] || "") ? ` <a href="${safeUrl(r[l])}">read more &rarr;</a>` : "";
-          const meta = [r[d], r[a], r[p]].filter(Boolean).map(esc).join(" &middot; ");
-          const body = esc(r[b] || "").split(/\n{2,}/).map((para) => `<p>${para.replace(/\n/g, "<br>")}</p>`).join("");
-          return `<article class="sheet-post">${img}<h3>${esc(r[t])}</h3><p class="post__meta">${meta}</p>${body}${more}</article>`;
+        const names = head.map((h) => h.trim().toLowerCase());
+        const posts = rows
+          .map((r) => {
+            const get = (...keys) => { for (const k of keys) { const i = names.indexOf(k); if (i >= 0 && r[i]) return r[i].trim(); } return ""; };
+            return { date: get("date"), title: get("title"), project: get("project"), author: get("author"),
+                     text: get("description", "body"), image: get("image"), link: get("link"), show: get("show").toLowerCase() };
+          })
+          .filter((p) => p.title && p.show === "yes")
+          .sort((a, b) => b.date.localeCompare(a.date)); // newest first
+
+        const isArchive = (p) => parseInt(p.date, 10) <= 2023;
+        const latest = posts.filter((p) => !isArchive(p));
+        const old = posts.filter(isArchive);
+
+        // new posts: title, details, text, picture
+        feed.innerHTML = latest.map((p) => {
+          const link = safeUrl(p.link), img = safeUrl(p.image);
+          const meta = [p.date && niceDate(p.date), p.project && esc(p.project), p.author && esc(p.author)].filter(Boolean).join(" &middot; ");
+          const title = link ? `<a href="${link}">${esc(p.title)}</a>` : esc(p.title);
+          const body = esc(p.text).split(/\n{2,}/).map((para) => `<p>${para.replace(/\n/g, "<br>")}</p>`).join("");
+          return `<article class="sheet-post">${img ? `<img src="${img}" alt="" loading="lazy">` : ""}<h3>${title}</h3><p class="post__meta">${meta}</p>${body}</article>`;
         }).join("");
+
+        // archive: the same year-by-year list as before, but from the sheet
+        const archive = document.getElementById("archive-posts");
+        if (archive && old.length) {
+          let html = "", year = "";
+          old.forEach((p) => {
+            const y = p.date.slice(0, 4);
+            if (y !== year) { html += (year ? "</ul>" : "") + `<h3 class="year-head">${esc(y)}</h3><ul class="post-list">`; year = y; }
+            const link = safeUrl(p.link);
+            html += `<li><time>${niceDate(p.date)}</time>` + (link
+              ? `<a href="${link}">${esc(p.title)}</a>`
+              : `<span class="gone">${esc(p.title)} <small>(lost in the Great Fire)</small></span>`) + "</li>";
+          });
+          archive.innerHTML = html + "</ul>";
+        }
       })
-      .catch(() => {});
+      .catch(() => {}); // if the sheet can't be reached, the built-in list stays up
   }
-  const editBtn = document.querySelector("[data-sheet-edit]");
-  if (editBtn && editBtn.getAttribute("href") === "#") editBtn.hidden = true;
+
+  // "add your update" link on the blog: private for now, so it only shows when viewing the site locally
+  const onLocalhost = ["localhost", "127.0.0.1", ""].includes(location.hostname);
+  document.querySelectorAll("[data-private]").forEach((el) => { if (onLocalhost) el.hidden = false; });
 
   // --- floating graphics you can grab and fling about ---
   document.querySelectorAll(".floater").forEach((el) => {

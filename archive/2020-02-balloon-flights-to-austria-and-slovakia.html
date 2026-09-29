@@ -39,53 +39,52 @@
 <iframe src="https://www.youtube.com/embed/v1nm1z1FW_o?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent"></iframe>
 <figcaption>Launch of the battery powered tracker, ICSPACE17. Landed on a hill in Slovakia</figcaption></figure>
 <p>The High altitude ballooning group launched 2 trackers on Friday 31 Jan 2020 from Fryent Country park. ICSPACE16 was last seen over Austria while ICSPACE17 landed on a hill in Slovakia and was transmitting until it ran out of battery.</p>
-<figure><a href="https://web.archive.org/web/202002/https://www.union.ic.ac.uk/guilds/icseds/final-flight-path/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="https://web.archive.org/web/202002/https://www.union.ic.ac.uk/guilds/icseds/final-flight-path/">
 </a><figcaption>Flight path of both balloons</figcaption></figure>
 <p>ICSPACE16 was our first pure solar tracker, with 6 solar cells generating a voltage of ~3.6V. We launched under cloudy conditions and thus it did not have power at launch. ICSPACE16 first appeared the next morning when the sun came up at an altitude of 9300m, the highest we have reached. However, it transmitted its position twice at sunrise and was silent for the rest of the day. During sunset, due to a reset caused by the low incidence angle of the sun(and thus lower solar voltage), the tracker came to life and transmitted 5 more fixes. It was just about to enter Hungary. It is likely that a software issue was behind the low performance of tracker. The software was not very robust in handling unexpected resets of the GPS and microcontroller. Sadly, this was the last time we heard from ICSPACE16.</p>
 <p>ICSPACE17 was battery powered, with an Energizer AAA battery+ boost converter. The transmissions were picked up by 100s of gateways connected to The Things Network here in the UK and in the Netherlands and over Europe. It flew overnight to Slovakia. However, in the morning, when the sun came up, due to heat from the Sun, the balloon shot up by 2000m before bursting and coming down. It was still transmitting for the rest of the day and was picked up by a gateway mounted on a radio tower. For a while, our tracker became a weather station, reporting back temperature and pressure on that hill in Slovakia. How cool is that!</p>
-<figure><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure>
 <figcaption>Flight profile for ICSPACE17 shows rapid altitude rise at the end before bursting and coming down quickly!</figcaption></figure>
 <p>Like our<a href="2020-01-long-range-lora-balloon-tracker-launch-from-london.html"> last flight</a>, the tracker used LoRa radio transmissions that were picked up by the 100s of gateways connected to the Things Network. On board our tracker was a custom 0.6mm PCB integrating the CMWX1ZZABZ-078 LoRa  radio module, U-blox MAX M8Q GPS, TE Connectivity MS5607  temperature/pressure sensor and boost converter. All the design files and software can be found on <a href="https://web.archive.org/web/202002/https://github.com/ImperialSpaceSociety/picotracker-Lora">Github</a>. </p>
-<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html">
 </a></figure>
 <p>We are thankful to everyone who setup their LoRa gateway and connected it to The Things Network. In our code, we have implemented Geofencing to switch radio parameters, depending on local restrictions.</p>
-<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html">
 </a></figure>
 <p>All our circuits are designed on Kicad, which is very flexible. </p>
-<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html">
 </a></figure>
 <p>We then make a PCB design with Kicad as well.</p>
-<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html">
 </a></figure>
 <p>Assembly of the trackers were done either in the Undergrad electronics lab at Imperial College London or the well equiped <a href="https://web.archive.org/web/202002/https://www.imperialhackspace.com/">Imperial College Advanced Hackspace</a>.</p>
-<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<figure><a href="2020-02-balloon-flights-to-austria-and-slovakia.html">
 </a></figure>
 <p>The Aliexpress party balloon was prestretched by filling it up with a vaccum cleaner. The tube was attached to the outlet where air came out. Our vaccum cleaner had two ports to connect the tube to. One was the suction end while the other was the blower end. </p>
 <p><strong>ICSPACE16</strong><br/>balloon: <a href="https://web.archive.org/web/202002/https://www.aliexpress.com/item/32803586452.html?spm=a2g0s.9042311.0.0.32bf4c4dL9KsTW">Aliexpress party balloon</a><br/>payload weight: 6.0g<br/>net lift: 5.5g<br/>float altitude: 9300m<br/>max altitude: 9345m<br/>distance traveled: 1287 km<br/>flight duration: ~23hours<br/>Lifting Gas: <a href="https://web.archive.org/web/202002/https://www.cardfactory.co.uk/gifts/helium-balloon-cylinder.htm">Party balloon helium(not very pure)</a></p>
 <p><strong>ICSPACE17</strong><br/>balloon: Qualatex 36 inch<br/>payload weight: 12.0<br/>net lift: 6.5g <br/>float altitude:  7400 m <br/>max altitude: 9391m<br/>distance traveled: 1481 km<br/>flight duration: ~18 hours<br/>Lifting Gas: <a href="https://web.archive.org/web/202002/https://www.cardfactory.co.uk/gifts/helium-balloon-cylinder.htm">Party balloon helium(not very pure)</a> </p>
 <p>Many thanks to the <a href="https://web.archive.org/web/202002/https://www.imperial.ac.uk/engineering/alumni/old-centralians-trust/">Old Centralian’s Trust</a>, <a href="https://web.archive.org/web/202002/https://ukseds.org/">UK Society for the Exploration and Development of Space</a>, <a href="https://web.archive.org/web/202002/https://www.imperialcollegeunion.org/">Imperial College Union</a> for sponsoring our flights.</p>
 <h2>Photos of trackers and launch</h2>
-<ul><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/image-from-ios-2/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Just before launching ICSPACE17</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/early-flight/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Plenty of gateways picking up packets</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/final-flight-path/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Final known positions of both trackers</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/landing-location-of-icspace17/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Landing site of ICSPACE17 on a hill in Slovakia</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/image-from-iosasd/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>ICSPACE16, the completely solar powered tracker. Around 15cm across</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/icsapce16-picked-up-by-100s-of-gateways/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Into the epicenter of LoRa. Hundreds of gateways picked up our transmissions</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/lkdfg/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Testing the battery powered version(not launched yet)</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_133914/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_130035/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Solar cells in the sun</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_123119/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Measuring short circuit current from solar cells.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200125_125119-2/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Filling up balloon that carried ICSPACE17 to Slovakia</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_214600/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>The pure solar tracker, ICSPACE16 weighed only 6 grams, slightly higher than expected</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_224543/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Prefilled balloon left floating overnight to detect any leaks</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200130_204000/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Tracker without solar cells.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200130_224541/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Solar cells not assembled yet</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200203_134344/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>The knot seal for the balloon</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/dfkfdg/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
-</a><figcaption>Solar tracker packaged in a box</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_131645/"><p class="post__lost-img">[ 1 photo didn&rsquo;t survive the archive ]</p>
+<ul><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/image-from-ios-2/">
+</a><figcaption>Just before launching ICSPACE17</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/early-flight/">
+</a><figcaption>Plenty of gateways picking up packets</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/final-flight-path/">
+</a><figcaption>Final known positions of both trackers</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/landing-location-of-icspace17/">
+</a><figcaption>Landing site of ICSPACE17 on a hill in Slovakia</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/image-from-iosasd/">
+</a><figcaption>ICSPACE16, the completely solar powered tracker. Around 15cm across</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/icsapce16-picked-up-by-100s-of-gateways/">
+</a><figcaption>Into the epicenter of LoRa. Hundreds of gateways picked up our transmissions</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/lkdfg/">
+</a><figcaption>Testing the battery powered version(not launched yet)</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_133914/">
+</a></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_130035/">
+</a><figcaption>Solar cells in the sun</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_123119/">
+</a><figcaption>Measuring short circuit current from solar cells.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200125_125119-2/">
+</a><figcaption>Filling up balloon that carried ICSPACE17 to Slovakia</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_214600/">
+</a><figcaption>The pure solar tracker, ICSPACE16 weighed only 6 grams, slightly higher than expected</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_224543/">
+</a><figcaption>Prefilled balloon left floating overnight to detect any leaks</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200130_204000/">
+</a><figcaption>Tracker without solar cells.</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200130_224541/">
+</a><figcaption>Solar cells not assembled yet</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200203_134344/">
+</a><figcaption>The knot seal for the balloon</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/dfkfdg/">
+</a><figcaption>Solar tracker packaged in a box</figcaption></figure></li><li><figure><a href="https://web.archive.org/web/202002/http://www.union.ic.ac.uk/guilds/icseds/20200129_131645/">
 </a><figcaption>Testing in the Sun. The sun waits for no one. And as the sun moved across the horizon, we had to follow it.  The sun was filtering through a narrow gap on exhibition road. As the sun “moved”, the ray of sunlight shifted across the road!</figcaption></figure></li></ul>
   </div>
-  <p class="post__meta">Originally published on the old society website &middot; <a href="https://web.archive.org/web/202002/https://www.union.ic.ac.uk/guilds/icseds/2020/02/balloon-flights-to-austria-and-slovakia/">see the original on the Wayback Machine</a></p>
 </article>
 </main>
 
