@@ -1,21 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 body {
   margin: 0;
-  background: #05050f url('../assets/img/stars-dim.png');
+  background: #212121;
   color: #e8e8e8;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
 }
 
-.home {
-  background-image: url('../assets/img/stars.gif');
-}
-
 h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 a {
@@ -39,7 +35,7 @@ img, video {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: black;
+  background: #181818;
   padding: 12px 40px;
   border-bottom: 1px solid #333;
   overflow: hidden;
@@ -58,7 +54,7 @@ img, video {
 #nav .taskbar__nav a {
   color: white;
   text-decoration: none;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 14px;
   margin-left: 28px;
 }
@@ -83,6 +79,8 @@ img, video {
 
 #hero h1 {
   font-size: 64px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
   margin: 0;
   line-height: 1.1;
   position: relative;
@@ -131,7 +129,6 @@ img, video {
   color: #ffd23f;
   transform: rotate(-4deg);
   z-index: 3;
-  animation: float 6s ease-in-out infinite;
 }
 
 /* the floating drawings. you can drag them around (see main.js) */
@@ -143,19 +140,12 @@ img, video {
   -webkit-user-drag: none;
   /* white outline otherwise the black bits disappear on the background */
   filter: drop-shadow(0 0 1px white) drop-shadow(0 0 6px rgba(150, 180, 255, 0.6));
-  animation: float 7s ease-in-out infinite;
 }
 
 #f-rocket  { width: 140px; left: 6%; top: 50px; }
-#f-balloon { width: 170px; right: 6%; top: 40px; animation-duration: 9s; }
-#f-rover   { width: 140px; left: 12%; bottom: 40px; animation-duration: 8s; }
-#f-sail    { width: 240px; left: 42%; bottom: 10px; animation-duration: 11s; }
-
-@keyframes float {
-  0% { translate: 0 0; }
-  50% { translate: 0 -12px; }
-  100% { translate: 0 0; }
-}
+#f-balloon { width: 170px; right: 6%; top: 40px; }
+#f-rover   { width: 140px; left: 12%; bottom: 40px; }
+#f-sail    { width: 240px; left: 42%; bottom: 10px; }
 
 /* main content */
 
@@ -208,7 +198,8 @@ img, video {
   display: block;
   height: 220px;
   overflow: hidden;
-  border: 3px solid white;
+  border: 1px solid #45454a;
+  border-radius: 6px;
   background: black;
   color: white;
   text-decoration: none;
@@ -235,14 +226,25 @@ img, video {
   opacity: 1;
 }
 
+.card:hover {
+  color: white;
+}
+
 .card__name {
   position: absolute;
-  left: 12px;
-  bottom: 10px;
-  font-family: 'Orbitron', sans-serif;
+  left: 10px;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 26px;
   font-weight: bold;
   text-shadow: 2px 2px 4px black, 0 0 10px black;
+}
+
+.card .new {
+  display: block;
 }
 
 .new {
@@ -520,7 +522,7 @@ video.big {
   padding: 40px 30px 30px;
   margin-top: 60px;
   border-top: 1px solid #333;
-  background: black;
+  background: #181818;
 }
 
 [hidden] { display: none !important; }
