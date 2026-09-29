@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ic-space-society.vercel.app/sitemap.xml
