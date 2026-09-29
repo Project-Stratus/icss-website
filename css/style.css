@@ -635,10 +635,3 @@ video.big {
   min-width: 0 !important;
 }
 
-/* blog: "add your update" note */
-.contribute {
-  border: 1px dashed #ffd23f;
-  background: rgba(255, 210, 63, 0.08);
-  padding: 10px 16px;
-  border-radius: 6px;
-}
