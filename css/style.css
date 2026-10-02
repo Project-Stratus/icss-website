@@ -815,7 +815,7 @@ video.big {
 
 .event-list .where { color: #aaa; font-size: 14px; }
 
-.event-list li.past { opacity: 0.45; }
+.event-list li.past, .event-list li.past time, .event-list li.past .where { color: #8c8c8c; }
 .event-list li.past time::after { content: " (done)"; color: #888; font-weight: 400; }
 
 .event-list li.tbc time { color: #aaa; }
