@@ -6,6 +6,10 @@
   <title>Imperial College Space Society (ICSS)</title>
   <meta name="description" content="A student-led society for the development of space bound infrastructure and research.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/">
@@ -17,12 +21,13 @@
   <meta property="og:image" content="https://ic-space-society.vercel.app/assets/img/projects/tycho-poster.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Imperial College Space Society", "alternateName": ["ICSS", "Imperial Space Society", "IC Space Society", "ICSEDS"], "url": "https://ic-space-society.vercel.app/", "logo": "https://ic-space-society.vercel.app/assets/img/logo-ic.png", "email": "space.society@imperial.ac.uk", "description": "A student-led society for the development of space bound infrastructure and research.", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Imperial College London"}, "sameAs": ["https://www.instagram.com/ic_space_society", "https://www.twitter.com/ICSpaceSoc", "https://www.imperialcollegeunion.org/activities/a-to-z/space-society", "https://github.com/Project-Stratus"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Imperial College Space Society", "alternateName": ["ICSS", "Imperial Space Society", "IC Space Society", "ICSEDS"], "url": "https://ic-space-society.vercel.app/", "logo": "https://ic-space-society.vercel.app/assets/img/logo-ic.png", "email": "space.society@imperial.ac.uk", "description": "A student-led society for the development of space bound infrastructure and research.", "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Imperial College London"}, "sameAs": ["https://www.instagram.com/ic_space_society", "https://www.imperialcollegeunion.org/activities/a-to-z/space-society", "https://github.com/Project-Stratus"]}</script>
   <!-- END seo -->
 </head>
 <body class="home">
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -45,6 +50,8 @@
 </div>
 <!-- END taskbar -->
 
+<main id="main">
+
 <div id="hero">
   <img class="floater" id="f-rocket"  src="assets/img/float/tycho-rocket.webp"    alt="" draggable="false">
   <img class="floater" id="f-balloon" src="assets/img/float/stratus-balloon.webp" alt="" draggable="false">
@@ -57,6 +64,7 @@
     <a class="button" href="#projects">Learn about our projects</a>
     <a class="button yellow" href="join.html">Join us</a>
   </p>
+  <p class="hero-next">New here? <a href="events.html#whats-on">See what's on this term</a></p>
 
   <p id="quote">"Come along, there's surely a chance for explosions, we build rockets!"</p>
 </div>
@@ -117,12 +125,12 @@
     </a>
   </div>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>

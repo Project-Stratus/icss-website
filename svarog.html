@@ -6,6 +6,10 @@
   <title>Project Svarog: solar sail CubeSat | Imperial College Space Society</title>
   <meta name="description" content="Project Svarog: a student-built solar sailing CubeSat aiming for the edge of the solar system.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/svarog.html">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,43 +49,69 @@
 </div>
 <!-- END taskbar -->
 
-<div class="content">
+<main id="main">
+
+<div class="content" style="--accent:#e05ad0">
+<header class="page-head">
 <img class="project-pic" src="assets/img/float/svarog-sail.webp" alt="">
-<h1 style="color:#e05ad0">Project Svarog</h1>
-<p><i>An interstellar solar sailing CubeSat</i></p>
+<p class="crumb"><a href="projects.html">Projects</a> / Project Svarog</p>
+<h1>Project Svarog</h1>
+<p class="lede">An interstellar solar sailing CubeSat, designed, built and tested by students.</p>
+</header>
+
+<dl class="facts">
+  <div><dt>Meets</dt><dd>Mondays, 18:00</dd></div>
+  <div><dt>Where</dt><dd>CAGB 650 <!-- CHECK WITH OLLIE: vault booking says CAGB 750-751 --> (changes go in the Svarog chat)</dd></div>
+  <div><dt>Leads</dt><dd>Orbital: Shiki Vaahan. Project lead to be confirmed <!-- CHECK WITH OLLIE: Matthew Acevski believed graduated; vault has Sahil as project lead --></dd></div>
+  <div><dt>Experience</dt><dd>None needed: freshers get a real part of the design</dd></div>
+  <div><dt>Status</dt><dd>Active: Low Earth Orbit demonstrator, Phase 0</dd></div>
+</dl>
+<p><a class="button yellow" href="#join">How to join</a></p>
+
+<ul class="toc">
+  <li><a href="#timeline">Timeline</a></li>
+  <li><a href="#what-we-did-last-year">What we did last year</a></li>
+  <li><a href="#this-year">This year</a></li>
+  <li><a href="#papers-and-conferences">Papers and conferences</a></li>
+  <li><a href="#photos">Photos</a></li>
+  <li><a href="#teams">Teams</a></li>
+  <li><a href="#what-you-ll-learn">What you'll learn</a></li>
+  <li><a href="#join">Join</a></li>
+</ul>
 
 <p>Project Svarog is a student designed, built and tested CubeSat. The long-term aim is to get it to the edge of the solar system using a solar sail, which no student team has done before.</p>
 
 <video class="big" src="assets/video/svarog-sail.mp4" poster="assets/img/projects/svarog-poster.jpg" muted loop playsinline autoplay controls></video>
 <p class="small grey">Sail deployment test</p>
 
-<h2>Timeline</h2>
-<table>
-  <tr><th>2021</th><td>Project started</td></tr>
-  <tr><th>2023</th><td>Vacuum chamber testing</td></tr>
-  <tr><th>2024/25</th><td>Balloon flights on BEXUS-34 and BEXUS-36 in Sweden</td></tr>
-  <tr><th>2026/27</th><td>Low Earth Orbit demonstrator: Phase 0 to preliminary design, plus a FlatSat prototype</td></tr>
-  <tr><th>2030?</th><td>Interstellar launch</td></tr>
-</table>
+<h2 id="timeline">Timeline</h2>
+<ol class="timeline">
+  <li><b>2021</b>Project started</li>
+  <li><b>2023</b>Vacuum chamber testing</li>
+  <li><b>2024</b>Balloon flight on BEXUS-34 in Sweden</li>
+  <li><b>Oct 2025</b>Second balloon flight, on BEXUS-36</li>
+  <li class="now"><b>2026/27 (now)</b>Low Earth Orbit demonstrator: Phase 0 to preliminary design, plus a FlatSat prototype</li>
+  <li><b>2030?</b>Interstellar launch</li>
+</ol>
 
-<h2>What we did last year</h2>
+<h2 id="what-we-did-last-year">What we did last year</h2>
 <p>Over the past year we've built on our flight heritage from the BEXUS balloon campaign in Sweden, and developed and tested a number of satellite subsystems:</p>
 <ul>
   <li>prototype carbon-composite deployable booms</li>
   <li>time-of-flight sensors to measure the sail deployment</li>
   <li>a complete, working solar sail orbital propagation and simulation codebase</li>
-  <li>a technical demonstration and proof of concept for the future Low Earth Orbit mission, flown on BEXUS-36</li>
+  <li>a technical demonstration for the future Low Earth Orbit mission, built to fly on BEXUS-36</li>
 </ul>
 
-<h2>This year</h2>
-<p>With these subsystems demonstrated on BEXUS-34 and BEXUS-36, the team has now started on Phase 0 of the Low Earth Orbit demonstrator mission. This year will focus on taking it from an initial mission concept to a preliminary design, while also building a FlatSat flight prototype.</p>
+<h2 id="this-year">This year</h2>
+<p>Building on the BEXUS-34 flight and that work, the team has now started on Phase 0 of the Low Earth Orbit demonstrator mission. This year will focus on taking it from an initial mission concept to a preliminary design, while also building a FlatSat flight prototype.</p>
 
-<h2>Papers and conferences</h2>
+<h2 id="papers-and-conferences">Papers and conferences</h2>
 <div class="paper"><img src="assets/img/projects/svarog-paper1.jpg" alt=""><p><i>Mission Concept and Development of the First Interstellar CubeSat Powered by Solar Sailing Technology</i></p></div>
 <div class="paper"><img src="assets/img/projects/svarog-paper2.jpg" alt=""><p><i>Research for and Early-Stage Development of the First Interstellar CubeSat Powered by Solar Sailing Technology</i><br>6th International Symposium on Space Sailing, New York, 2023</p></div>
 <p>We also presented at the First European Interstellar Symposium (December 2024), and in the process found a new type of orbit that was previously thought not to be possible. For most of the team this was their first chance to get published.</p>
 
-<h2>Photos</h2>
+<h2 id="photos">Photos</h2>
 <div class="photos">
   <figure><img src="assets/img/projects/svarog-sail.jpg" alt="Solar sail deployed on a hangar floor" loading="lazy"><figcaption>full sail deployment</figcaption></figure>
   <figure><img src="assets/img/projects/svarog-drop.jpg" alt="CubeSat hanging for a drop test" loading="lazy"><figcaption>drop test</figcaption></figure>
@@ -97,7 +128,8 @@
 </div>
 <script async src="https://www.instagram.com/embed.js"></script>
 
-<h2>Teams</h2>
+<h2 id="teams">Teams</h2>
+<p>You'll hear the subteams called by their short names: STRUM (structures and mechanical), BOLT (electronics), STIM, MASS, ORB and ENV. In plain terms, the work covers:</p>
 <ol>
   <li>Electronics (PCB design, building the electronics box)</li>
   <li>Orbital simulations</li>
@@ -109,19 +141,24 @@
 <p>New for this year is a <b>composites engineer</b> role, responsible for designing the new composite booms for the sails.</p>
 <p>We take a freshers-first approach - we run projects to teach new members how to design, build and test satellite systems, and you'll be given responsibility for a real part of the design and manufacturing process, with us there to guide you through it. Hopefully some of you'll be the ones who eventually see it launch. There are also trips to ESA for testing.</p>
 
-<h2>What you'll learn</h2>
+<h2 id="what-you-ll-learn">What you'll learn</h2>
 <p>You'll get hands-on with PCB design and building the electronics box, orbital simulation and optimisation in our solar sail propagation code, structural simulation, plasma modelling, and designing composite booms for the sails. There's also plenty of mechanical design and testing (vacuum chamber and drop tests, time-of-flight sensors for measuring deployment), and you'll see how academic papers get written and published.</p>
 
+<section class="join-panel" id="join">
 <h2>Join</h2>
-<p>We meet on Mondays at 6pm in CAGB 650. Any changes to times or rooms get posted in the Svarog group chat in the <a href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">ICSS WhatsApp community</a>.</p>
-<p>Mission lead: Matthew Acevski. Orbital lead: Shiki Vaahan. Instagram: <a href="https://www.instagram.com/project_svarog">@project_svarog</a></p>
+<p>We meet on Mondays at 18:00 in CAGB 650. Any changes to times or rooms get posted in the Svarog group chat in the WhatsApp community.</p>
+<p>Instagram: <a href="https://www.instagram.com/project_svarog">@project_svarog</a></p>
+<p><a class="button yellow" href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">Join the WhatsApp community</a></p>
+</section>
+
+<p class="checked">Last checked 2 October 2026. Spotted something out of date? <a href="mailto:space.society@imperial.ac.uk?subject=Website%3A%20Project%20Svarog%20page">Tell us</a>.</p>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>

@@ -181,3 +181,11 @@
     el.addEventListener("pointercancel", drop);
   });
 })();
+
+// --- events page: grey out events whose date has passed ---
+(function () {
+  const today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll(".event-list li[data-date]").forEach((li) => {
+    if (li.dataset.date < today) li.classList.add("past");
+  });
+})();
