@@ -6,6 +6,10 @@
   <title>Projects | Imperial College Space Society</title>
   <meta name="description" content="Student-led space engineering projects at Imperial College London: a liquid rocket engine, a solar sail CubeSat, high altitude balloons, planetary rovers and model rocketry.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/projects.html">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,34 +49,47 @@
 </div>
 <!-- END taskbar -->
 
-<div class="content">
+<main id="main">
+
+<div class="content" id="all-projects" style="max-width:1200px">
+<header class="page-head">
 <h1>Projects</h1>
-<p>All of our projects are entirely student led, and most don't require any prior experience. Every project also runs some form of introductory course or task at the start of the year, so it's completely fine to turn up knowing nothing (Tycho's, for example, is a 4 week rocket engine design course).</p>
-
-<h2><a href="tycho.html">Tycho</a></h2>
-<p>A liquid bipropellant rocket engine, aiming for the UK student thrust record. Hot-fired at 4.5 kN at Race 2 Space last July.</p>
-
-<h2><a href="svarog.html">Svarog</a></h2>
-<p>An interstellar solar sailing CubeSat. Having flown on BEXUS-34 and BEXUS-36, the team is now working on a Low Earth Orbit demonstrator.</p>
-
-<h2><a href="stratus.html">Stratus</a></h2>
-<p>High altitude weather balloons that use reinforcement learning to steer themselves by changing altitude.</p>
-
-<h2><a href="iprl.html">IPRL</a></h2>
-<p>The Imperial Planetary Robotics Lab, covering rovers, drones and planetary research. Placed 16th at the European Rover Challenge 2025.</p>
-
-<h2><a href="rocketry.html">High Powered Rocketry</a> <span class="new">(new!)</span></h2>
-<p>A high-powered model rocket on a G-class motor, back after a couple of years away.</p>
-
-<h2><a href="rover.html">Mini Rover</a> <span class="new">(new!)</span></h2>
-<p>A joint ICSS and IPRL rover for the UKSEDS Olympus Rover Trials, aimed at relative newcomers.</p>
+<p class="lede">All of our projects are entirely student led, and most don't need any prior experience. Every project runs an intro course or task at the start of the year, so it's fine to turn up knowing nothing.</p>
+</header>
+<div class="proj-list">
+  <a class="proj-item" href="tycho.html" style="--accent:#19c3d4">
+    <img src="assets/img/projects/tycho-hotfire.jpg" alt="Engine firing on a test stand" fetchpriority="high">
+    <div><h2>Tycho</h2><p>A liquid bipropellant rocket engine, aiming for the UK student thrust record. Hot-fired at 4.5 kN at Race 2 Space.</p><p class="meta">Thursdays 18:00 &middot; no experience needed</p></div>
+  </a>
+  <a class="proj-item" href="svarog.html" style="--accent:#e05ad0">
+    <img src="assets/img/projects/svarog-sail.jpg" alt="Solar sail deployed on a hangar floor" loading="lazy">
+    <div><h2>Svarog</h2><p>An interstellar solar sailing CubeSat. After flights on BEXUS-34 and BEXUS-36, the team is working on a Low Earth Orbit demonstrator.</p><p class="meta">Mondays 18:00 &middot; freshers first</p></div>
+  </a>
+  <a class="proj-item" href="stratus.html" style="--accent:#a26bff">
+    <img src="assets/img/projects/stratus-space1.jpg" alt="The curve of the Earth from a balloon" loading="lazy">
+    <div><h2>Stratus</h2><p>High altitude balloons that use reinforcement learning to steer themselves by changing altitude. Last flew 7 February 2026.</p><p class="meta">Fridays 18:00 &middot; about one launch a term</p></div>
+  </a>
+  <a class="proj-item" href="iprl.html" style="--accent:#ff9a1f">
+    <img src="assets/img/projects/iprl-rover.jpg" alt="The IPRL rover in a Mars yard" loading="lazy">
+    <div><h2>IPRL</h2><p>The Imperial Planetary Robotics Lab: a European Rover Challenge team, drones and planetary research. 16th at ERC 2025.</p><p class="meta">Rover team Wednesdays 14:00 &middot; 4-8 h a week</p></div>
+  </a>
+  <a class="proj-item" href="rocketry.html" style="--accent:#4d8dff">
+    <img src="assets/img/projects/hpr-onboard.jpg" alt="View from a camera on a rocket" loading="lazy">
+    <div><h2>High Powered Rocketry</h2><p>Design, build and fly G-class rockets with our own flight computer. Last flew to 721 m in 2023, and restarting this year.</p><p class="meta">Weekly 18:00 &middot; no experience needed</p></div>
+  </a>
+  <a class="proj-item" href="rover.html" style="--accent:#ff5a36">
+    <img src="assets/img/projects/rover-mini.jpg" alt="Small red rover on sand" loading="lazy">
+    <div><h2>Mini Rover</h2><p>A joint ICSS and IPRL rover for the UKSEDS Olympus Rover Trials, built for newcomers.</p><p class="meta">New for 2026/27</p></div>
+  </a>
 </div>
+<p class="checked">Last checked 2 October 2026. Spotted something out of date? <a href="mailto:space.society@imperial.ac.uk?subject=Website%3A%20Projects%20page">Tell us</a>.</p>
+</div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>

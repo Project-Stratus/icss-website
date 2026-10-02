@@ -6,6 +6,10 @@
   <title>Project Tycho: liquid rocket engine | Imperial College Space Society</title>
   <meta name="description" content="Project Tycho: a student-built liquid bipropellant rocket engine at Imperial College London.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/tycho.html">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,13 +49,33 @@
 </div>
 <!-- END taskbar -->
 
-<div class="content">
-<img class="project-pic" src="assets/img/float/tycho-rocket.webp" alt="">
-<h1 style="color:#19c3d4">Project Tycho</h1>
-<p><i>A high-thrust liquid bipropellant rocket engine</i></p>
+<main id="main">
 
-<p>Project Tycho is a team of around 20 undergraduate, masters and PhD students designing, building and firing a liquid rocket engine. Tycho is the successor to Project Kepler, so you'll still see the Kepler name crop up in older documents and posts.</p>
-<p>What we're working towards:</p>
+<div class="content" style="--accent:#19c3d4">
+<header class="page-head">
+<img class="project-pic" src="assets/img/float/tycho-rocket.webp" alt="">
+<p class="crumb"><a href="projects.html">Projects</a> / Tycho</p>
+<h1>Project Tycho</h1>
+<p class="lede">A high-thrust liquid bipropellant rocket engine, built by around 20 undergraduate, masters and PhD students.</p>
+</header>
+
+<dl class="facts">
+  <div><dt>Meets</dt><dd>Thursdays, 18:00-20:00</dd></div>
+  <div><dt>Where</dt><dd>SKEM 060 for intro sessions, then CAGB 751</dd></div>
+  <div><dt>Leads</dt><dd>Lalith Velamakanni (project), James Squire and Tim Barrett (technical)</dd></div>
+  <div><dt>Experience</dt><dd>None needed, no application</dd></div>
+</dl>
+<p><a class="button yellow" href="#join">How to join</a></p>
+
+<ul class="toc">
+  <li><a href="#engine">The engine</a></li>
+  <li><a href="#learn">What you'll learn</a></li>
+  <li><a href="#photos">Photos</a></li>
+  <li><a href="#done">What we've done</a></li>
+  <li><a href="#join">Join</a></li>
+</ul>
+
+<p style="margin-top:40px">Tycho is the successor to Project Kepler, so you'll still see the Kepler name crop up in older documents and posts. What we're working towards:</p>
 <ul>
   <li>breaking the UK student record for the highest thrust produced by a liquid bipropellant engine (10 kN)</li>
   <li>being the first student team to test a liquid bipropellant engine that uses turbomachinery designed in-house</li>
@@ -59,7 +84,7 @@
 <video class="big" src="assets/video/tycho-hotfire.mp4" poster="assets/img/projects/tycho-poster.jpg" muted loop playsinline autoplay controls></video>
 <p class="small grey">Our hot-fire at Race 2 Space in July, in the Airborne Engineering test bays at Westcott Venture Park</p>
 
-<h2>The engine</h2>
+<h2 id="engine">The engine</h2>
 <table>
   <tr><th>Propellants</th><td>Liquid oxygen + isopropyl alcohol (IPA)</td></tr>
   <tr><th>Thrust</th><td>~11 kN (about 1120 kg) at 60 bar chamber pressure</td></tr>
@@ -70,11 +95,11 @@
 </table>
 <p>The main changes from the last design are that it's manufactured in fewer parts, uses a new 24 kRPM turbopump, and has a longer chamber with a shorter nozzle.</p>
 
-<h2>What you'll learn</h2>
+<h2 id="learn">What you'll learn</h2>
 <p>Over the year you'll get involved with CAD, FEA and CFD, regenerative cooling analysis, injector and nozzle design, turbomachinery, and machining and metal additive manufacturing, as well as writing test procedures and going through design reviews (PDR/CDR). There's also a fair bit of electronics work on the flow control unit and pressure sensors.</p>
 <p>For new members we run a <b>Rocket Engine Design Crash Course</b> - over 4 weeks you design your own engine using the same theory and software that we use for the real one. It's a good place to start if you've never touched a rocket engine before (most of us hadn't either).</p>
 
-<h2>Photos</h2>
+<h2 id="photos">Photos</h2>
 <div class="photos">
   <figure><img src="assets/img/projects/tycho-hotfire.jpg" alt="Engine firing on the test stand at Westcott" loading="lazy"><figcaption>hot-fire!!</figcaption></figure>
   <figure><img src="assets/img/projects/tycho-am-chamber.jpg" alt="3D printed thrust chamber held in a hand" loading="lazy"><figcaption>the thrust chamber assembly</figcaption></figure>
@@ -85,7 +110,7 @@
   <figure><img src="assets/img/projects/tycho-testteam.jpg" alt="The team at the test site" loading="lazy"><figcaption>test day team</figcaption></figure>
 </div>
 
-<h2>What we've done</h2>
+<h2 id="done">What we've done</h2>
 <ul>
   <li>Hot-fired the engine for the first time at Race 2 Space - it held together and produced 4500 N of thrust (enough to lift a grand piano)</li>
   <li>Tested our turbine as part of a final year project, which confirmed the design works well</li>
@@ -99,18 +124,21 @@
 <!-- paste Instagram / LinkedIn embed code here -->
 <p class="grey">Follow <a href="https://www.instagram.com/ic_space_society">@ic_space_society</a> on Instagram for videos from test days.</p>
 
+<section class="join-panel" id="join">
 <h2>Join</h2>
-<p>Meetings will take place every Thursday from 6-8 PM. Intro sessions will take place in SKEM 060, and regular sessions (from the 29th onwards) will take place in CAGB 751.</p> 
-<p>Project lead: Lalith Velamakanni. Technical leads: James Squire and Tim Barrett.</p>
-<p>You don't need any experience, and there's no application - just come along.</p>
-<p>If you have any questions, either ask in the Tycho group chat in the <a href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">ICSS WhatsApp community</a> or email <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>.</p>
+<p>Meetings are every Thursday, 18:00-20:00. Intro sessions are in SKEM 060, and regular sessions (from the 29th onwards) are in CAGB 751. You don't need any experience, and there's no application - just come along.</p>
+<p>Questions? Ask in the Tycho group chat in the WhatsApp community, or email <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>.</p>
+<p><a class="button yellow" href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">Join the WhatsApp community</a></p>
+</section>
+
+<p class="checked">Last checked 2 October 2026. Spotted something out of date? <a href="mailto:space.society@imperial.ac.uk?subject=Website%3A%20Tycho%20page">Tell us</a>.</p>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>

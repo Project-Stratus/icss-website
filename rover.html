@@ -6,6 +6,10 @@
   <title>Mini Rover | Imperial College Space Society</title>
   <meta name="description" content="ICSS x IPRL mini rover for the UKSEDS Olympus Rover Trials.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/rover.html">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,9 +49,29 @@
 </div>
 <!-- END taskbar -->
 
-<div class="content">
+<main id="main">
+
+<div class="content" style="--accent:#ff5a36">
+<header class="page-head">
 <img class="project-pic" src="assets/img/float/iprl-rover.webp" alt="">
-<h1 style="color:#ff5a36">Mini Rover <span class="new">(new!)</span></h1>
+<p class="crumb"><a href="projects.html">Projects</a> / Mini Rover</p>
+<h1>Mini Rover</h1>
+<p class="lede">A joint ICSS and IPRL rover for the UKSEDS Olympus Rover Trials, aimed at newcomers.</p>
+</header>
+
+<dl class="facts">
+  <div><dt>Meets</dt><dd>Times go in the rover group chat</dd></div>
+  <div><dt>Leads</dt><dd>To be confirmed <!-- CHECK WITH OLLIE: who took the Mini Rover lead from the hiring pool --></dd></div>
+  <div><dt>Experience</dt><dd>None needed: built for first-timers</dd></div>
+  <div><dt>Status</dt><dd>New for 2026/27</dd></div>
+</dl>
+<p><a class="button yellow" href="#join">How to join</a></p>
+
+<ul class="toc">
+  <li><a href="#what-you-ll-learn">What you'll learn</a></li>
+  <li><a href="#join">Join</a></li>
+</ul>
+
 
 <p>This project will surround the design of a Mars-style rover developed to tackle realistic challenges in mobility, autonomy and planetary exploration, all in order to compete in the <b>Olympus Rover Trials</b>!</p>
 <p>This project will be supported by the strong expertise built up by the <a href="iprl.html">Imperial Planetary Robotics Lab</a>, but is designed for some relative newcomers to come along and try their hand at end-to-end rover design and project management for the first time.</p>
@@ -56,17 +81,23 @@
   <figure><img src="assets/img/projects/rover-group.jpg" alt="Everyone at the Olympus Rover Trials" loading="lazy"><figcaption>Olympus Rover Trials</figcaption></figure>
 </div>
 
-<h2>What you'll learn</h2>
+<h2 id="what-you-ll-learn">What you'll learn</h2>
 <p>You'll work on the whole rover end to end: mobility and suspension, autonomy, mechanical design, electronics and a lot of rapid prototyping. As the project is aimed at newcomers, it's also a good chance to get some project management experience.</p>
 
-<p>Meeting times and rooms get posted in the rover group chat in the <a href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">ICSS WhatsApp community</a>.</p>
+<section class="join-panel" id="join">
+<h2>Join</h2>
+<p>Meeting times and rooms get posted in the rover group chat in the WhatsApp community.</p>
+<p><a class="button yellow" href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">Join the WhatsApp community</a></p>
+</section>
+
+<p class="checked">Last checked 2 October 2026. Spotted something out of date? <a href="mailto:space.society@imperial.ac.uk?subject=Website%3A%20Mini%20Rover%20page">Tell us</a>.</p>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>

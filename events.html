@@ -6,6 +6,10 @@
   <title>Events | Imperial College Space Society</title>
   <meta name="description" content="ICSS events: launch watch parties, hackathons, movie nights, trivia, talks and trips.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/events.html">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,8 +49,13 @@
 </div>
 <!-- END taskbar -->
 
+<main id="main">
+
 <div class="content">
+<header class="page-head">
 <h1>Events</h1>
+<p class="lede">Talks, trips, hackathons, launch watch parties and socials. Most are free for members.</p>
+</header>
 
 <div class="watchparty">
   <div class="crt">
@@ -62,79 +72,31 @@
   <p class="bubble two">no way no way no WAY</p>
 </div>
 
-<h2>Event timeline</h2>
-<table style="margin: 25px auto 30px; width: 100%;">
-  <thead>
-    <tr>
-      <th>Week beginning</th>
-      <th>Events</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>28th Sep</td>
-      <td><b>Welcome Fair</b>, Wednesday, 9-5</td>
-    </tr>
-    <tr>
-      <td>5th Oct</td>
-      <td>
-        <b>Welcome Talk</b>, Tuesday 6th, 6-8, RSM 131<br>
-        <b>World Space Week Panel</b>, Wednesday 7th, 6-8:30<br>
-        <b>DeepTech London Summit</b>, Thursday 8th, All Day<br>
-      </td>
-    </tr>
-    <tr>
-      <td>12th Oct</td>
-      <td><b>Movie - Trivia Night with AstroSoc</b>, Friday 16th</td>
-    </tr>
-    <tr>
-      <td>19th Oct</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>26th Oct</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>2nd Nov</td>
-      <td><b>Tour of RAL</b>, Thursday 5th, All Day, Harwell</td>
-    </tr>
-    <tr>
-      <td>9th Nov</td>
-      <td><b>Hackathon</b>, Saturday 14th - Sunday 15th</td>
-    </tr>
-    <tr>
-      <td>16th Nov</td>
-      <td>Talks In Planning</td>
-    </tr>
-    <tr>
-      <td>23rd Nov</td>
-      <td><b>Hosting UKSDC</b>, Saturday 28th</td>
-    </tr>
-    <tr>
-      <td>30th Nov</td>
-      <td>
-        <b>Talk from ESA</b><br>
-        <b>Inter-Project Design Review</b>
-      </td>
-    </tr>
-    <tr>
-      <td>7th Dec</td>
-      <td><b>Talk from Asclepios Analogue Astronaut Project</b></td>
-    </tr>
-  </tbody>
-</table>
+<h2 id="whats-on">What's on this term</h2>
+<p>Past events go grey on their own. Anything marked "to be confirmed" gets its date in the <a href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">WhatsApp community</a> first.</p>
+<ul class="event-list">
+  <li data-date="2026-09-30"><time>Tue 29 - Wed 30 Sep</time><div><b>Welcome Fair</b></div></li>
+  <li data-date="2026-10-06"><time>Tue 6 Oct</time><div><b>Welcome Talk</b><br><span class="where">18:00-20:00, RSM 131. Meet every project and its leads.</span></div></li>
+  <li data-date="2026-10-08"><time>Thu 8 Oct</time><div><b>London Deeptech Festival Summit</b><br><span class="where">All day. Volunteers get in free; ask in the WhatsApp community.</span></div></li>
+  <li data-date="2026-10-16"><time>Fri 16 Oct</time><div><b>Movie and trivia night with AstroSoc</b></div></li>
+  <li data-date="2026-11-05"><time>Thu 5 Nov</time><div><b>Tour of RAL Space</b><br><span class="where">All day, Harwell. Places are limited and the list is fixed a month ahead, so watch the WhatsApp community.</span></div></li>
+  <li data-date="2026-11-15"><time>Sat 14 - Sun 15 Nov</time><div><b>Autumn Hackathon: Lunar Logistics</b><br><span class="where">Teams of 4, free entry, pizza lunch both days.</span></div></li>
+  <li data-date="2026-11-28" class="tbc"><time>Sat 28 Nov</time><div><b>Hosting the UK Space Design Competition</b><br><span class="where">To be confirmed.</span></div></li>
+  <li data-date="2026-12-31" class="tbc"><time>December</time><div><b>Talk from ESA's Head of Hiring</b><br><span class="where">Date to be confirmed.</span></div></li>
+  <li data-date="2026-12-31" class="tbc"><time>Early Dec</time><div><b>Inter-project design review</b><br><span class="where">Date to be confirmed.</span></div></li>
+  <li data-date="2026-12-31" class="tbc"><time>w/b 7 Dec</time><div><b>Talk from the Asclepios analogue astronaut project</b><br><span class="where">Date to be confirmed.</span></div></li>
+</ul>
 
 <h2>Launch watch parties</h2>
-<p>When there's a big launch on, we book a room and put it up on the big screen. Launches get delayed a lot, so to keep us busy while we wait there's usually a space quiz running as well.</p>
+<p>When there's a big launch on, we book a room and put it up on the big screen. Next up is a watch party for the Rocket Factory Augsburg launch, with the date set by the launch itself. Launches get delayed a lot, so to keep us busy while we wait there's usually a space quiz running as well.</p>
 
 <h2>Hackathons</h2>
-<p>Last year we ran two hackathons:</p>
+<p>This term's hackathon is <b>Lunar Logistics</b> on 14-15 November: in teams of 4 you design how to set up and grow a permanent settlement on the Moon, then present it. It's design and presentation only, with pizza lunch both days. Last year we ran two hardware hackathons:</p>
 <ul>
   <li><b>LEOHack</b> - simulating the in-space docking of satellites (sponsored by Magdrive)</li>
   <li><b>SatHack</b> - simulating autonomous space debris avoidance (sponsored by Lodestar Space)</li>
 </ul>
-<p>Each one has hardware, software and presentation tasks, with access to 3D printers, circuit assembly tools and prototyping space. Lunch is provided, and last year over &pound;300 in prizes was given out. The next one is on the <b>14th-15th of November</b>.</p>
+<p>Each one has hardware, software and presentation tasks, with access to 3D printers, circuit assembly tools and prototyping space. Lunch was provided, and over &pound;300 in prizes was given out.</p>
 <div class="photos">
   <figure><img src="assets/img/events/hack-build.jpg" alt="Hackathon teams building on the floor" loading="lazy"><figcaption></figcaption></figure>
   <figure><img src="assets/img/events/hack-team.jpg" alt="Team at laptops with 3D printed parts" loading="lazy"><figcaption></figcaption></figure>
@@ -152,12 +114,12 @@
 <p>We also help out with the UK Space Design Competition, UKROC and CanSat, through hosting, volunteering and giving talks.</p>
 <p>Dates get posted in the <a href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">WhatsApp community</a> first, so it's worth joining.</p>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>

@@ -6,6 +6,10 @@
   <title>Project Stratus: high altitude balloons | Imperial College Space Society</title>
   <meta name="description" content="Project Stratus: high altitude weather balloons steered by reinforcement learning.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/stratus.html">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,10 +49,33 @@
 </div>
 <!-- END taskbar -->
 
-<div class="content">
+<main id="main">
+
+<div class="content" style="--accent:#a26bff">
+<header class="page-head">
 <img class="project-pic" src="assets/img/float/stratus-balloon.webp" alt="">
-<h1 style="color:#a26bff">Project Stratus</h1>
-<p><i>AI-navigated high altitude ballooning for environmental monitoring</i></p>
+<p class="crumb"><a href="projects.html">Projects</a> / Project Stratus</p>
+<h1>Project Stratus</h1>
+<p class="lede">AI-navigated high altitude balloons for environmental monitoring.</p>
+</header>
+
+<dl class="facts">
+  <div><dt>Meets</dt><dd>Fridays, 18:00-20:00</dd></div>
+  <div><dt>Where</dt><dd>CAGB 749 <!-- CHECK WITH OLLIE: vault booking says CAGB 750-751 --></dd></div>
+  <div><dt>Leads</dt><dd>Balloon Commander Lucas Cheung, Balloon Admiral Mikhail Ischenko</dd></div>
+  <div><dt>Experience</dt><dd>None needed</dd></div>
+  <div><dt>Status</dt><dd>Active: last flight 7 February 2026, about one launch a term</dd></div>
+</dl>
+<p><a class="button yellow" href="#join">How to join</a></p>
+
+<ul class="toc">
+  <li><a href="#what-we-did-last-year">What we did last year</a></li>
+  <li><a href="#this-year">This year</a></li>
+  <li><a href="#the-ai-bit">The AI bit</a></li>
+  <li><a href="#on-board">On board</a></li>
+  <li><a href="#what-you-ll-learn">What you'll learn</a></li>
+  <li><a href="#join">Join</a></li>
+</ul>
 
 <p>Project Stratus builds and launches high altitude weather balloons. We're adding release valves, ballast and an AI agent so that the balloon can move up and down to catch winds blowing in different directions. The idea is that it can then stay roughly in one place (within about 100 km of the launch site) rather than drifting off, and that we can recover it rather than letting it burst.</p>
 <p>If this works, it gives a cheap alternative to low orbit satellites for weather monitoring and Earth observation. The long-term ambition is an affordable balloon platform capable of multi-day atmospheric observations.</p>
@@ -57,10 +85,10 @@
 </div>
 <p class="small grey">Stratus flight, 7 February 2026</p>
 
-<h2>What we did last year</h2>
+<h2 id="what-we-did-last-year">What we did last year</h2>
 <p>The big milestone this year was the successful launch of a helium-filled latex balloon to approximately <b>18,000 metres</b>, which also collected temperature and pressure data on the way. We also designed a payload enclosure and an ultrasonic anemometer (for measuring wind speed), and wrote a preliminary reinforcement-learning controller to explore how changing altitude could keep the balloon within a target area.</p>
 
-<h2>This year</h2>
+<h2 id="this-year">This year</h2>
 <ul>
   <li>develop and test a valve and ballast system</li>
   <li>demonstrate autonomous altitude control</li>
@@ -74,30 +102,34 @@
   <figure><img src="assets/img/projects/stratus-space2.jpg" alt="Dark sky above the clouds" loading="lazy"><figcaption></figcaption></figure>
 </div>
 
-<h2>The AI bit</h2>
+<h2 id="the-ai-bit">The AI bit</h2>
 <p>The balloon can only control its height, so the reinforcement-learning model has to learn which altitude to sit at in order to ride the right wind. So far we have a basic 3D atmospheric environment and a fully trained 1D agent. The next steps are to include real-world limitations (ballast, helium etc.) in the model and to expand it to more dimensions.</p>
 
-<h2>On board</h2>
+<h2 id="on-board">On board</h2>
 <p>The payload carries a temperature sensor, barometer, battery monitor and GPS (all over I2C), a microSD card and LoRaWAN antenna (over serial) and a UV sensor (analog), as well as a camera, power bank, insulated container and parachute. All of our code is on our <a href="https://github.com/Project-Stratus">GitHub</a>.</p>
 <p>We're also looking into detecting "ship tracks" (clouds formed from ship exhaust) to help with the monitoring and regulation of fuel sulphur content.</p>
 
-<h2>What you'll learn</h2>
+<h2 id="what-you-ll-learn">What you'll learn</h2>
 <p>You'd be doing a mix of electronics and soldering, radio and GPS work, reinforcement learning, and regular trips to the Advanced Hackspace (lathe, waterjet cutter, TIG welding) to make the valve. Then you get to see it all tested on a real flight, 18 km up, where it's around -55&deg;C and the air is less than a tenth as thick as on the ground.</p>
 <div class="photos">
   <figure><img src="assets/img/projects/stratus-valve.jpg" alt="Students at a lathe" loading="lazy"><figcaption>valve making</figcaption></figure>
   <figure><img src="assets/img/projects/stratus-workshop.jpg" alt="Students in the workshop" loading="lazy"><figcaption></figcaption></figure>
 </div>
 
+<section class="join-panel" id="join">
 <h2>Join</h2>
-<p>We meet on Fridays from 6-8pm in CAGB 749, and aim to launch roughly once a term. Any changes to times or rooms get posted in the Stratus group chat in the <a href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">ICSS WhatsApp community</a>.</p>
-<p>Balloon Commander: Lucas Cheung. Balloon Admiral: Mikhail Ischenko.</p>
+<p>We meet on Fridays from 18:00 to 20:00 in CAGB 749, and aim to launch roughly once a term. Any changes to times or rooms get posted in the Stratus group chat in the WhatsApp community.</p>
+<p><a class="button yellow" href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">Join the WhatsApp community</a></p>
+</section>
+
+<p class="checked">Last checked 2 October 2026. Spotted something out of date? <a href="mailto:space.society@imperial.ac.uk?subject=Website%3A%20Project%20Stratus%20page">Tell us</a>.</p>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>

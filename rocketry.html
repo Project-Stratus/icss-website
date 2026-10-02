@@ -4,15 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>High Powered Rocketry | Imperial College Space Society</title>
-  <meta name="description" content="High powered model rocketry at ICSS.">
+  <meta name="description" content="Design, build and fly G-class rockets with the Imperial College Space Society. No experience needed.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/rocketry.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Imperial College Space Society">
   <meta property="og:title" content="High Powered Rocketry | Imperial College Space Society">
-  <meta property="og:description" content="High powered model rocketry at ICSS.">
+  <meta property="og:description" content="Design, build and fly G-class rockets with the Imperial College Space Society. No experience needed.">
   <meta property="og:url" content="https://ic-space-society.vercel.app/rocketry.html">
   <meta property="og:image" content="https://ic-space-society.vercel.app/assets/img/projects/hpr-onboard.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,12 +49,33 @@
 </div>
 <!-- END taskbar -->
 
-<div class="content">
-<img class="project-pic" src="assets/img/float/tycho-rocket.webp" alt="">
-<h1 style="color:#4d8dff">High Powered Rocketry <span class="new">(new!)</span></h1>
+<main id="main">
 
-<p>The aim of this project is to design and build a high-powered model rocket fitted with a G-class motor, and get it as high as possible. Alongside that we want to collect data during the flight using on-board sensors, and (ideally) recover the rocket in one piece.</p>
-<p>ICSS ran this project until 2023 and we're now bringing it back - we already have the equipment, supplies and funding ready to go. We have some pedigree in the National Rocketry Championship (NRC), so we'd love to get back to entering it more consistently, and give members the chance to get involved with a rocketry project at its grassroots.</p>
+<div class="content" style="--accent:#4d8dff">
+<header class="page-head">
+<img class="project-pic" src="assets/img/float/tycho-rocket.webp" alt="">
+<p class="crumb"><a href="projects.html">Projects</a> / High Powered Rocketry</p>
+<h1>High Powered Rocketry</h1>
+<p class="lede">Design, build and fly our own G-class rockets, with our own electronics on board.</p>
+</header>
+
+<dl class="facts">
+  <div><dt>Meets</dt><dd>Weekly, 18:00-20:00 (day to be confirmed)</dd></div>
+  <div><dt>Leads</dt><dd>Thomas van Pul and Curtis (co-leads)</dd></div>
+  <div><dt>Experience</dt><dd>None needed</dd></div>
+  <div><dt>Status</dt><dd>Restarting for 2026/27; last flew in 2023</dd></div>
+</dl>
+<p><a class="button yellow" href="#join">How to join</a></p>
+
+<ul class="toc">
+  <li><a href="#the-last-flight-2023">The last flight (2023)</a></li>
+  <li><a href="#this-year">This year</a></li>
+  <li><a href="#what-you-ll-learn">What you'll learn</a></li>
+  <li><a href="#join">Join</a></li>
+</ul>
+
+
+<p>The aim is to get the rocket as high as we can, record the flight with our own sensors, and get it back in one piece so it can fly again. ICSS ran this project until 2023 and it's restarting this year, led by Thomas van Pul and Curtis.</p>
 
 <div class="photos">
   <figure><img src="assets/img/projects/hpr-onboard.jpg" alt="View from a camera on the rocket" loading="lazy"><figcaption>onboard camera</figcaption></figure>
@@ -57,16 +83,29 @@
   <figure><img src="assets/img/projects/hpr-sim.jpg" alt="OpenRocket simulation plot" loading="lazy"><figcaption>OpenRocket sim</figcaption></figure>
 </div>
 
-<h2>What you'll learn</h2>
+<h2 id="the-last-flight-2023">The last flight (2023)</h2>
+<p>The 2023 team flew a G-class rocket to 721 m. It carried a flight computer they designed and soldered themselves, with GPS, a LoRa radio, pressure, temperature and humidity sensors and an IMU, and it sent back telemetry all the way down. The rocket was recovered; the nose cone took a knock. The flight computer design and code are on <a href="https://github.com/ImperialSpaceSociety/Flight-Computer">GitHub</a>.</p>
+
+<h2 id="this-year">This year</h2>
+<p>We're starting a new rocket: design it in OpenRocket and CAD, build it, test it on the ground, then fly it. We're sticking to G-class motors. The plan, the budget and the launch site are still being worked out, and we'll share them in the group chat as they're settled.</p>
+
+<h2 id="what-you-ll-learn">What you'll learn</h2>
 <p>The project covers a bit of everything: aerodynamics, electronics, mechanics, structures and mechanisms. You'll get experience with OpenRocket, MATLAB, CAD, FEA and CFD, as well as manufacturing through laser cutting, 3D printing and assembly.</p>
-<p>You don't need any relevant experience - this is a new, fairly low-risk project, so don't worry about making mistakes. Meeting times and rooms get posted in the rocketry group chat in the <a href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">ICSS WhatsApp community</a>.</p>
+
+<section class="join-panel" id="join">
+<h2>Join</h2>
+<p>No experience needed. We'll meet weekly, 18:00-20:00 (day to be confirmed). Come and meet us at the Welcome Talk on Tuesday 6 October, 18:00-20:00 in RSM 131, and join the rocketry group chat in the WhatsApp community, where meeting times and rooms get posted.</p>
+<p><a class="button yellow" href="https://chat.whatsapp.com/Brtu4jvbhaV7uub6FQ1q0v">Join the WhatsApp community</a></p>
+</section>
+
+<p class="checked">Last checked 2 October 2026. Spotted something out of date? <a href="mailto:space.society@imperial.ac.uk?subject=Website%3A%20High%20Powered%20Rocketry%20page">Tell us</a>.</p>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>
