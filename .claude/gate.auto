@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "command": null,
+  "reason": "no test/typecheck/lint command detected"
+}
