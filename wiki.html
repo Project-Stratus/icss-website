@@ -6,6 +6,10 @@
   <title>Wiki | Imperial College Space Society</title>
   <meta name="description" content="Guides and resources for Imperial College Space Society projects.">
   <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- BEGIN seo -->
   <link rel="canonical" href="https://ic-space-society.vercel.app/wiki.html">
@@ -22,6 +26,7 @@
 <body>
 
 <!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<a class="skip" href="#main">Skip to content</a>
 <div id="nav">
   <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
   <span class="taskbar__nav">
@@ -44,24 +49,30 @@
 </div>
 <!-- END taskbar -->
 
+<main id="main">
+
 <div class="content">
+<header class="page-head">
 <h1>Wiki</h1>
-<p>This is still a work in progress - we're putting together guides and resources for each of the projects. In the meantime, you can find the skills each project uses on their own pages:</p>
+<p class="lede">Guides and resources for each project. We're still putting these together.</p>
+</header>
+<p>Until the guides are up, here's where to start for each project:</p>
 <ul>
-  <li><a href="tycho.html">Tycho</a></li>
-  <li><a href="svarog.html">Svarog</a></li>
-  <li><a href="stratus.html">Stratus</a></li>
-  <li><a href="iprl.html">IPRL</a></li>
-  <li><a href="rocketry.html">High Powered Rocketry</a></li>
-  <li><a href="rover.html">Mini Rover</a></li>
+  <li><a href="tycho.html">Tycho</a>: the 4-week Rocket Engine Design Crash Course, where you design your own engine</li>
+  <li><a href="svarog.html">Svarog</a>: freshers' projects on how to design, build and test satellite systems</li>
+  <li><a href="stratus.html">Stratus</a>: electronics, radio and the reinforcement-learning controller</li>
+  <li><a href="iprl.html">IPRL</a>: Triton's three intro research projects in the first term</li>
+  <li><a href="rocketry.html">High Powered Rocketry</a>: OpenRocket, and the <a href="https://github.com/ImperialSpaceSociety/Flight-Computer">2023 flight computer</a> on GitHub</li>
+  <li><a href="rover.html">Mini Rover</a>: end-to-end rover design for first-timers</li>
 </ul>
+<p>Stratus code lives on the <a href="https://github.com/Project-Stratus">Project-Stratus GitHub</a>. If you've written a guide that should go here, email <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>.</p>
 </div>
+</main>
 
 <!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
 <div id="footer">
   <p>
     <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
-    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
     <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
     <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
   </p>
