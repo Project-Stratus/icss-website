@@ -1,0 +1,11 @@
+{
+  "session": "d58af324-49f5-4c44-882d-c282b50f526e",
+  "repo": "/Users/TvpPro/Developer/icss-website",
+  "task": ".review/queue/2026-10-03T1720-every-subpage-current.md",
+  "model": "",
+  "reason": "network drop; network error, idle 246s (threshold 240s)",
+  "paused_at": "2026-10-03T17:20:05",
+  "state_at_pause": "idle",
+  "pid": 53511,
+  "last_text": "API Error: Unable to connect to API: SSL certificate verification failed (UNABLE_TO_GET_ISSUER_CERT_LOCALLY). The certificate comes from an authority Claude Code doesn't trust, usually a TLS-inspecting corporate proxy or a gateway signed by a private CA: set NODE_EXTRA_CA_CERTS to that CA bundle, or add it to the system certificate store \u00b7 see https://code.claude.com/docs/en/network-config"
+}
