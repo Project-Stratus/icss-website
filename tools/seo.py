@@ -93,7 +93,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, "archive", "*.html"))):
     rel = os.path.relpath(path, ROOT)
     s = open(path).read()
     t = re.search(r"<title>(.*?)</title>", s, re.S).group(1)
-    t = re.sub(r"\s*(&middot;|·|\|)\s*ICSS archive$", "", t)
+    t = re.sub(r"\s*(&middot;|·|\|)\s*(ICSS|" + re.escape(NAME) + ") archive$", "", t)   # so re-running doesn't stack the suffix
     process(rel, f"{html.unescape(t)} | {NAME} archive")
     urls.append((SITE + "/" + rel, "0.4"))
 
