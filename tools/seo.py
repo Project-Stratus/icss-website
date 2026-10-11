@@ -10,6 +10,8 @@ import datetime, glob, html, json, os, re
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://ic-space-society.vercel.app"   # change this if the society gets its own domain
 NAME = "Imperial College Space Society"
+# Google Search Console "HTML tag" verification: paste only the content="..." value here, then re-run.
+GOOGLE_SITE_VERIFICATION = ""
 
 # page -> (title, share image)
 PAGES = {
@@ -25,6 +27,8 @@ PAGES = {
     "blog.html":     (f"Blog | {NAME}",                          "assets/img/projects/stratus-launch.jpg"),
     "join.html":     (f"Join | {NAME}",                          "assets/img/projects/tycho-testteam.jpg"),
     "wiki.html":     (f"Wiki | {NAME}",                          "assets/img/projects/tycho-injector.jpg"),
+    "autumn-hackathon.html": (f"Autumn Hackathon 2026: Lunar Logistics | {NAME}", "assets/img/events/hack-team.jpg"),
+    "rfa-watchalong.html":   (f"RFA launch watch party | {NAME}",  "assets/img/projects/hpr-onboard.jpg"),
 }
 
 ORG = {
@@ -46,6 +50,56 @@ ORG = {
 }
 
 
+# One page per event, so it can show in Google's event results. Dates are ISO 8601 with the
+# London offset (+00:00 in winter, +01:00 in summer). Leave "end" out if it isn't known.
+# Google drops an event once its date has passed; that's fine, the page stays as a record.
+EVENTS = {
+    "autumn-hackathon.html": {"name": "ICSS Autumn Hackathon 2026: Lunar Logistics",
+                              "start": "2026-11-14", "end": "2026-11-15"},
+    # no launch date yet: add "start" (and the room as "venue") once RFA announce a window
+    "rfa-watchalong.html":   {"name": "RFA launch watch party"},
+}
+
+
+def event_data(path, title, desc, image):
+    e = EVENTS[path]
+    data = {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": e["name"],
+        "description": desc,
+        "startDate": e["start"],
+        "eventStatus": "https://schema.org/" + e.get("status", "EventScheduled"),
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+            "@type": "Place",
+            "name": e.get("venue", "Imperial College London"),
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Exhibition Road",
+                "addressLocality": "London",
+                "postalCode": "SW7 2AZ",
+                "addressCountry": "GB",
+            },
+        },
+        "image": [SITE + "/" + image],
+        "url": SITE + "/" + path,
+        "organizer": {"@type": "Organization", "name": NAME, "url": SITE + "/"},
+        "isAccessibleForFree": e.get("free", True),
+    }
+    if "end" in e:
+        data["endDate"] = e["end"]
+    if e.get("free", True):
+        data["offers"] = {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "GBP",
+            "availability": "https://schema.org/InStock",
+            "url": e.get("signup", SITE + "/" + path),
+        }
+    return data
+
+
 def head_block(path, title, desc, image):
     url = SITE + "/" + ("" if path == "index.html" else path)
     t, d = html.escape(title), html.escape(desc)
@@ -62,6 +116,10 @@ def head_block(path, title, desc, image):
     ]
     if path == "index.html":
         lines.append('<script type="application/ld+json">' + json.dumps(ORG) + "</script>")
+        if GOOGLE_SITE_VERIFICATION:
+            lines.append(f'<meta name="google-site-verification" content="{html.escape(GOOGLE_SITE_VERIFICATION)}">')
+    if EVENTS.get(path, {}).get("start"):
+        lines.append('<script type="application/ld+json">' + json.dumps(event_data(path, title, desc, image)) + "</script>")
     return "\n  ".join(lines)
 
 
@@ -93,7 +151,7 @@ for path in sorted(glob.glob(os.path.join(ROOT, "archive", "*.html"))):
     rel = os.path.relpath(path, ROOT)
     s = open(path).read()
     t = re.search(r"<title>(.*?)</title>", s, re.S).group(1)
-    t = re.sub(r"\s*(&middot;|·|\|)\s*ICSS archive$", "", t)
+    t = re.sub(r"\s*(&middot;|·|\|)\s*(ICSS|" + re.escape(NAME) + ") archive$", "", t)   # so re-running doesn't stack the suffix
     process(rel, f"{html.unescape(t)} | {NAME} archive")
     urls.append((SITE + "/" + rel, "0.4"))
 
