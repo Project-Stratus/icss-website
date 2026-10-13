@@ -2,7 +2,7 @@
 
 Written: 2026-10-09 13:47
 Queue: auto
-Priority: normal
+Priority: background
 Model: claude-opus-5
 
 ## Why
