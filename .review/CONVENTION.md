@@ -176,7 +176,7 @@ line, one field per line, in this order, no bold, nothing else on the
     RESULT: PASS | PARTIAL | FAIL
     GATE: green | red | unmeasurable | not-run
     SESSION: <the value of $CLAUDE_CODE_SESSION_ID>
-    HUMAN: none | <what still needs Thomas — a confirmation or a decision>
+    HUMAN: none | <what still needs Thomas: money, a credential, a send above the threshold, or an irreversible act>
     PREMISE: held | false: <one line on what was not true>
 
 Why each field, from a report that needed it:
@@ -202,7 +202,11 @@ Why each field, from a report that needed it:
   census on 2026-09-17 found the last one missing the field was written
   2026-09-05, so the rule refuses nothing in today's archive and only stops the
   next one being written.
-* `HUMAN` — what is still Thomas's. `iris/2026-09-05T1900` said
+* `HUMAN` — what is still Thomas's, and only the four kinds the question diet
+  allows (20 Oct 2026): money, a credential or sign-in, a send as him above the
+  auto-send threshold, an irreversible act that could go either way. Anything
+  else was the session's to decide: `did X`, not `I would pick X`, and `none`.
+  What is still Thomas's, historically: `iris/2026-09-05T1900` said
   `RESULT: PASS (by-ear confirmation is MANUAL, see §7)`;
   `orchestra/2026-09-05T0042` said `PARTIAL — one judgement call is waiting
   on Thomas`. Same situation, two verdicts. Five archived PASS reports carry
@@ -418,6 +422,43 @@ Two rules that follow:
 * **Do not report queue state from a summary.** Both accounts above came from
   memory rather than from `ls`. Check the directory.
 
+## One way to write a task — added 2026-10-09
+
+Every writer of a queue file — chat, session, script — goes through
+`scripts/atrium-task.py`, and nothing writes the format by hand:
+
+    python3 ~/dev/orchestra/scripts/atrium-task.py add --repo <repo> --slug <slug> \
+        --title "<the title>" --priority urgent|normal|background \
+        --weight light|heavy --queue auto|manual --body-file <file> \
+        [--respects "<how it respects a decision below>"] [--allow-duplicate]
+
+    python3 ~/dev/orchestra/scripts/atrium-task.py check <files...>   # or --stdin
+
+It refuses rather than corrects, and prints the reason, because the runner's
+own readers coerce instead of failing: `task_priority` reads anything but
+urgent/background as `normal`, `task_weight` anything but `light` as `heavy`,
+`task_screen` anything but yes/true/1 as `no`, and a `Deadline:` it cannot
+parse is dropped. A corrected header would run as something the writer did not
+ask for with nothing saying so. Three refusals, exit 2, 3 and 4:
+
+* **format** — against what the runner actually parses, not this document: a
+  first line that is `# <title>` (16 tasks were moved to `queue/invalid/` on
+  9 Oct for a date line first), a parseable `Written:`, a `Queue:` line at all
+  (about 25 tasks waited forever without one on 8–9 Oct), and a value the
+  runner will not coerce for `Priority:`, `Weight:`, `Screen:` and `Deadline:`.
+* **duplicate** — the same subject already open in any repo's queue, `held/`,
+  `invalid/`, or archived in the last 14 days. It prints the match and
+  `--allow-duplicate` is the way to say it is not one.
+* **decision** — Thomas's recorded decisions on the subject, from
+  `Atlas/Settled.md`, `Atlas/Projects/Atrium/Standing-Asks.md`, the recent
+  Handoff notes and `~/.atrium/chats`. `--respects` is how the writer says how
+  the task respects them, and it is written into the task as
+  `## Decisions respected`. On 9 Oct a calendar task nearly overrode the 6 Oct
+  two-stage decision (real events plus at most two picked work blocks a day).
+
+`atrium-health`'s `task-format` check reads the same module over every open
+task, so a writer that starts producing bad headers is red the same day.
+
 ## A task declares its checks — added 2026-09-29
 
 Measured over orchestra's archive: acceptance criteria were prose in 50 of
@@ -564,3 +605,20 @@ a bug.
 
 `next.md` and `report.md` are working files, not history. Git history is the
 record.
+
+## Deliverables go to Atrium, never onto his screen — added 2026-10-26
+
+Thomas, 26 Oct 09:53: "u still keep opening random documents for me at random times, not
+only this but other sheets and stuff too." Word had opened "Able round 3" in front of him.
+
+* A deliverable for him (brief, pack, sheet, table, plan, write-up) is an Atrium page first:
+  `python3 ~/dev/orchestra/scripts/atrium_projects.py publish --slug S --title T --md FILE`,
+  or for a file you already made `python3 ~/dev/orchestra/scripts/atrium_publish_deliverables.py FILE`.
+  A .docx, .xlsx or .pdf is made only when he asks for the file or the reader is outside Atrium,
+  and then it is an export of the page, kept beside it.
+* Registering a .docx, .xlsx or .pdf under `## Deliverables` publishes its page automatically
+  (atrium-deliver). Nothing is opened for him: delivery is a notice that names the page.
+* Never run `open`, `open -a`, `tell application ... activate`, or an Office `open` to show him
+  anything. Background file writes are fine. Foreground opens are refused and logged
+  (`~/dev/orchestra/scripts/foreground_guard.py report`), and only a grant from an action he
+  took himself lifts that.
