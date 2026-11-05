@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+/* Roboto is loaded from a <link> in each page's head (an @import here held up the first paint) */
 
 body {
   margin: 0;
@@ -635,3 +635,282 @@ video.big {
   min-width: 0 !important;
 }
 
+
+/* ---------- subpages (projects, events, join, wiki) ----------
+   each page sets its colour with style="--accent: #..." on .content */
+
+.content { --accent: #ffd23f; }
+
+.content h2 {
+  scroll-margin-top: 90px;
+}
+
+.page-head {
+  border-left: 4px solid var(--accent);
+  padding: 2px 0 2px 24px;
+  margin-bottom: 10px;
+}
+
+.page-head h1 {
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+.crumb {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+}
+
+.crumb a { color: #bbb; }
+
+.lede {
+  font-size: 19px;
+  color: #ddd;
+}
+
+/* the quick facts box at the top of each project page */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1px;
+  margin: 28px 0 18px;
+  background: #3a3a3a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  overflow: hidden;
+  clear: both;
+}
+
+.facts div {
+  background: #1b1b1b;
+  padding: 14px 16px;
+}
+
+.facts dt {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9a9a9a;
+}
+
+.facts dd {
+  margin: 4px 0 0;
+  font-weight: 500;
+}
+
+.page-head .button { margin: 0 10px 0 0; }
+
+/* "on this page" links */
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0 !important;
+  margin: 26px 0 0 !important;
+}
+
+.toc li { margin: 0 !important; }
+
+.toc a {
+  display: inline-block;
+  padding: 6px 13px;
+  border: 1px solid #454545;
+  border-radius: 999px;
+  color: #ddd;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.toc a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* photos: same-sized tiles instead of a ragged row */
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.photos figure { width: auto; }
+
+.photos img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #111;
+}
+
+/* spec tables */
+.content table { width: 100%; max-width: 720px; }
+
+/* svarog's timeline */
+.timeline {
+  list-style: none;
+  padding: 0 0 0 22px !important;
+  border-left: 2px solid #444;
+  margin: 25px 0 30px 6px !important;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 18px !important;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #212121;
+  border: 2px solid var(--accent);
+}
+
+.timeline li.now::before { background: var(--accent); }
+
+.timeline b {
+  display: block;
+  color: var(--accent);
+}
+
+/* the join box at the bottom of each project page */
+.join-panel {
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  background: #1b1b1b;
+  padding: 6px 28px 14px;
+  margin-top: 70px;
+}
+
+.join-panel h2 { margin-top: 22px; }
+
+.join-panel .button { margin: 0 10px 12px 0; }
+
+/* events list: past ones go grey automatically (see main.js) */
+.event-list {
+  list-style: none;
+  padding: 0 !important;
+  max-width: 720px;
+}
+
+.event-list li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  margin: 0 !important;
+  border-bottom: 1px solid #333;
+}
+
+.event-list time {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.event-list .where { color: #aaa; font-size: 14px; }
+
+.event-list li.past, .event-list li.past time, .event-list li.past .where { color: #8c8c8c; }
+.event-list li.past time::after { content: " (done)"; color: #888; font-weight: 400; }
+
+.event-list li.tbc time { color: #aaa; }
+
+/* "last checked" line, so readers know how fresh a page is */
+.checked {
+  margin-top: 50px !important;
+  padding-top: 14px;
+  border-top: 1px solid #333;
+  font-size: 13px;
+  color: #888;
+}
+
+/* project index page */
+.proj-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.proj-item {
+  display: block;
+  border: 1px solid #3a3a3a;
+  border-top: 4px solid var(--accent);
+  border-radius: 8px;
+  background: #1b1b1b;
+  overflow: hidden;
+  color: #e8e8e8;
+  text-decoration: none;
+}
+
+.proj-item:hover { border-color: var(--accent); color: #e8e8e8; }
+
+.proj-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.proj-item div { padding: 14px 18px 4px; }
+
+.proj-item h2 {
+  margin: 0 0 6px !important;
+  font-size: 21px !important;
+  color: var(--accent);
+}
+
+.proj-item p { font-size: 15px; }
+
+.proj-item .meta { color: #9a9a9a; font-size: 13px; }
+
+@media (max-width: 800px) {
+  .page-head { padding-left: 16px; }
+  .lede { font-size: 17px; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .join-panel { padding: 4px 18px 10px; }
+  .event-list li { grid-template-columns: 1fr; gap: 2px; }
+  th { white-space: normal; }
+}
+
+@media (max-width: 380px) {
+  .facts { grid-template-columns: 1fr; }
+}
+
+/* skip link for keyboard users, only shows when focused */
+.skip {
+  position: absolute;
+  left: 10px;
+  top: -60px;
+  z-index: 30;
+  padding: 8px 14px;
+  background: #ffd23f;
+  color: black;
+  font-weight: bold;
+}
+
+.skip:focus { top: 10px; color: black; }
+
+/* phones: bigger tap targets in the nav bar */
+@media (max-width: 800px) {
+  #nav .taskbar__nav { display: flex; flex-wrap: wrap; gap: 0 4px; }
+  #nav .taskbar__nav a { font-size: 15px; padding: 10px 8px; margin: 0; }
+  #nav .taskbar__nav > a:first-child { padding-left: 0; }
+  #nav .dropdown > a { display: inline-block; }
+}
+
+.toc { margin-bottom: 40px !important; }
+
+/* small "what's on" link under the hero buttons */
+.hero-next {
+  position: relative;
+  z-index: 2;
+  margin: 14px 0 0;
+  font-size: 15px;
+  color: #ccc;
+}

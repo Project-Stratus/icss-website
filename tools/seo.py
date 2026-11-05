@@ -39,7 +39,6 @@ ORG = {
     "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Imperial College London"},
     "sameAs": [
         "https://www.instagram.com/ic_space_society",
-        "https://www.twitter.com/ICSpaceSoc",
         "https://www.imperialcollegeunion.org/activities/a-to-z/space-society",
         "https://github.com/Project-Stratus",
     ],
