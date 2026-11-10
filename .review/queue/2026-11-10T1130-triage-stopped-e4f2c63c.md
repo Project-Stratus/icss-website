@@ -1,0 +1,34 @@
+# icss-website: retry or close 1 stopped items (ICSS website found on Google: Search Con)
+
+Written: 2026-11-10
+Workstream: life
+Queue: auto
+Priority: normal
+Weight: heavy
+Kind: triage
+Source: scripts/silent_stops.py
+
+Found by scripts/silent_stops.py on the steward tick, not by Thomas (task 2026-11-10T1032, work that silently stops). Each item below stopped with nothing after it. 1 items in icss-website.
+
+## Do
+For every item, newest first, read its report and decide one of:
+- still wanted: queue it again with `atrium-task add` carrying what blocked it (the line below) and a gate that checks the real deliverable, not unrelated tests; a HUMAN item of the four kinds (money, credentials, a send as him, irreversible) goes to the bank instead;
+- the date was the point and it has passed, or later work made it moot: close it with one line why.
+Record each decision in the report as `- <report path> | requeued <file> | closed: <why>`. Never delete a report or a task.
+
+## Builds on
+orchestra task 2026-11-10T1032 (work that silently stops) and the request ledger, steward and queue runner.
+- 2026-10-11T1947-icss-found-on-google
+
+## Decisions respected
+Extends the 19 Oct answer (archive or re-date tasks that will never start) from four projects to every queue location; items are moved or closed with a reason, never deleted; a queued task runs only with Queue: auto (9 Oct).
+
+## Three or more PARTIALs in a row on one subject, no retry queued (1)
+
+- /Users/TvpPro/Developer/icss-website/.review/archive/2026-10-11T1947-icss-found-on-google.report.md | ICSS website found on Google: Search Console, sitemap, ranking | 3 PARTIAL/FAIL in a row on 'website' since 2026-10-02; 3 with a HUMAN line, 2 with a gate that cannot measure the deliverable; no retry queued
+
+## One system
+Atrium is one system with one self-model and one presence ([Thomas] 3 Nov 16:45 to 16:51). What this task makes feeds it:
+- It records what it does and every open loop it leaves in the one self-model (atrium_loops.py, `atrium-loops summary`; rows in ~/.atrium/events.tsv). No private store, log or copy of state that already has a home (parts and homes: docs/atrium-parts-map.md).
+- It reads and writes the shared memory (the vault, through atrium-vault and atrium-capture) and speaks through the shared voice and presence. No persona, name or memory of its own.
+- Gate (direction): the report carries a `## One system` section naming the loop kinds or event rows it wrote, or `none: <why>`. A task that leaves a draft, a plate, a send, a reminder or a booking with nobody tracking it is PARTIAL.
