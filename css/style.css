@@ -635,3 +635,144 @@ video.big {
   min-width: 0 !important;
 }
 
+
+/* hackathon sign-up form (hackathon.html) */
+.hack-facts th { width: 1%; }
+
+.signup {
+  max-width: 620px;
+  margin: 25px 0 0;
+}
+
+.signup .field {
+  margin: 0 0 24px;
+}
+
+.signup fieldset {
+  border: 1px solid #45454a;
+  border-radius: 6px;
+  padding: 14px 18px 4px;
+  min-width: 0;
+}
+
+.signup legend {
+  padding: 0 6px;
+  font-weight: 500;
+}
+
+.signup label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.signup .field__hint {
+  margin: -2px 0 8px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup select,
+.signup textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  background: #181818;
+  color: #e8e8e8;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font: inherit;
+}
+
+.signup textarea { resize: vertical; }
+
+.signup input:focus-visible,
+.signup select:focus-visible,
+.signup textarea:focus-visible,
+.signup .choice input:focus-visible {
+  outline: 2px solid #ffd23f;
+  outline-offset: 2px;
+}
+
+.signup [aria-invalid="true"] {
+  border-color: #ff8a80;
+}
+
+.signup .choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  cursor: pointer;
+}
+
+.signup .choice input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: #ffd23f;
+}
+
+.signup .team-details,
+.signup #diet-other-wrap {
+  margin-top: 14px;
+}
+
+.signup .field__err {
+  margin: 6px 0 0;
+  color: #ff8a80;
+  font-size: 14px;
+}
+
+.signup .field__err:empty { display: none; }
+
+.form-summary {
+  border: 1px solid #ff8a80;
+  border-radius: 5px;
+  padding: 10px 14px;
+  margin: 0 0 24px;
+  color: #ff8a80;
+}
+
+/* honeypot, off screen rather than display:none so bots still see it */
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+button.button {
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.box button.button,
+.signup button.button {
+  margin: 0;
+}
+
+button.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button.yellow:disabled:hover {
+  background: #ffd23f;
+  color: black;
+}
+
+.form-closed {
+  border-left: 4px solid #ffd23f;
+  padding: 8px 14px;
+}
+
+.form-result h2 { margin-top: 0; }
+.form-result--error { border-color: #ff8a80; }
