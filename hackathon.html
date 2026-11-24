@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autumn Hackathon sign-up | Imperial College Space Society</title>
+  <meta name="description" content="Sign up for the ICSS Autumn Hackathon, Lunar Logistics: 14-15 November 2026 at Imperial College London.">
+  <!-- not live yet: keep this page out of search results, the nav, the home page and sitemap.xml
+       (tools/seo.py only touches the pages listed in its PAGES dict, so it leaves this one alone) -->
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- BEGIN taskbar (edit partials/taskbar.html, then run: python3 tools/stamp.py) -->
+<div id="nav">
+  <a href="index.html"><img src="assets/img/logo-ic.png" alt="ICSS" id="logo"></a>
+  <span class="taskbar__nav">
+    <a href="blog.html">Blog</a>
+    <a href="wiki.html">Wiki</a>
+    <a href="events.html">Events</a>
+    <span class="dropdown">
+      <a href="projects.html">Projects &#9662;</a>
+      <span class="dropdown__menu">
+        <a href="tycho.html">Tycho</a>
+        <a href="svarog.html">Svarog</a>
+        <a href="stratus.html">Stratus</a>
+        <a href="iprl.html">IPRL</a>
+        <a href="rocketry.html">High Powered Rocketry</a>
+        <a href="rover.html">Mini Rover</a>
+      </span>
+    </span>
+    <a href="join.html" class="join">Join us</a>
+  </span>
+</div>
+<!-- END taskbar -->
+
+<div class="content">
+<h1>Autumn Hackathon: Lunar Logistics</h1>
+
+<p>In teams of 4, you'll design a logistics strategy for setting up a permanent settlement on the Moon and growing it over time. It's all design and presentation, so there's no hardware to build.</p>
+
+<table class="hack-facts">
+  <tr><th>When</th><td>Saturday 14 and Sunday 15 November 2026</td></tr>
+  <tr><th>Where</th><td>Imperial College London (room to be confirmed)</td></tr>
+  <tr><th>Teams</th><td>4 people. Bring your own team or we'll match you with one.</td></tr>
+  <tr><th>Cost</th><td>Free</td></tr>
+  <tr><th>Food</th><td>Pizza lunch on both days</td></tr>
+  <tr><th>Prizes</th><td>Yes!</td></tr>
+</table>
+
+<p>There's space for about 80 people. Sign-ups close on <b>Saturday 7 November</b>. After that we go through them and email everyone to confirm places.</p>
+
+<h2 id="signup-heading">Sign up</h2>
+
+<p class="form-closed" id="form-closed" hidden>Sign-ups aren't open yet. Check back soon, or keep an eye on the WhatsApp community.</p>
+
+<form id="hack-form" class="signup" novalidate aria-labelledby="signup-heading">
+
+  <div class="form-summary" id="form-summary" role="alert" tabindex="-1" hidden></div>
+
+  <div class="field">
+    <label for="f-name">Full name</label>
+    <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="120" aria-describedby="f-name-err">
+    <p class="field__err" id="f-name-err"></p>
+  </div>
+
+  <div class="field">
+    <label for="f-email">Imperial email</label>
+    <p class="field__hint" id="f-email-hint">Ending in @imperial.ac.uk or @ic.ac.uk</p>
+    <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" aria-describedby="f-email-hint f-email-err">
+    <p class="field__err" id="f-email-err"></p>
+  </div>
+
+  <!-- CID: keep or remove once Ollie confirms -->
+  <div class="field">
+    <label for="f-cid">CID <span class="grey">(optional)</span></label>
+    <p class="field__hint" id="f-cid-hint">Your 8 digit college ID. Only fill this in if the organisers ask for it.</p>
+    <input id="f-cid" name="cid" type="text" inputmode="numeric" maxlength="8" autocomplete="off" aria-describedby="f-cid-hint f-cid-err">
+    <p class="field__err" id="f-cid-err"></p>
+  </div>
+
+  <div class="field">
+    <label for="f-year">Year of study</label>
+    <select id="f-year" name="year" required aria-describedby="f-year-err">
+      <option value="">Choose one</option>
+      <option>1st year undergrad</option>
+      <option>2nd year undergrad</option>
+      <option>3rd year undergrad</option>
+      <option>4th year undergrad</option>
+      <option>Masters</option>
+      <option>PhD</option>
+      <option>Staff / other</option>
+    </select>
+    <p class="field__err" id="f-year-err"></p>
+  </div>
+
+  <div class="field">
+    <label for="f-dept">Department</label>
+    <input id="f-dept" name="department" type="text" required maxlength="120" aria-describedby="f-dept-err">
+    <p class="field__err" id="f-dept-err"></p>
+  </div>
+
+  <fieldset class="field" id="f-team" aria-describedby="f-team-err">
+    <legend>Team</legend>
+    <label class="choice"><input type="radio" name="team_mode" value="team" required> I have a team of 4</label>
+    <label class="choice"><input type="radio" name="team_mode" value="match"> Match me with a team</label>
+    <p class="field__err" id="f-team-err"></p>
+
+    <div class="team-details" id="team-details" hidden>
+      <div class="field">
+        <label for="f-team-name">Team name</label>
+        <input id="f-team-name" name="team_name" type="text" maxlength="80" aria-describedby="f-team-name-err">
+        <p class="field__err" id="f-team-name-err"></p>
+      </div>
+      <div class="field">
+        <label for="f-mates">Your teammates</label>
+        <p class="field__hint" id="f-mates-hint">Names and Imperial emails of the other 3, one per line. They should each sign up too.</p>
+        <textarea id="f-mates" name="teammates" rows="4" maxlength="1000" aria-describedby="f-mates-hint f-mates-err"></textarea>
+        <p class="field__err" id="f-mates-err"></p>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="field" id="f-diet" aria-describedby="f-diet-err">
+    <legend>Dietary needs</legend>
+    <p class="field__hint">Tick everything that applies, or None.</p>
+    <label class="choice"><input type="checkbox" name="diet" value="Vegetarian"> Vegetarian</label>
+    <label class="choice"><input type="checkbox" name="diet" value="Vegan"> Vegan</label>
+    <label class="choice"><input type="checkbox" name="diet" value="Halal"> Halal</label>
+    <label class="choice"><input type="checkbox" name="diet" value="Gluten-free"> Gluten-free</label>
+    <label class="choice"><input type="checkbox" name="diet" value="None" id="f-diet-none"> None</label>
+    <label class="choice"><input type="checkbox" name="diet" value="Other" id="f-diet-other"> Other</label>
+    <div class="field" id="diet-other-wrap" hidden>
+      <label for="f-diet-other-text">Other dietary needs</label>
+      <input id="f-diet-other-text" name="diet_other" type="text" maxlength="200" aria-describedby="f-diet-other-err">
+      <p class="field__err" id="f-diet-other-err"></p>
+    </div>
+    <p class="field__err" id="f-diet-err"></p>
+  </fieldset>
+
+  <div class="field">
+    <label for="f-allergies">Allergies <span class="grey">(optional)</span></label>
+    <input id="f-allergies" name="allergies" type="text" maxlength="300">
+  </div>
+
+  <div class="field">
+    <label for="f-access">Accessibility needs <span class="grey">(optional)</span></label>
+    <p class="field__hint" id="f-access-hint">Anything that would help you take part. Only the committee sees this.</p>
+    <textarea id="f-access" name="access_needs" rows="3" maxlength="1000" aria-describedby="f-access-hint"></textarea>
+  </div>
+
+  <fieldset class="field">
+    <legend>Consent</legend>
+    <label class="choice"><input type="checkbox" name="consent_data" value="yes" id="f-consent-data" required aria-describedby="f-consent-data-err"> <span>I agree to the ICSS committee storing these details to run this event. They're deleted after the event.</span></label>
+    <p class="field__err" id="f-consent-data-err"></p>
+    <label class="choice"><input type="checkbox" name="consent_photos" value="yes"> <span>I'm happy to appear in photos taken at the event <span class="grey">(optional)</span></span></label>
+  </fieldset>
+
+  <!-- honeypot: hidden from people, bots fill it in and get quietly ignored -->
+  <div class="hp" aria-hidden="true">
+    <label for="f-website">Leave this empty</label>
+    <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button type="submit" class="button yellow" id="f-submit">Sign up</button>
+</form>
+
+<div class="box form-result" id="form-success" role="status" tabindex="-1" hidden>
+  <h2>You're signed up!</h2>
+  <p>Thanks, we've got your details. Sign-ups close on Saturday 7 November, then we'll go through them and email you at <b id="success-email"></b> to confirm.</p>
+</div>
+
+<div class="box form-result form-result--error" id="form-error" role="alert" tabindex="-1" hidden>
+  <p><b>Sorry, your sign-up didn't send.</b> Check your internet connection and try again. If it still doesn't work, email us at <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a> and we'll sort it out.</p>
+</div>
+</div>
+
+<!-- BEGIN footer (edit partials/footer.html, then run: python3 tools/stamp.py) -->
+<div id="footer">
+  <p>
+    <a href="https://www.instagram.com/ic_space_society">Instagram</a> |
+    <a href="https://www.twitter.com/ICSpaceSoc">Twitter</a> |
+    <a href="https://www.imperialcollegeunion.org/activities/a-to-z/space-society">Union page</a> |
+    <a href="mailto:space.society@imperial.ac.uk">space.society@imperial.ac.uk</a>
+  </p>
+  <p class="small grey">Imperial College Space Society, Imperial College London, 2026</p>
+</div>
+<!-- END footer -->
+
+<script src="js/main.js"></script>
+<script src="js/hackathon-form.js"></script>
+</body>
+</html>
